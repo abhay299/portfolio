@@ -1,0 +1,23 @@
+.navbar{
+	display:flex;
+	/* align-items: center; */
+	justify-content: center;
+	background-color: #616161;
+	height: 100px;
+	width: 100%;
+}
+
+.navbarItems{
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 40%;
+	font-size: 18px;	
+	/* background-color:burlywood; */
+}
+
+.navbar a{
+	color: white;
+	text-decoration:none;
+}
