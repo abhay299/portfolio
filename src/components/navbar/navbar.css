@@ -2,7 +2,7 @@
 	display:flex;
 	/* align-items: center; */
 	justify-content: center;
-	background-color: #616161;
+	background-color: purple;
 	height: 100px;
 	width: 100%;
 }
@@ -13,7 +13,8 @@
 	align-items: center;
 	justify-content: space-evenly;
 	width: 40%;
-	font-size: 18px;	
+	font-size: 20px;
+	font-weight: 600;	
 	/* background-color:burlywood; */
 }
 

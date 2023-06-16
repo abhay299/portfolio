@@ -1,0 +1,23 @@
+.project{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #A4BE5C;
+}
+
+.project h1{
+	color:darkblue;
+	font-size: 32px;
+}
+
+.project img{
+	width: 50%;
+	border-radius: 10px;
+}
+
+.project p{
+	font-size: 28px;
+	color: darkblue;
+}

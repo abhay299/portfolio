@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "browser-router": "^0.2.0",
     "material-icons": "^1.13.8",
+    "navigate": "^0.3.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.13.0",
