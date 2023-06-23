@@ -1,14 +1,27 @@
-.home{
+.home {
+	--s: 20px;
+	--c: skyblue;
+	
+	--_g: 
+	  #0000 calc(-650%/13) calc(50%/13),var(--c) 0 calc(100%/13),
+	  #0000 0 calc(150%/13),var(--c) 0 calc(200%/13),
+	  #0000 0 calc(250%/13),var(--c) 0 calc(300%/13);
+	--_g0: repeating-linear-gradient( 45deg,var(--_g));
+	--_g1: repeating-linear-gradient(-45deg,var(--_g));
+	background:
+	  var(--_g0),var(--_g0) var(--s) var(--s),
+	  var(--_g1),var(--_g1) var(--s) var(--s) burlywood;
+	background-size: calc(2*var(--s)) calc(2*var(--s));
 	display: flex;
 	width: 100%;
 	flex-direction: row-reverse;
-	/* justify-content: center; */
-	background-image: url(https://images.unsplash.com/photo-1604964432806-254d07c11f32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGV2ZWxvcGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60);
-}
+	justify-content: center;
+  }
 
-img{
-	width: 250px;
-	height:250px;
+.home img{
+	padding: 10px;
+	width: 30%;
+	height:40vh;
 	border-radius: 50%;
 }
 
@@ -16,7 +29,9 @@ img{
 	width: 100%;
 	padding: 0px 24px;
 	font-size: 18px;
-	color: whitesmoke;
+	font-weight: 600;
+	font-family:monospace;
+	color: rgb(62, 13, 160);
 }
 
 .checkout{
@@ -24,11 +39,11 @@ img{
 	width: 100%;
 	font-size: 18px;
 	align-items: center;
-	color: whitesmoke;
+	color: navy;
 }
 
 .checkout a{
-	color: aliceblue;
+	color: navy;
 	display: flex;
 	text-decoration: none;
 	padding: 5px 5px 5px 5px;
