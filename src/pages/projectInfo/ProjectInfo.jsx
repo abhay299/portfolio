@@ -1,4 +1,3 @@
-import React from 'react';
 import './projectInfo.css'
 import { useParams } from 'react-router-dom';
 import { GitHub } from '@mui/icons-material';
@@ -9,13 +8,13 @@ const ProjectInfo = () => {
 		{
 			name: "Social Media App",
 			img: '/static/media/socialMediaFeed.80e4d92692e878d93b2d.png',
-			stack: "React, Node.js, Express.js, MySQL",
+			stack: "ReactJS, NodeJS, ExpressJS, MySQL",
 			url: "https://github.com/abhay299/social_media"
 		},
 		{
 			name: "Hotel Booking App",
 			img: '/static/media/bookamigoHomePage.ad898dd1f39e8410ab8d.png',
-			stack: "React, Node.js, Express.js, MySQL",
+			stack: "ReactJS, NodeJS, ExpressJS, MySQL",
 			url: "https://github.com/abhay299/BookAmigo"
 		},
 		{
@@ -37,7 +36,7 @@ const ProjectInfo = () => {
 			<img src={project.img} alt='' ></img>
 			<p>Tech Stack: {project.stack}</p>
 			<a href={project.url}>
-				<GitHub fontSize='large' style={{ "color": 'darkblue' }} />
+				<GitHub fontSize='large' style={{ "color": 'cornsilk' }} />
 			</a>
 		</div>
 	)

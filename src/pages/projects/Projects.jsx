@@ -3,13 +3,11 @@ import "./projects.css";
 import smHomePage from '../../assets/socialMediaFeed.png';
 import baHomePage from '../../assets/bookamigoHomePage.png';
 import calculator from '../../assets/calculator.png';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
 
 	const navigate = useNavigate();
-	const locate = useLocation();
-	console.log(locate)
 
 	return (
 		<div className='projects'>

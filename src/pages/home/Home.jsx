@@ -2,12 +2,9 @@ import React from 'react'
 import './home.css';
 import me2 from '../../assets/me2.jpg'
 import { GitHub, LinkedIn, EmailSharp } from '@mui/icons-material';
-import { useLocation } from 'react-router-dom';
-
 
 const Home = () => {
-	const locate = useLocation();
-	console.log(locate)
+
 	return (
 		<div className='home'>
 			<div className='infoContainer'>
@@ -36,22 +33,20 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-			<div className='skills'>
-				<h2>Tech Skills</h2>
-				<ul>
-					<li>
-						Front-End: ReactJS, HTML, CSS
-					</li>
-				</ul>
-				<ul>
-					<li>
-						Back-End: NodeJS, ExpressJS, Django, MySQL
-					</li>
-				</ul>
-				<h2>Languages</h2>
-				<ul>
-					<li>JavaScript, Python, Java, C</li>
-				</ul>
+			<div className='skillContainer'>
+				<div className='skills'>
+					<h2>Tech Skills</h2>
+					<div className='skillInfo'>
+						<li>
+							Front-End: ReactJS, HTML, CSS
+						</li>
+						<li>
+							Back-End: NodeJS, ExpressJS, Django, MySQL
+						</li>
+						<h2>Languages</h2>
+						<li>JavaScript, Python, Java, C</li>
+					</div>
+				</div>
 			</div>
 		</div>
 	)

@@ -1,34 +1,7 @@
-@media only screen and (max-width: 500px) {
-	.navbar{
-		display:flex;
-		align-items: center;
-		justify-content: center;
-		background-color: purple;
-		height: 100px;
-		width: 100%;
-	}
-	
-	.navbarItems{
-		color: white;
-		display: flex;
-		align-items: center;
-		justify-content: space-evenly;
-		width: 100%;
-		font-size: 20px;
-		font-weight: 600;	
-		/* background-color:burlywood; */
-	}
-	
-	.navbar a{
-		color: white;
-		text-decoration:none;
-	}
-}
-
+/* For Desktop */
 @media only screen and (min-width: 720px) {
 	.navbar{
 		display:flex;
-		/* align-items: center; */
 		justify-content: center;
 		background-color: purple;
 		height: 100px;
@@ -36,7 +9,6 @@
 	}
 	
 	.navbarItems{
-		color: white;
 		display: flex;
 		align-items: center;
 		justify-content: space-evenly;
@@ -50,4 +22,31 @@
 		color: white;
 		text-decoration:none;
 	}	
+}
+
+/* For Mobile Device */
+@media only screen and (max-width: 680px) {
+	.navbar{
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		background-color: purple;
+		height: 100px;
+		width: 100%;
+	}
+	
+	.navbarItems{
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 100%;
+		font-size: 20px;
+		font-weight: 600;	
+	}
+	
+	.navbar a{
+		color: white;
+		text-decoration:none;
+	}
 }
