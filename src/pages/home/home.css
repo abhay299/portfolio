@@ -1,4 +1,12 @@
-.home {
+.home{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.infoContainer {
 	--s: 20px;
 	--c: skyblue;
 	
@@ -25,9 +33,19 @@
 	border-radius: 50%;
 }
 
+@media only screen and (max-width: 500px){
+	.home img{
+		margin-right: 4px;
+		margin-top: 10px;
+		width: 30%;
+		height:30vh;
+		border-radius: 50%;
+	}
+}
+
 .info{
 	width: 100%;
-	padding: 0px 24px;
+	padding: 0px 10px;
 	font-size: 18px;
 	font-weight: 600;
 	font-family:monospace;
@@ -52,4 +70,14 @@
 .checkout svg{
 	display: flex;
 	padding-top: 5px;
+}
+
+.skills{
+	width: 100%;
+	padding: 0px 10px;
+	font-size: 18px;
+	font-weight: 600;
+	font-family:monospace;
+	background-color: bisque;
+	color: rgb(62, 13, 160);
 }
