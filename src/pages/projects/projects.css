@@ -1,47 +1,95 @@
-.projects{
-	display: flex;
-	text-align: center;
-	width: 100%;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-background-color:#A4BE5C;
-
+@media only screen and (max-width: 400px) {
+	.projects{
+		display: flex;
+		text-align: center;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		background-color:#A4BE5C;
+	}
+	
+	.projectList{
+		width: 100%;
+		height: auto;
+		place-items: center;
+	}
+	
+	.projectItem {
+		border-radius: 15px;
+		width: 300px;
+		height: 300px;
+		margin: 25px;
+		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+		text-align: center;
+		background-color:darkslateblue;
+	  }
+	  .projectItem:hover {
+		box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+		transition: 0.3s ease-in;
+		cursor: pointer;
+	  }
+	
+	  img{
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+		border-bottom-left-radius:5px ;
+		border-bottom-right-radius:5px ;
+		width: 100%;
+		height: 250px;
+	  }
+	  
+	  .projectItem h1 {
+		font-size: 22px;
+		color:khaki;
+	  }
 }
 
-.projectList{
-	width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
+@media only screen and (min-width: 720px){
+	.projects{
+		display: flex;
+		text-align: center;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		background-color:#A4BE5C;
+	}
+	
+	.projectList{
+		width: 100%;
+		height: auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		place-items: center;
+	}
+	
+	.projectItem {
+		border-radius: 15px;
+		width: 300px;
+		height: 300px;
+		margin: 40px;
+		box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+		text-align: center;
+		background-color:darkslateblue;
+	  }
+	  .projectItem:hover {
+		box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+		transition: 0.3s ease-in;
+		cursor: pointer;
+	  }
+	
+	  img{
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+		border-bottom-left-radius:5px ;
+		border-bottom-right-radius:5px ;
+		width: 100%;
+		height: 250px;
+	  }
+	  
+	  .projectItem h1 {
+		font-size: 22px;
+		color:khaki;
+	  }	
 }
-
-.projectItem {
-	border-radius: 15px;
-	width: 300px;
-	height: 300px;
-	margin: 40px;
-	box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-	text-align: center;
-	background-color:darkslateblue;
-  }
-  .projectItem:hover {
-	box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
-	transition: 0.3s ease-in;
-	cursor: pointer;
-  }
-
-  img{
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-	border-bottom-left-radius:5px ;
-	border-bottom-right-radius:5px ;
-	width: 100%;
-	height: 250px;
-  }
-  
-  .projectItem h1 {
-	font-size: 22px;
-	color:khaki;
-  }
