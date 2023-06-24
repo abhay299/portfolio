@@ -36,16 +36,14 @@ const Home = () => {
 			<div className='skillContainer'>
 				<div className='skills'>
 					<h2>Tech Skills</h2>
-					<div className='skillInfo'>
-						<li>
-							Front-End: ReactJS, HTML, CSS
-						</li>
-						<li>
-							Back-End: NodeJS, ExpressJS, Django, MySQL
-						</li>
-						<h2>Languages</h2>
-						<li>JavaScript, Python, Java, C</li>
-					</div>
+					<li>
+						Front-End: ReactJS, HTML, CSS
+					</li>
+					<li>
+						Back-End: NodeJS, ExpressJS, Django, MySQL
+					</li>
+					<h2>Languages</h2>
+					<li>JavaScript, Python, Java, C</li>
 				</div>
 			</div>
 		</div>
