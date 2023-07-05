@@ -3,7 +3,7 @@
 	.navbar{
 		display:flex;
 		justify-content: center;
-		background-color: purple;
+		background-color: #213555;
 		height: 100px;
 		width: 100%;
 	}
@@ -14,12 +14,12 @@
 		justify-content: space-evenly;
 		width: 40%;
 		font-size: 20px;
-		font-weight: 600;	
+		font-weight: 700;	
 		/* background-color:burlywood; */
 	}
 	
 	.navbar a{
-		color: white;
+		color: #EEE2DE;
 		text-decoration:none;
 	}	
 }
@@ -30,13 +30,12 @@
 		display:flex;
 		align-items: center;
 		justify-content: center;
-		background-color: purple;
+		background-color: #213555;
 		height: 100px;
 		width: 100%;
 	}
 	
 	.navbarItems{
-		color: white;
 		display: flex;
 		align-items: center;
 		justify-content: space-evenly;
@@ -46,7 +45,7 @@
 	}
 	
 	.navbar a{
-		color: white;
+		color:#EEE2DE;
 		text-decoration:none;
 	}
 }

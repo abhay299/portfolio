@@ -3,7 +3,7 @@
 	.footer {
 		width: 100%;
 		height: 100px;
-		background-color:#1EA1A1;
+		background-color: #213555;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -18,7 +18,7 @@
 	}
 	
 	.footerItems svg{
-		color:whitesmoke;
+		color: #EEE2DE;
 		font-size: 50px;
 	}	
 }
@@ -28,7 +28,7 @@
 	.footer {
 		width: 100%;
 		height: 100px;
-		background-color:#1EA1A1;
+		background-color:#213555;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -43,7 +43,7 @@
 	}
 	
 	.footerItems svg{
-		color:whitesmoke;
+		color: #EEE2DE;
 		font-size: 50px;
 	}
 }

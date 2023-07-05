@@ -36,7 +36,7 @@ const ProjectInfo = () => {
 			<img src={project.img} alt='' ></img>
 			<p>Tech Stack: {project.stack}</p>
 			<a href={project.url}>
-				<GitHub fontSize='large' style={{ "color": 'cornsilk' }} />
+				<GitHub fontSize='large' style={{ "color": '#EEE2DE' }} />
 			</a>
 		</div>
 	)

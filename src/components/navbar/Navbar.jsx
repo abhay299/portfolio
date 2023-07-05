@@ -19,17 +19,17 @@ const Navbar = () => {
 			<div className='navbarItems'>
 				{
 					location.pathname === current.home
-						? <Link to={"/"} style={{ color: 'black', 'textDecoration': 'underline' }}>Home</Link>
+						? <Link to={"/"} style={{ color: '#F1C376', 'textDecoration': 'underline' }}>Home</Link>
 						: <Link to={"/"}>Home</Link>
 				}
 				{
 					location.pathname === current.project || location.pathname === current.projectID
-						? <Link to={"/projects"} style={{ color: 'black', 'textDecoration': 'underline' }}>Projects</Link>
+						? <Link to={"/projects"} style={{ color: '#F1C376', 'textDecoration': 'underline' }}>Projects</Link>
 						: <Link to={"/projects"}>Projects</Link>
 				}
 				{
 					location.pathname === current.about
-						? <Link to={"/aboutMe"} style={{ color: 'black', 'textDecoration': 'underline' }}>About Me</Link>
+						? <Link to={"/aboutMe"} style={{ color: '#F1C376', 'textDecoration': 'underline' }}>About Me</Link>
 						: <Link to={"/aboutMe"}>About Me</Link>
 				}
 			</div>
