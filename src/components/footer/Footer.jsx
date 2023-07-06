@@ -9,18 +9,28 @@ const Footer = () => {
 	return (
 		<div className='footer'>
 			<div className='footerItems'>
-				<a href="https://www.linkedin.com/in/abhay-gupta-88326b1a6/">
-					<LinkedInIcon />
-				</a>
-				<a href="https://www.facebook.com/Abhay.sg.18/">
-					<FacebookIcon />
-				</a>
-				<a href="https://www.instagram.com/abhay_29_7/">
-					<InstagramIcon />
-				</a>
-				<a href="https://twitter.com/abysssickg">
-					<TwitterIcon />
-				</a>
+				<h2>Say Hello</h2>
+				<div className='footerSvg'>
+					<a href="https://www.linkedin.com/in/abhay-gupta-88326b1a6/">
+						<LinkedInIcon />
+					</a>
+					<a href="https://www.facebook.com/Abhay.sg.18/">
+						<FacebookIcon />
+					</a>
+					<a href="https://www.instagram.com/abhay_29_7/">
+						<InstagramIcon />
+					</a>
+					<a href="https://twitter.com/abysssickg">
+						<TwitterIcon />
+					</a>
+				</div>
+			</div>
+			<div className='vl'></div>
+			<div className='footerItems'>
+				<p>
+					<h2>My Resume</h2>
+					<h2>My work</h2>
+				</p>
 			</div>
 		</div>
 	)

@@ -1,8 +1,8 @@
 import React from 'react';
 import "./projects.css";
-import smHomePage from '../../assets/socialMediaFeed.png';
-import baHomePage from '../../assets/bookamigoHomePage.png';
-import calculator from '../../assets/calculator.png';
+import smHomePage from '../../assets/Socials/socialMediaFeed.png';
+import baHomePage from '../../assets/BookAmigo/BA-homePage.png';
+import calculator from '../../assets/Calulator/calc.png';
 import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
