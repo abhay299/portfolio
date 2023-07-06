@@ -126,83 +126,13 @@
 	} */
 }
 
-/* For Mobile Device */
-/* @media only screen and (max-width: 680px){
-
-	.home {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		height: 80vh;
-		margin: auto;
-		overflow:hidden;
-	}
-	
-	.infoContainer {
-		display: flex;
-		width: 100%;
-		justify-content: center;
-		background-image: url("https://plus.unsplash.com/premium_photo-1665426465755-953214e31c2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60");
-		background-repeat: no-repeat;
-	}
-
-	.home img{
-		margin-right: 10px;
-		margin-top: 14px;
-		width: 30%;
-		height:20vh;
-		border-radius: 50%;
-	}
-
-	
-	.info{
-		width: 100%;
-		padding: 0px 10px;
-		font-size: 16px;
-		font-weight: 1000;
-		
-		font-family:monospace;
-	}
-
-	.checkout{
-		display: flex;
-		width: 100%;
-		font-size: 18px;
-		align-items: center;
-	}
-
-	.checkout a{
-		color: black;
-		display: flex;
-		text-decoration: none;
-		padding: 5px 5px 5px 5px;
-	}
-
-	.checkout svg{
-		display: flex;
-		padding-top: 5px;
-	}
-
-	.skillContainer{
-		display: block;
-		width: 100%;
-		height: 100%;
-	}
-
-	.skills{
-		width: 100%;
-		padding: 0px 10px;
-		font-size: 16px;
-		font-weight: 1000;
-		font-family:monospace;
-	}
-} */
-
 @media only screen and (max-width: 680px){
+	/* Main Component */
 	.home{
 		background-color: white;
 	}
 
+	/* Info Component */
 	.info{
 		/* background-color: red; */
 		background-image: url("https://images.unsplash.com/photo-1688494930045-328d0f95efe9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=60");
@@ -214,41 +144,55 @@
 		font-size: 22px;
 		padding: 30px 8px 2px 8px;
 	}
+
+	.checkout svg{
+		color: white;
+	}
 	
+	/* Work Component */
 	.work{
 		display: flex;
 		flex-direction: column;
 		background-color:white;
 		justify-content: center;
 		align-items: center;
-		padding: 8px 0px 0px 0px;
+		padding: 0px 0px 0px 0px;
 	}
 
-	.projectCardContainer {
+	.work h1{
+		text-align: left;
+		padding-inline: 1rem;
+		font-weight: 600;
+	}
+	
+	.projectCardContainer{
 		display: flex;
+		width: 90%;
+		height: fit-content;
 		flex-direction: column;
 		background-color: #DAFFFB;
-		width: 80%;
-		height: 38vh;
 		box-shadow: 0 0 50px rgba(0, 0, 0, 0.55);
-		margin-bottom: 14px;
+		margin-bottom: 16px;
 	}
 	
 	.projectCardContainer img {
-		object-fit: contain;
+		/* background-color: red; */
+		height: fit-content;
+		border-radius: 0;
+		object-fit: cover;
 		object-position: center;
 	}
 
 	.containerText {
-		display: flex;
-		flex-direction: column;
+		/* display: flex;
+		flex-direction: column; */
 		background-color: #DAFFFB;
-		padding: 12px;
+		padding-left: 12px;
 	}
 	.containerText h2 {
 		color: #334454;
 		text-align: center;
-		font-size: 1.2rem;
+		font-size: 1.6rem;
 	}
 	.containerText p {
 		color: grey;
@@ -259,19 +203,7 @@
 		font-size: 1rem;
 	}
 
-	.skill{
-		/* background-color: red; */
-		padding: 6px 0px 6px 8px;
-	}
-
-	.skillInfo{
-		background-color: #DAFFFB;
-		padding-top: 4px;
-		padding-bottom: 4px;
-		font-size: 14pt;
-		font-weight: 600;
-	}
-
+	/* Feedback Component */
 	@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 	
 	.mailMe{
@@ -288,7 +220,7 @@
 	.mailMe form {
 		/* background-color: red; */
 		width: 70%; 
-		margin: 30px auto;
+		margin: 10px auto;
 	}
 	
 	.formInput {
@@ -315,21 +247,68 @@
 	}
 	.formInput:focus { border-bottom:1px solid #122fa3; }
 
-	[type="submit"] {
-		font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	.sendButton {
+		appearance: button;
+		background-color: #DAFFFB;
+		background-image: none;
+		border: 1px solid #000;
+		border-radius: 4px;
+		box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+		box-sizing: border-box;
+		color: midnightblue;
+		cursor: pointer;
 		width: 100%;
-		background: midnightblue;
-		border-radius:5px;
-		border:0;
-		cursor:pointer;
-		color:white;
-		font-size:24px;
-		padding-top:10px;
-		padding-bottom:10px;
-		transition: all 0.3s;
-		margin-top: 12px;
-		font-weight:700;
+		display: inline-block;
+		font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+		font-size: 14pt;
+		font-weight: 600;
+		line-height: 20px;
+		margin: 12px 0px 10px 0px;
+		overflow: visible;
+		padding: 12px 0px;
+		text-align: center;
+		text-transform: none;
+		touch-action: manipulation;
+		user-select: none;
+		-webkit-user-select: none;
+		vertical-align: middle;
+		white-space: nowrap;
 	}
-	[type="submit"]:hover { background: midnightblue; }
 
+	.sendButton:focus {
+		text-decoration: none;
+	}
+
+	.sendButton:hover {
+		text-decoration: none;
+	}
+
+	.sendButton:active {
+		box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+		outline: 0;
+	}
+
+	.sendButton:not([disabled]):active {
+		box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+		transform: translate(2px, 2px);
+	}
+	
+	/* Skill Component */
+	.skill{
+		/* background-color: red; */
+		padding: 6px 0px 6px 8px;
+	}
+	
+	.skillInfo{
+		background-color: #DAFFFB;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		font-size: 14pt;
+		font-weight: 600;
+	}
 }
+	/* @media (min-width: 768px) {
+		.sendButton {
+		padding: 12px 50px;
+	}
+} */
