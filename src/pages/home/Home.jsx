@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
 import './home.css';
-import { Alert } from '@mui/material';
+// import { Alert } from '@mui/material';
 import EastRoundedIcon from '@mui/icons-material/EastRounded';
-// import smLogo from '../../assets/Socials/SM-logo.png';
 import smLogo from '../../assets/Socials/SM-RegisterPage.png';
-// import baLogo from '../../assets/BookAmigo/BA-logo.png'
-import baLogo from '../../assets/BookAmigo/BA-homePage.png'
+import baLogo from '../../assets/BookAmigo/BA-logo.png'
+import portfolioLogo from '../../assets/Portfolio/portfolioLogo.png'
 import crmLogo from '../../assets/CRM/CRM-homePage.png'
-import addRecord from '../../assets/CRM/CRM-addRecord.png'
-import calcLogo from '../../assets/Calulator/calc.png'
-// import TrendingFlatOutlinedIcon from '@mui/icons-material/TrendingFlatOutlined';
-// import me2 from '../../assets/me2.jpg'
-import { GitHub, LinkedIn, EmailSharp } from '@mui/icons-material';
+import { EmailSharp } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+	const navigate = useNavigate();
 
 	const [inputs, setInputs] = useState({
 		name: "",
@@ -68,66 +65,65 @@ const Home = () => {
 					Passionate about creating functional websites | Eager to contribute and grow professionally.</p>
 				<span>Contact Me</span>
 				<div className='checkout'>
-
-					{/* <a href='https://github.com/abhay299/'>
-						<GitHub fontSize='small' />
-					</a>
-					|
-					<a href='https://www.linkedin.com/in/abhay-gupta-88326b1a6/'>
-						<LinkedIn fontSize='medium' />
-					</a>
-					| */}
-					<EastRoundedIcon style={{ marginBottom: "5px" }} />
+					<EastRoundedIcon />
 					<a href='mailto:abhaysg2000@gmail.com'>
-						<EmailSharp fontSize='large' />
+						<EmailSharp />
 					</a>
 				</div>
 			</div>
 			<div className='work'>
 				<h1>
-					Over the months I built a few projects...
+					Over the months I've built a few projects...
 				</h1>
 				<div className='projectCardContainer'>
-					<img src={smLogo} alt='' />
+					<img src={smLogo} alt='' onClick={() => {
+						navigate("/projects/0");
+					}} />
 					<div className='containerText'>
 						<h2>Socials</h2>
 						<p>
 							Full Stack Social Media App <br />
-							<a href='#'>Find out more...</a>
+							<a href='/projects/0'>Find out more...</a>
 						</p>
 					</div>
 				</div>
 				<div className='projectCardContainer'>
-					<img src={baLogo} alt='' />
+					<img src={baLogo} alt='' onClick={() => {
+						navigate("/projects/1");
+					}} />
 					<div className='containerText'>
 						<h2>BookAmigo</h2>
 						<p>
 							Front-End Hotel booking App <br />
-							<a href='#'>Find out more...</a>
+							<a href='/projects/1'>Find out more...</a>
 						</p>
 					</div>
 				</div>
 				<div className='projectCardContainer'>
-					<img src={addRecord} alt='' />
+					<img src={portfolioLogo} alt='' onClick={() => {
+						navigate("/projects/2");
+					}} />
 					<div className='containerText'>
-						<h2>My Website</h2>
+						<h2>My Portfolio</h2>
 						<p>
 							Full Stack Website <br />
-							<a href='#'>Find out more...</a>
+							<a href='/projects/2' >Find out more...</a>
 						</p>
 					</div>
 				</div>
 				<div className='projectCardContainer'>
-					<img src={crmLogo} alt='' />
+					<img src={crmLogo} alt='' onClick={() => {
+						navigate("/projects/0");
+					}} />
 					<div className='containerText'>
 						<h2>Django CRM</h2>
 						<p>
 							Back-End based CRM App with Django <br />
-							<a href='#'>Find out more...</a>
+							<a href='/projects/3'>Find out more...</a>
 						</p>
 					</div>
 				</div>
-				<div className='projectCardContainer'>
+				{/* <div className='projectCardContainer'>
 					<img src={calcLogo} alt='' />
 					<div className='containerText'>
 						<h2>Calculator</h2>
@@ -136,7 +132,7 @@ const Home = () => {
 							<a href='#'>Find out more...</a>
 						</p>
 					</div>
-				</div>
+				</div> */}
 			</div>
 			<div className='mailMe'>
 				<h1>Drop me a message!</h1>

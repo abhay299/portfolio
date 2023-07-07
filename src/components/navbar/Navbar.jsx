@@ -3,16 +3,16 @@ import './navbar.css';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-	const location = useLocation();
+	// const location = useLocation();
 
-	const id = location.pathname.split('/')
+	// const id = location.pathname.split('/')
 
-	const current = {
-		home: '/',
-		project: '/projects',
-		projectID: `/projects/${id[id.length - 1]}`,
-		about: '/aboutMe'
-	};
+	// const current = {
+	// 	home: '/',
+	// 	project: '/projects',
+	// 	projectID: `/projects/${id[id.length - 1]}`,
+	// 	about: '/aboutMe'
+	// };
 
 	return (
 		// <div className='navbar'>
@@ -34,21 +34,22 @@ const Navbar = () => {
 		// 		}
 		// 	</div>
 		// </div>
-		<body>
-			{/* <div className='navbar'> */}
+
+		<div>
 			<input type='checkbox' id='active' />
 			<label htmlFor='active' className='menu-btn'><span></span></label>
 			<label htmlFor='active' className='close'></label>
 			<div className='wrapper'>
 				<ul>
-					<li><Link to={"/"}>Home</Link></li>
-					<li><Link to={"/projects"}>Work</Link></li>
-					<li><Link to={"/aboutMe"}>About</Link></li>
-					<li><Link to={"/feedback"}>Feedback</Link></li>
+					<li><a href='/'>Home</a></li>
+					{/* <li><Link to={"/"}>Home</Link></li> */}
+					<li><a href={"/projects"}>Work</a></li>
+					<li><a href={"/aboutMe"}>About</a></li>
+					<li><a href={"https://drive.google.com/file/d/1kHcHDc51cNCSeL20qqmiJ4Fy76EOl-34/view?usp=sharing"}>Resume</a></li>
 				</ul>
 			</div>
-			{/* </div> */}
-		</body>
+		</div>
+
 	)
 };
 

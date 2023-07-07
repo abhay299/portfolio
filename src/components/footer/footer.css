@@ -29,7 +29,9 @@
 		width: 100%;
 		height: 150px;
 		/* background-color:#213555; */
-		background-image: url("https://images.unsplash.com/photo-1688494930045-328d0f95efe9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=60");
+		background-image: url("https://images.unsplash.com/photo-1688516353461-540cd4b178fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+		/* background-image: url("https://images.unsplash.com/photo-1688413708929-8b2d281803df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNDV8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60"); */
+		/* background-image: url("https://images.unsplash.com/photo-1688494930045-328d0f95efe9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=60"); */
 		background-repeat: no-repeat;
 		background-size: cover;
 		display: flex;
@@ -49,8 +51,9 @@
 
 	.footerItems h2{
 		font-family:Arial, Helvetica, sans-serif ;
-		font-size: 16pt;
+		font-size: 14pt;
 		font-weight: 300;
+		line-height: 1rem;
 	}
 
 	.footerItems a{

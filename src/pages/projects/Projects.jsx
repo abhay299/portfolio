@@ -1,37 +1,26 @@
 import React from 'react';
 import "./projects.css";
-import smHomePage from '../../assets/Socials/socialMediaFeed.png';
-import baHomePage from '../../assets/BookAmigo/BA-homePage.png';
-import calculator from '../../assets/Calulator/calc.png';
-import { useNavigate } from 'react-router-dom';
+import '../home/home.css'
+import ProjectItem from '../../components/projectItem/ProjectItem.jsx';
+import { projectList } from '../../helpers/projectList.js';
+import Home from '../home/Home';
 
 const Projects = () => {
 
-	const navigate = useNavigate();
-
+	// console.log(projectList[0].image);
 	return (
 		<div className='projects'>
-			<h1>Personal Projects</h1>
-			<div className='projectList'>
-				<div className='projectItem' onClick={() => navigate('/projects/0')}>
-					<div className='projectImage'>
-						<img src={smHomePage} alt='' />
-						<h1>Social Media App</h1>
-					</div>
-				</div>
-				<div className='projectItem' onClick={() => navigate('/projects/1')}>
-					<div className='projectImage'>
-						<img src={baHomePage} alt='' />
-						<h1>Hotel Booking App</h1>
-					</div>
-				</div>
-				<div className='projectItem' onClick={() => navigate('/projects/2')}>
-					<div className='projectImage'>
-						<img src={calculator} alt='' />
-						<h1>Calculator App</h1>
-					</div>
-				</div>
-			</div>
+			<h1>Some of my recent work.</h1>
+			<p>Disclaimer: The projects listed below have been done by following various
+				tutorials on the web but I have customized and added
+				a few features of my own. Feel free to leave a comment on the same.</p>
+			<br />
+			<br />
+			{
+				projectList.map((project, index) => {
+					return <ProjectItem id={index} name={project.name} image={project.image} desc={project.desc} />
+				})
+			}
 		</div>
 	)
 };

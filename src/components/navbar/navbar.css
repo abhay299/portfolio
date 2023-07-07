@@ -236,8 +236,8 @@
 		font-size: 20px;
 		cursor: pointer;
 		transition: all 0.1s ease-in-out;
-		background-color: #DAFFFB;
-		/* background-color: rosybrown; */
+		background-color: rgba(218, 255, 251, 0.4);
+		/* background-color: #DAFFFB; */
 	}
 	.menu-btn span,
 	.menu-btn:before,

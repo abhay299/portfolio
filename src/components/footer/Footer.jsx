@@ -2,7 +2,7 @@ import React from 'react';
 import './footer.css';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
+import { EmailSharp } from '@mui/icons-material';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
 const Footer = () => {
@@ -11,11 +11,11 @@ const Footer = () => {
 			<div className='footerItems'>
 				<h2>Say Hello</h2>
 				<div className='footerSvg'>
-					<a href="https://www.linkedin.com/in/abhay-gupta-88326b1a6/">
+					<a href="https://www.linkedin.com/in/abhaygupta299/">
 						<LinkedInIcon />
 					</a>
-					<a href="https://www.facebook.com/Abhay.sg.18/">
-						<FacebookIcon />
+					<a href='mailto:abhaysg2000@gmail.com'>
+						<EmailSharp />
 					</a>
 					<a href="https://www.instagram.com/abhay_29_7/">
 						<InstagramIcon />
@@ -28,8 +28,9 @@ const Footer = () => {
 			<div className='vl'></div>
 			<div className='footerItems'>
 				<p>
-					<h2><a href='https://drive.google.com/file/d/1kHcHDc51cNCSeL20qqmiJ4Fy76EOl-34/view?usp=sharing'>My Resume</a></h2>
-					<h2>My work</h2>
+					<h2><a href='https://drive.google.com/file/d/1kHcHDc51cNCSeL20qqmiJ4Fy76EOl-34/view?usp=sharing'>Resume</a></h2>
+					<h2><a href='/projects' >My work</a></h2>
+					<h2><a href='/aboutMe' >About Me</a></h2>
 				</p>
 			</div>
 		</div>
