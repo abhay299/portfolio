@@ -1,18 +1,7 @@
 import React from 'react';
 import './navbar.css';
-import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-	// const location = useLocation();
-
-	// const id = location.pathname.split('/')
-
-	// const current = {
-	// 	home: '/',
-	// 	project: '/projects',
-	// 	projectID: `/projects/${id[id.length - 1]}`,
-	// 	about: '/aboutMe'
-	// };
 
 	return (
 		// <div className='navbar'>
