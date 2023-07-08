@@ -37,7 +37,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		background-color: #F9F9F9;
+		background-color: #f1e4ff;
 	}
 	
 	.project h1{
@@ -77,6 +77,10 @@
 		justify-content: space-between;
 		margin: 0.5rem 0rem 0.5rem 0rem;
 		/* background-color: red; */
+	}
+
+	.projectFooter a{
+		margin-top: 9px;
 	}
 
 	.nextBtn{
