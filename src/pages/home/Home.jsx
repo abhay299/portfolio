@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import Axios from 'axios';
 import './home.css';
 // import { Alert } from '@mui/material';
-import EastRoundedIcon from '@mui/icons-material/EastRounded';
 import smLogo from '../../assets/Socials/SM-RegisterPage.png';
 import baLogo from '../../assets/BookAmigo/BA-logo.png'
 import portfolioLogo from '../../assets/Portfolio/portfolioLogo.png'
 import crmLogo from '../../assets/CRM/CRM-homePage.png'
-import { EmailSharp } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
@@ -21,9 +19,9 @@ const Home = () => {
 
 
 	// Regex to check email validity
-	let regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	let regEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-	const [err, setErr] = useState(null);
+	const [setErr] = useState(null);
 
 	const handleChange = (e) => {
 		setInputs(prev => ({
@@ -100,7 +98,7 @@ const Home = () => {
 						<h2>My Portfolio</h2>
 						<p>
 							Full Stack Website <br />
-							<a href='/' ></a>
+							<a href='/' >Home</a>
 						</p>
 					</div>
 				</div>
