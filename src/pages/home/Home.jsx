@@ -100,13 +100,13 @@ const Home = () => {
 						<h2>My Portfolio</h2>
 						<p>
 							Full Stack Website <br />
-							<a href='/projects/2' >Find out more...</a>
+							<a href='/' ></a>
 						</p>
 					</div>
 				</div>
 				<div className='projectCardContainer'>
 					<img src={crmLogo} alt='' onClick={() => {
-						navigate("/projects/0");
+						navigate("/projects/3");
 					}} />
 					<div className='containerText'>
 						<h2>Django CRM</h2>

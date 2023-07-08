@@ -9,6 +9,7 @@ import bookAmigoSingleHotel from '../assets/BookAmigo/BA-singleHotelPage.png';
 import bookAmigoHotelList from '../assets/BookAmigo/BA-hotelist.png';
 import bookAmigoFooter from '../assets/BookAmigo/BA-footer.png';
 import calculator from '../assets/Calculator/calcDark.png';
+import calculator2 from '../assets/Calculator/calc2.png';
 import crmLogo from '../assets/CRM/CRM-homePage.png'
 import crmAdd from '../assets/CRM/CRM-addRecord.png'
 import crmLogin from '../assets/CRM/CRM-loggedin.png'
@@ -16,6 +17,7 @@ import crmIndividual from '../assets/CRM/CRM-individualRecord.png'
 import crmDel from '../assets/CRM/CRM-recordDelete.png'
 import crmUpdate from '../assets/CRM/CRM-update.png'
 import portfolio from '../assets/Portfolio/portfolioLogo.png';
+import navbarPortfolio from '../assets/Portfolio/navbar.png'
 
 export const projectList = [
 	{
@@ -36,14 +38,15 @@ export const projectList = [
 		image3: bookAmigoSingleHotel,
 		image4: bookAmigoFeatured,
 		image5: bookAmigoFooter,
-		desc: "",
+		desc: "BookAmigo is a Hotel Booking Web App. This was my 1st dynamic frontend project. The purpose of this project was to become proficient in ReactJS & CSS. There are multiple pages in to navigate to in this project. I had also added a SignUp/SignIn page which I have removed temporarily. It gave me an insight on how systems work in backend of the project. I used MySQL database to store user Credentials along with ExpressJS and NodeJS to keep the server running smoothly.",
 		stack: "ReactJS, NodeJS, ExpressJS, MySQL",
 		gitUrl: "https://github.com/abhay299/BookAmigo",
 	},
 	{
 		name: "Portfolio",
 		image: portfolio,
-		desc: "",
+		image1: navbarPortfolio,
+		desc: "This is my portfolio that I built to connect with more people and showcase my knowledge and work to them. You can look around to find out more about my website.",
 		stack: "ReactJS, NodeJS, ExpressJS, MySQL, CSS",
 		gitUrl: "https://github.com/abhay299/my_Portfolio",
 	},
@@ -55,14 +58,15 @@ export const projectList = [
 		image3: crmDel,
 		image4: crmUpdate,
 		image5: crmIndividual,
-		desc: "",
+		desc: "CRM is a Customer Relationship Management App. The motive to build this project was to grasp knowledge about Django framework and learn a bit about API calls using Django. As I have done a lot of python programming before hand, the syntax was not an issue. I have used Bootsrap framework instead of the normal CSS. The app keeps track of users, users can access the data only if they are logged in and they can add, update, delete records of their own. One can view all the records individually as well.",
 		stack: "HTML, Django, Bootstrap",
 		gitUrl: "https://github.com/abhay299/crm-App",
 	},
 	{
 		name: "Calculator",
 		image: calculator,
-		desc: "",
+		image1: calculator2,
+		desc: "As you can see it's a very basic calculator app that performs the elementary operations. It's among the first few static web apps that I built using Javascript, HTML, CSS. Although, it's not that simple as I've used Redux in this project to manage state of operations. Also while building the app I found a bug which crashed the app, it was happening while pressing the 'Period' button so, I resolved that error with a optional chaining operator '?.' to check whether it's null/undefined state.",
 		stack: "JavaScript(Redux), HTML, CSS",
 		gitUrl: "https://github.com/abhay299/calc",
 	},

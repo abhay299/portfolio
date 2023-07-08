@@ -1,7 +1,5 @@
 import React from 'react';
 import './navbar.css';
-import { EastRounded, EmailSharp } from '@mui/icons-material';
-
 const Navbar = () => {
 
 	return (

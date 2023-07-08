@@ -33,6 +33,7 @@
 		display: flex;
 		width: 100%;
 		height: calc(100vh-100px);
+		/* height: 100vh; */
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
@@ -46,20 +47,93 @@
 		margin-top: 50px;
 	}
 
+	.project p{
+		margin: 0px 6px 12px 6px;
+		font-size: 16pt;
+	}
+	
+	.project img{
+		width: 80%;
+		border-radius: 10px;
+	}
+
 	.projectContainer{
 		width: 95%;
 		background-color: white;
 	}
 	
-	.project img{
-		width: 75%;
-		border-radius: 10px;
-	}
 	
 	.projectContainer p{
 		color: #3D155F;
 		text-align:left;
-		font-size: 20px;
+		font-size: 14pt;
 		font-weight: 400;
 	}
+
+	.projectFooter{
+		display: flex;
+		width: 95%;
+		justify-content: space-between;
+		margin: 0.5rem 0rem 0.5rem 0rem;
+		/* background-color: red; */
+	}
+
+	.nextBtn{
+		align-items: center;
+		background: #FFFFFF;
+		border: 0 solid #E2E8F0;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+		box-sizing: border-box;
+		color: #000;
+		display: inline-flex;
+		font-family: Inter, sans-serif;
+		font-size: 1rem;
+		font-weight: 700;
+		height: 32px;
+		justify-content: center;
+		line-height: 24px;
+		overflow-wrap: break-word;
+		padding: 24px;
+		text-decoration: none;
+		width: auto;
+		border-radius: 4px;
+		cursor: pointer;
+		user-select: none;
+		-webkit-user-select: none;
+		touch-action: manipulation;
+	}
+
+	.nextBtn :disabled, button[disabled]{
+		background-color: rgb(202, 202, 202);
+	}
+
+	.prevBtn{
+		align-items: center;
+		background: #FFFFFF;
+		border: 0 solid #E2E8F0;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+		box-sizing: border-box;
+		color: #1A202C;
+		display: inline-flex;
+		font-family: Inter, sans-serif;
+		font-size: 1rem;
+		font-weight: 700;
+		height: 32px;
+		justify-content: center;
+		line-height: 24px;
+		overflow-wrap: break-word;
+		padding: 24px;
+		text-decoration: none;
+		width: auto;
+		border-radius: 4px;
+		cursor: pointer;
+		user-select: none;
+		-webkit-user-select: none;
+		touch-action: manipulation;
+	}
+
+	.prevBtn :disabled, button[disabled]{
+		background-color: rgb(202, 202, 202);
+	}
+	
 }
