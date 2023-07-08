@@ -3,7 +3,6 @@ import "./projects.css";
 import '../home/home.css'
 import ProjectItem from '../../components/projectItem/ProjectItem.jsx';
 import { projectList } from '../../helpers/projectList.js';
-import Home from '../home/Home';
 
 const Projects = () => {
 
@@ -18,7 +17,7 @@ const Projects = () => {
 			<br />
 			{
 				projectList.map((project, index) => {
-					return <ProjectItem id={index} name={project.name} image={project.image} desc={project.desc} />
+					return <ProjectItem id={index} name={project.name} image={project.image} stack={project.stack} />
 				})
 			}
 		</div>

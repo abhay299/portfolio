@@ -36,13 +36,19 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		background-color: #A4BE5C;
+		background-color: #F9F9F9;
 	}
 	
 	.project h1{
-		color:midnightblue;
-		font-size: 34px;
+		/* color:midnightblue; */
+		color: #17669f;
+		font-size: 34pt;
 		margin-top: 50px;
+	}
+
+	.projectContainer{
+		width: 95%;
+		background-color: white;
 	}
 	
 	.project img{
@@ -50,10 +56,10 @@
 		border-radius: 10px;
 	}
 	
-	.project p{
-		color: blueviolet;
-		text-align:center;
-		font-size: 40px;
+	.projectContainer p{
+		color: #3D155F;
+		text-align:left;
+		font-size: 20px;
 		font-weight: 400;
 	}
 }

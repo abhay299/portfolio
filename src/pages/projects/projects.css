@@ -107,7 +107,8 @@
 	.projectItem p {
 		color: #2D4356;
 		/* color: grey; */
-		font-size: 1.2rem;
+		font-size: 1.1rem;
+		line-height: 1.2rem;
 		text-align:center;
 	}
 }

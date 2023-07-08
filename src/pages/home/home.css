@@ -215,8 +215,14 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		line-height: 0.1rem;
+		line-height: 1rem;
 		/* background-color: #122fa3; */
+	}
+
+	.mailMe p{
+		text-align: justify;
+		font-size: 14pt;
+		margin: 0px 8px 0px 8px;
 	}
 	
 	.mailMe form {

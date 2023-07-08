@@ -36,7 +36,7 @@ const Home = () => {
 
 		// console.log(inputs)
 
-		if ((inputs.name || inputs.email || inputs.comment) === '') {
+		if (inputs.name === '' || inputs.email === '' || inputs.comment === '') {
 			return alert("Please fill out all fields.")
 		} else if (!regEmail.test(inputs.email)) {
 			return alert("Please enter a valid Email address.")
@@ -60,16 +60,9 @@ const Home = () => {
 			<div className='info'>
 				<p>Hey, I'm</p>
 				<h1>Abhay Gupta</h1>
-				Full Stack Web developer
+				Full Stack Web developer.
 				<p><br />
 					Passionate about creating functional websites | Eager to contribute and grow professionally.</p>
-				<span>Contact Me</span>
-				<div className='checkout'>
-					<EastRoundedIcon />
-					<a href='mailto:abhaysg2000@gmail.com'>
-						<EmailSharp />
-					</a>
-				</div>
 			</div>
 			<div className='work'>
 				<h1>

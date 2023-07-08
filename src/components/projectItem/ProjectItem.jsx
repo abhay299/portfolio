@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const ProjectItem = ({ name, image, id, desc }) => {
+const ProjectItem = ({ name, image, id, stack }) => {
 	const navigate = useNavigate();
 	// console.log((image))
 	return (
@@ -11,7 +11,7 @@ const ProjectItem = ({ name, image, id, desc }) => {
 			{/* <div style={{ backgroundImage: `url(${image})` }} className='bgImage' /> */}
 			<img src={image} alt='' />
 			<h1>{name}</h1>
-			<p>Stack: {desc}</p>
+			<p>Stack: {stack}</p>
 		</div>
 	);
 }
