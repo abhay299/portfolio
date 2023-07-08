@@ -66,8 +66,8 @@ export const projectList = [
 		name: "Calculator",
 		image: calculator,
 		image1: calculator2,
-		desc: "As you can see it's a very basic calculator app that performs the elementary operations. It's among the first few static web apps that I built using Javascript, HTML, CSS. Although, it's not that simple as I've used Redux in this project to manage state of operations. Also while building the app I found a bug which crashed the app, it was happening while pressing the 'Period' button so, I resolved that error with a optional chaining operator '?.' to check whether it's null/undefined state.",
-		stack: "JavaScript(Redux), HTML, CSS",
+		desc: "As you can see it's a very basic calculator app that performs the elementary operations. It's among the first few static web apps that I built using ReactJS. Although, it's not that simple as I've used Redux in this project to manage state of operations. Also while building the app I found a bug which crashed the app, it was happening while pressing the 'Period' button so, I resolved that error with a optional chaining operator '?.' to check whether it's null/undefined state.",
+		stack: "ReactJS (Redux), CSS",
 		gitUrl: "https://github.com/abhay299/calc",
 	},
 ];

@@ -37,7 +37,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		background-color: #f1e4ff;
+		background-color: #f3ebfa;
 	}
 	
 	.project h1{
@@ -81,6 +81,7 @@
 
 	.projectFooter a{
 		margin-top: 9px;
+		color: black;
 	}
 
 	.nextBtn{
