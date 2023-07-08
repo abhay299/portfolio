@@ -171,7 +171,7 @@
 		width: 90%;
 		height: fit-content;
 		flex-direction: column;
-		background-color: #e2fefc;
+		background-color: #effffe;
 		box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
 		margin-bottom: 16px;
 	}
@@ -187,7 +187,7 @@
 	.containerText {
 		/* display: flex;
 		flex-direction: column; */
-		background-color: #e2fefc;
+		background-color: #effffe;
 		padding-left: 12px;
 	}
 	.containerText h2 {
@@ -257,7 +257,7 @@
 
 	.sendButton {
 		appearance: button;
-		background-color: #e2fefc;
+		background-color: #effffe;
 		background-image: none;
 		border: 1px solid #000;
 		border-radius: 4px;
@@ -308,7 +308,7 @@
 	}
 	
 	.skillInfo{
-		background-color: #e2fefc;
+		background-color: #effffe;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		font-size: 13pt;
