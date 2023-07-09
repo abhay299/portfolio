@@ -9,7 +9,10 @@ const app = express();
 // const router = express.Router();
 
 app.use((req, res, next) => {
-	res.header("Access-Control-Allow-Credentials", true);
+	res.header({
+		"Access-Control-Allow-Credentials": true,
+		"Access-Control-Allow-Private-Network": true,
+	});
 	next();
 })
 
