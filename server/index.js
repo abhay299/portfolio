@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 		"Access-Control-Allow-Private-Network": true,
 	});
 	next();
-})
+});
 
 app.use(express.json());
 app.use(cors({
