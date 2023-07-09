@@ -32,7 +32,7 @@ const Home = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		// console.log(inputs)
+		if (err) { };
 
 		if (inputs.name === '' || inputs.email === '' || inputs.comment === '') {
 			return alert("Please fill out all fields.")
