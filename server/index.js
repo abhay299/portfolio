@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(cors({
 	// origin: "http://localhost:3000"
-	origin: "https://abhay-gupta.netlify.app/"
+	origin: "https://abhay-gupta.netlify.app"
 }));
 
 app.use(cookieParser());
