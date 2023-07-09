@@ -48,7 +48,7 @@
 	}
 
 	.project p{
-		margin: 0px 6px 12px 6px;
+		margin: 0px 6px 12px 10px;
 		font-size: 16pt;
 	}
 	
@@ -69,6 +69,7 @@
 		text-align:left;
 		font-size: 14pt;
 		font-weight: 400;
+		padding: 2px 4px 0px 4px;
 	}
 
 	.projectFooter{
