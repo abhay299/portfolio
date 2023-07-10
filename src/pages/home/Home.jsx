@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Axios from 'axios';
 import './home.css';
 import smLogo from '../../assets/Socials/SM-RegisterPage.png';
@@ -11,59 +11,28 @@ import { useForm } from 'react-hook-form';
 const Home = () => {
 	const navigate = useNavigate();
 
-	const { register, handleSubmit, formState: { errors } } = useForm();
+	const { register, handleSubmit, reset, formState: { errors } } = useForm({
+		defaultValues: {
+			name: '',
+			email: '',
+			comment: '',
+		},
+	});
 
 	const onSubmit = async (data) => {
 
 		try {
 			await Axios.post("http://localhost:8800/", data);
+			alert("Message Sent!");
+			reset();
 		} catch (err) {
 			console.log(err);
+			alert("Something went wrong. Your submission has failed.")
 		}
 	};
 
-	// console.log(watch({ register }))
-
-	// const [inputs, setInputs] = useState({
-	// 	name: "",
-	// 	email: "",
-	// 	comment: "",
-	// });
-
 	// Regex to check email validity
 	let regEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g;
-
-	// const [err, setErr] = useState(null);
-
-	// const handleChange = (e) => {
-	// 	setInputs(prev => ({
-	// 		...prev, [e.target.name]: e.target.value
-	// 	}));
-	// };
-
-	// const handleSubmit = async (e) => {
-	// 	e.preventDefault();
-
-	// 	if (err) { };
-
-	// 	if (inputs.name === '' || inputs.email === '' || inputs.comment === '') {
-	// 		return alert("Please fill out all fields.")
-	// 	} else if (!regEmail.test(inputs.email)) {
-	// 		return alert("Please enter a valid Email address.")
-	// 	}
-	// 	try {
-	// 		await Axios.post("http://localhost:8800/", inputs);
-	// 	} catch (err) {
-	// 		setErr(err.response.data)
-	// 	}
-
-	// 	setInputs({
-	// 		name: '',
-	// 		email: '',
-	// 		comment: ''
-	// 	});
-	// 	alert("Message sent!");
-	// }
 
 	return (
 		<div className='Home'>
@@ -126,37 +95,31 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-			<div className='MailMe'>
+			<div className='MailMeHeader'>
 				<h1>Drop me a message!</h1>
 				<p>Like my work or want to connect, just let me know.</p>
-				{/* <form>
-					<input name='name' value={inputs.name} type="text" className='formInput'
-						placeholder='Enter your name' onChange={handleChange} required />
-					<input name='email' value={inputs.email} type="email" className='formInput'
-						placeholder='Enter your email' onChange={handleChange} required />
-					<textarea name='comment' value={inputs.comment} className='formInput' onChange={handleChange}
-						placeholder='Enter your message' required></textarea>
-					<button type='submit' className="sendButton"
-						onClick={handleSubmit}>Send</button>
-				</form> */}
-				<form onSubmit={handleSubmit(onSubmit)}>
-					<input className='FormInput' placeholder='Your name'
-						{...register('name', { required: true, maxLength: 60 })} />
-					{errors.name?.type === "required" && (
-						<p role="alert">Your name is required</p>
-					)}
-					{/* {errors.name && <span> Please fill out this field. </span>} */}
-
-					<input className='FormInput' placeholder='Your email address'
-						{...register('email', { required: true, maxLength: 100, pattern: regEmail })} />
-					{errors.email && <span> Please fill out this field.</span>}
-
-					<input className='FormInput' placeholder='Hi! We like some of your work, we would like to collaborate.'
-						{...register('comment', { required: true, })} />
-					{errors.comment && <span> Please fill out this field.</span>}
-
-					<input type='submit' />
-				</form>
+				<div className='MailMe-InnerContent'>
+					<form onSubmit={handleSubmit(onSubmit)}>
+						<div className='Form-Row'>
+							{
+								<input className='Abhay FormInput' placeholder='Your name'
+									{...register('name', { required: true, maxLength: 60 })} />
+							}
+							{errors.name?.type === "required" && (
+								<p role="alert">Your name is required</p>
+							)}
+							<input className='Abhay FormInput' placeholder='Your email address'
+								{...register('email', { required: true, maxLength: 100, pattern: regEmail })} />
+							{errors.email && <p> Please fill out this field correctly.</p>}
+						</div>
+						<div className='Form-Row'>
+							<textarea className='FormInput' placeholder='Hi! We like some of your work, we would like to collaborate.'
+								{...register('comment', { required: true, })} />
+							{errors.comment && <p> Please fill out this field.</p>}
+						</div>
+						<input className='SendButton' type='submit' />
+					</form>
+				</div>
 			</div>
 			<div className='Skill'>
 				<h2>Tech Skills</h2>
