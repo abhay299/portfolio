@@ -56,9 +56,8 @@ const Home = () => {
 			<div className='info'>
 				<p>Hey, I'm</p>
 				<h1>Abhay Gupta</h1>
-				Full Stack Web developer.
-				<p><br />
-					Passionate about creating functional websites | Eager to contribute and grow professionally.</p>
+				<h2>Full Stack Web developer. </h2>
+				<p>Passionate about creating functional websites | Eager to contribute and grow professionally.</p>
 			</div>
 			<div className='work'>
 				<h1>
