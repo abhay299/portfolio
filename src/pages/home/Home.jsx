@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Axios from 'axios';
 import './home.css';
 import smLogo from '../../assets/Socials/SM-RegisterPage.png';
 import baLogo from '../../assets/BookAmigo/BA-logo.png'
 import portfolioLogo from '../../assets/Portfolio/portfolioLogo.png'
 import crmLogo from '../../assets/CRM/CRM-homePage.png'
-import { useFormAction, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { async } from 'q';
 
 const Home = () => {
 	const navigate = useNavigate();
 
-	const { register, handleSubmit, watch, formState: { errors } } = useForm();
+	const { register, handleSubmit, formState: { errors } } = useForm();
 
 	const onSubmit = async (data) => {
 
@@ -25,22 +24,22 @@ const Home = () => {
 
 	// console.log(watch({ register }))
 
-	const [inputs, setInputs] = useState({
-		name: "",
-		email: "",
-		comment: "",
-	});
+	// const [inputs, setInputs] = useState({
+	// 	name: "",
+	// 	email: "",
+	// 	comment: "",
+	// });
 
 	// Regex to check email validity
 	let regEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g;
 
-	const [err, setErr] = useState(null);
+	// const [err, setErr] = useState(null);
 
-	const handleChange = (e) => {
-		setInputs(prev => ({
-			...prev, [e.target.name]: e.target.value
-		}));
-	};
+	// const handleChange = (e) => {
+	// 	setInputs(prev => ({
+	// 		...prev, [e.target.name]: e.target.value
+	// 	}));
+	// };
 
 	// const handleSubmit = async (e) => {
 	// 	e.preventDefault();
