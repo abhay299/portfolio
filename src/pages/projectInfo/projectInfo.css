@@ -48,28 +48,33 @@
 	}
 
 	.project p{
-		margin: 0px 6px 12px 10px;
+		margin: 0px 6px 12px 6px;
 		font-size: 16pt;
 	}
 	
-	.project img{
+	/* .project img{
 		width: 80%;
 		border-radius: 10px;
 		margin: 10px 0px 10px 0px;
-	}
+	} */
 
-	.projectContainer{
+	.textContainer{
 		width: 95%;
 		background-color: white;
 	}
 	
 	
-	.projectContainer p{
+	.textContainer p{
 		color: #3D155F;
 		text-align:left;
 		font-size: 14pt;
 		font-weight: 400;
 		padding: 2px 4px 0px 4px;
+	}
+
+	.carouselContainer {
+		width: 95%;
+		margin-top: 0.5rem;
 	}
 
 	.projectFooter{

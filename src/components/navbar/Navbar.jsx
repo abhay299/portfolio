@@ -3,30 +3,11 @@ import './navbar.css';
 const Navbar = () => {
 
 	return (
-		// <div className='navbar'>
-		// 	<div className='navbarItems'>
-		// 		{
-		// 			location.pathname === current.home
-		// 				? <Link to={"/"} style={{ color: '#F1C376', 'textDecoration': 'underline' }}>Home</Link>
-		// 				: <Link to={"/"}>Home</Link>
-		// 		}
-		// 		{
-		// 			location.pathname === current.project || location.pathname === current.projectID
-		// 				? <Link to={"/projects"} style={{ color: '#F1C376', 'textDecoration': 'underline' }}>Projects</Link>
-		// 				: <Link to={"/projects"}>Projects</Link>
-		// 		}
-		// 		{
-		// 			location.pathname === current.about
-		// 				? <Link to={"/aboutMe"} style={{ color: '#F1C376', 'textDecoration': 'underline' }}>About Me</Link>
-		// 				: <Link to={"/aboutMe"}>About Me</Link>
-		// 		}
-		// 	</div>
-		// </div>
 
 		<div>
 			<input type='checkbox' id='active' />
 			<label htmlFor='active' className='menu-btn'><span></span></label>
-			<label htmlFor='active' className='close'></label>
+			{/* <label htmlFor='active' className='close'></label> */}
 			<div className='wrapper'>
 				<ul>
 					<li><a href='/'>Home</a></li>
@@ -46,7 +27,6 @@ const Navbar = () => {
 				</ul>
 			</div>
 		</div>
-
 	)
 };
 

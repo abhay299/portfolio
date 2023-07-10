@@ -22,6 +22,7 @@ import navbarPortfolio from '../assets/Portfolio/navbar.png'
 export const projectList = [
 	{
 		name: "Socials",
+		imgLen: 4,
 		image: socialsLogo,
 		image1: socialsReg,
 		image2: socialsLogin,
@@ -32,6 +33,7 @@ export const projectList = [
 	},
 	{
 		name: "BookAmigo",
+		imgLen: 6,
 		image: bookAmigoLogo,
 		image1: bookAmigoHotel,
 		image2: bookAmigoHotelList,
@@ -44,6 +46,7 @@ export const projectList = [
 	},
 	{
 		name: "Portfolio",
+		imgLen: 2,
 		image: portfolio,
 		image1: navbarPortfolio,
 		desc: "This is my portfolio that I built to connect with more people and showcase my knowledge and work to them. You can look around to find out more about my website.",
@@ -52,6 +55,7 @@ export const projectList = [
 	},
 	{
 		name: "CRM App",
+		imgLen: 6,
 		image: crmLogo,
 		image1: crmLogin,
 		image2: crmAdd,
@@ -64,6 +68,7 @@ export const projectList = [
 	},
 	{
 		name: "Calculator",
+		imgLen: 2,
 		image: calculator,
 		image1: calculator2,
 		desc: "As you can see it's a very basic calculator app that performs the elementary operations. It's among the first few static web apps that I built using ReactJS. Although, it's not that simple as I've used Redux in this project to manage state of operations. Also while building the app I found a bug which crashed the app, it was happening while pressing the 'Period' button so, I resolved that error with a optional chaining operator '?.' to check whether it's null/undefined state.",

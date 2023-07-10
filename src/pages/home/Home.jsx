@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
 import './home.css';
-// import { Alert } from '@mui/material';
 import smLogo from '../../assets/Socials/SM-RegisterPage.png';
 import baLogo from '../../assets/BookAmigo/BA-logo.png'
 import portfolioLogo from '../../assets/Portfolio/portfolioLogo.png'
@@ -16,7 +15,6 @@ const Home = () => {
 		email: "",
 		comment: "",
 	});
-
 
 	// Regex to check email validity
 	let regEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

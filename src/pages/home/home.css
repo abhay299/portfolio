@@ -129,6 +129,7 @@
 @media only screen and (max-width: 680px){
 	/* Main Component */
 	.home{
+		/* margin-top: -24px; */
 		background-color: white;
 	}
 

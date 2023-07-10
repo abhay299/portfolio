@@ -2,6 +2,8 @@ import './projectInfo.css'
 import { projectList } from '../../helpers/projectList';
 import { useNavigate, useParams } from 'react-router-dom';
 import { GitHub } from '@mui/icons-material';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Carousel from 'react-bootstrap/Carousel';
 
 const ProjectInfo = () => {
 
@@ -12,25 +14,119 @@ const ProjectInfo = () => {
 
 	const handleNext = () => {
 		navigate('/projects/' + (parseInt(id) + 1).toString());
-	}
+	};
 
 	const handlePrev = () => {
 		navigate('/projects/' + (parseInt(id) - 1).toString());
-	}
+	};
 
 	return (
 		<div className='project'>
 			<h1>{project.name}</h1>
 			<p>Stack: {project.stack}</p>
-			<div className='projectContainer'>
+			<div className='textContainer'>
 				<p>{project.desc}</p>
 			</div>
-			<img src={project.image} alt='' ></img>
-			<img src={project?.image1} alt='' ></img>
-			<img src={project?.image2} alt='' ></img>
-			<img src={project?.image3} alt='' ></img>
-			<img src={project?.image4} alt='' ></img>
-			<img src={project?.image5} alt='' ></img>
+			<div className='carouselContainer'>
+
+				{
+					(project.imgLen === 2) ?
+						<Carousel data-bs-theme="dark">
+							<Carousel.Item>
+								<img
+									className='d-block w-100'
+									src={project?.image}
+									alt='First slide'
+								/>
+							</Carousel.Item>
+							<Carousel.Item>
+								<img
+									className='d-block w-100'
+									src={project?.image1}
+									alt='Second slide'
+								/>
+							</Carousel.Item>
+						</Carousel>
+						: (project.imgLen === 4) ?
+							<Carousel data-bs-theme="dark">
+								<Carousel.Item>
+									<img
+										className='d-block w-100'
+										src={project?.image}
+										alt='First slide'
+									/>
+								</Carousel.Item>
+								<Carousel.Item>
+									<img
+										className='d-block w-100'
+										src={project?.image1}
+										alt='Second slide'
+									/>
+								</Carousel.Item>
+								<Carousel.Item>
+									<img
+										className='d-block w-100'
+										src={project?.image2}
+										alt='Third slide'
+									/>
+
+								</Carousel.Item>
+								<Carousel.Item>
+									<img
+										className='d-block w-100'
+										src={project?.image3}
+										alt='Fourth slide'
+									/>
+								</Carousel.Item>
+							</Carousel>
+							:
+							<Carousel data-bs-theme="dark">
+								<Carousel.Item>
+									<img
+										className='d-block w-100'
+										src={project?.image}
+										alt='First slide'
+									/>
+								</Carousel.Item>
+								<Carousel.Item>
+									<img
+										className='d-block w-100'
+										src={project?.image1}
+										alt='Second slide'
+									/>
+								</Carousel.Item>
+								<Carousel.Item>
+									<img
+										className='d-block w-100'
+										src={project?.image2}
+										alt='Third slide'
+									/>
+
+								</Carousel.Item>
+								<Carousel.Item>
+									<img
+										className='d-block w-100'
+										src={project?.image3}
+										alt='Fourth slide'
+									/>
+								</Carousel.Item>
+								<Carousel.Item>
+									<img
+										className='d-block w-100'
+										src={project?.image4}
+										alt='Fifth slide'
+									/>
+								</Carousel.Item>
+								<Carousel.Item>
+									<img
+										className='d-block w-100'
+										src={project?.image5}
+										alt='Sixth slide'
+									/>
+								</Carousel.Item>
+							</Carousel>
+				}
+			</div>
 			<div className='projectFooter'>
 				<button className='prevBtn' disabled={parseInt(id) === 0 ? true : false} onClick={handlePrev}>prev</button>
 				<a href={project.gitUrl}>

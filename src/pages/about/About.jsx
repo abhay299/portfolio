@@ -3,29 +3,6 @@ import './about.css';
 
 const About = () => {
 	return (
-		// <div className='page'>
-		// 	<div className='timeline'>
-		// 		<div className='timeline-group'>
-		// 			<span className='timeline-year-time' aria-hidden="true">
-		// 			</span>
-		// 			<div className='timeline-cards'>
-		// 				<div className='timeline-cards-card'>
-		// 					<header className='card-header'>
-		// 						<time className='time' dateTime='2010-02-02'>
-		// 							<span className='time-day'>2</span>
-		// 							<span className='time-month'>Feb</span>
-		// 						</time>
-		// 					</header>
-		// 					<div className='card-content'>
-		// 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-		// 							Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-		// 							when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-		// 					</div>
-		// 				</div>
-		// 			</div>
-		// 		</div>
-		// 	</div>
-		// </div>
 		<div className='about'>
 			<h1>A bit about myself</h1>
 			<ul>
@@ -38,7 +15,7 @@ const About = () => {
 						<br />
 						Worked on a Robotics based project to create a theme-based competition for <b>K-12</b> students.<br />
 						{/* Designed and developed a friendly robotic kit for the same using Raspberry Pi as a microprocessor.<br /> */}
-						Created a GUI using Kivy to ease up checking of the robotic kit’s functionality by <b>80%</b><br />
+						Created a GUI using Kivy to ease up checking of the robotic kit's functionality by <b>80%</b><br />
 						Created about <b>6</b> cycles of tasks in Webots Simulation, also used Image processing with libraries like NumPy, and OpenCV.
 					</div>
 				</li>
