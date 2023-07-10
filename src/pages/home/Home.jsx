@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Axios from 'axios';
 import './home.css';
 import smLogo from '../../assets/Socials/SM-RegisterPage.png';
