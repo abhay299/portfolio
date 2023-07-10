@@ -1,13 +1,13 @@
 /* For Desktop */
 @media only screen and (min-width: 720px){
 	/* Main Component */
-	.home{
+	.Home{
 		/* margin-top: -24px; */
 		background-color: white;
 	}
 
 	/* Info Component */
-	.info{
+	.Info{
 		/* background-image: url("https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"); */
 		/* background-image: url("https://images.unsplash.com/photo-1688413708993-39da5ee59315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60"); */
 		/* background-image: url("../../assets/Portfolio/pexels-junior-teixeira-2047905.jpg"); */
@@ -21,22 +21,22 @@
 		padding: 30px 8px 2px 8px;
 	}
 
-	.info h1{
+	.Info h1{
 		font-size: 40pt;
 		color: #122fa3;
 	}
 	
-	.info h2{
+	.Info h2{
 		font-size: 28pt;
 		color: #220f70;
 	}
 
-	.checkout svg{
+	.Checkout svg{
 		color: white;
 	}
 	
 	/* Work Component */
-	.work{
+	.Work{
 		display: flex;
 		flex-direction: column;
 		background-color: white;
@@ -45,7 +45,7 @@
 		/* padding: 0px 0px 0px 0px; */
 	}
 
-	.work h1{
+	.Work h1{
 		text-align: left;
 		padding-inline: 1rem;
 		font-weight: 600;
@@ -53,7 +53,7 @@
 		margin: 1.5rem 0rem 1.5rem 0rem;
 	}
 	
-	.projectCardContainer{
+	.ProjectCardContainer{
 		display: flex;
 		width: 90%;
 		height: fit-content;
@@ -63,7 +63,7 @@
 		margin-bottom: 16px;
 	}
 	
-	.projectCardContainer img {
+	.ProjectCardContainer img {
 		/* background-color: red; */
 		height: fit-content;
 		border-radius: 0;
@@ -71,22 +71,22 @@
 		object-position: center;
 	}
 
-	.containerText {
+	.ContainerText {
 		/* display: flex;
 		flex-direction: column; */
 		background-color: #effffe;
 		padding-left: 12px;
 	}
-	.containerText h2 {
+	.ContainerText h2 {
 		color: #334454;
 		text-align: center;
 		font-size: 1.6rem;
 	}
-	.containerText p {
+	.ContainerText p {
 		color: grey;
 		font-size: 1.1rem;
 	}
-	.containerText a {
+	.ContainerText a {
 		text-decoration:none;
 		color: midnightblue;
 		font-size: 1rem;
@@ -95,7 +95,7 @@
 	/* Feedback Component */
 	@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 	
-	.mailMe{
+	.MailMe{
 		display: flex;
 		width: 100%;
 		margin-top: 24px;
@@ -106,19 +106,19 @@
 		/* background-color: #122fa3; */
 	}
 
-	.mailMe p{
+	.MailMe p{
 		text-align: justify;
 		font-size: 14pt;
 		margin: 0px 8px 0px 8px;
 	}
 	
-	.mailMe form {
+	.MailMe form {
 		/* background-color: red; */
 		width: 70%; 
 		margin: 10px auto;
 	}
 	
-	.formInput {
+	.FormInput {
 		display: flex;
 		align-items: center;
 		margin-top: 10px;
@@ -134,15 +134,17 @@
 		transition: border-color .2s;
 	}
 
-	.mailMe textarea {
+	.MailMe textarea {
 		height: 80px;
 		font-size: 14pt;
 		line-height: 100%;
 		resize:vertical;
 	}
-	.formInput:focus { border-bottom:1px solid #122fa3; }
+	.FormInput:focus { 
+		border-bottom:1px solid #122fa3;
+	}
 
-	.sendButton {
+	/* .SendButton {
 		appearance: button;
 		background-color: #effffe;
 		background-image: none;
@@ -170,31 +172,72 @@
 		white-space: nowrap;
 	}
 
-	.sendButton:focus {
+	.SendButton:focus {
 		text-decoration: none;
 	}
 
-	.sendButton:hover {
+	.SendButton:hover {
 		text-decoration: none;
 	}
 
-	.sendButton:active {
+	.SendButton:active {
 		box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
 		outline: 0;
 	}
 
-	.sendButton:not([disabled]):active {
+	.SendButton:not([disabled]):active {
 		box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
 		transform: translate(2px, 2px);
+	} */
+	.SendButton {
+		--c:  #122fa3; /* the color*/
+		box-shadow: 0 0 0 .1em inset var(--c); 
+		--_g: linear-gradient(var(--c) 0 0) no-repeat;
+		background: 
+		  var(--_g) calc(var(--_p,0%) - 100%) 0%,
+		  var(--_g) calc(200% - var(--_p,0%)) 0%,
+		  var(--_g) calc(var(--_p,0%) - 100%) 100%,
+		  var(--_g) calc(200% - var(--_p,0%)) 100%;
+		background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+		outline-offset: .1em;
+		transition: background-size .4s, background-position 0s .4s;
+		font-family: system-ui, sans-serif;
+		font-size: 0rem;
+		cursor: pointer;
+		padding: 1em 6em;
+		font-weight: bold;
+		border: none;
+		display: inline-block;
 	}
+
+	.SendButton:hover {
+		--_p: 100%;
+		transition: background-position .4s, background-size 0s;
+		color: #fff;
+	}
+
+	.SendButton:active {
+		box-shadow: 0 0 9e9q inset #0a217b; 
+		background-color: var(--c);
+		color: #fff;
+	}
+
+	/* button {
+		font-family: system-ui, sans-serif;
+		font-size: 0rem;
+		cursor: pointer;
+		padding: 1em 6em;
+		font-weight: bold;
+		border: none;
+	} */
 	
 	/* Skill Component */
-	.skill{
+	.Skill{
 		/* background-color: red; */
 		padding: 6px 0px 6px 8px;
 	}
 	
-	.skillInfo{
+	.SkillInfo{
 		background-color: #effffe;
 		padding-top: 4px;
 		padding-bottom: 4px;
@@ -205,13 +248,13 @@
 
 @media only screen and (max-width: 680px){
 	/* Main Component */
-	.home{
+	.Home{
 		/* margin-top: -24px; */
 		background-color: white;
 	}
 
 	/* Info Component */
-	.info{
+	.Info{
 		background-image: url("https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60");
 		/* background-image: url("https://images.unsplash.com/photo-1688413708993-39da5ee59315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60"); */
 		/* background-image: url("https://images.unsplash.com/photo-1688494930045-328d0f95efe9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=60"); */
@@ -224,12 +267,12 @@
 		padding: 30px 8px 2px 8px;
 	}
 
-	.checkout svg{
+	.Checkout svg{
 		color: white;
 	}
 	
 	/* Work Component */
-	.work{
+	.Work{
 		display: flex;
 		flex-direction: column;
 		background-color:white;
@@ -238,13 +281,13 @@
 		padding: 0px 0px 0px 0px;
 	}
 
-	.work h1{
+	.Work h1{
 		text-align: left;
 		padding-inline: 1rem;
 		font-weight: 600;
 	}
 	
-	.projectCardContainer{
+	.ProjectCardContainer{
 		display: flex;
 		width: 90%;
 		height: fit-content;
@@ -254,7 +297,7 @@
 		margin-bottom: 16px;
 	}
 	
-	.projectCardContainer img {
+	.ProjectCardContainer img {
 		/* background-color: red; */
 		height: fit-content;
 		border-radius: 0;
@@ -262,22 +305,22 @@
 		object-position: center;
 	}
 
-	.containerText {
+	.ContainerText {
 		/* display: flex;
 		flex-direction: column; */
 		background-color: #effffe;
 		padding-left: 12px;
 	}
-	.containerText h2 {
+	.ContainerText h2 {
 		color: #334454;
 		text-align: center;
 		font-size: 1.6rem;
 	}
-	.containerText p {
+	.ContainerText p {
 		color: grey;
 		font-size: 1.1rem;
 	}
-	.containerText a {
+	.ContainerText a {
 		text-decoration:none;
 		color: midnightblue;
 		font-size: 1rem;
@@ -286,7 +329,7 @@
 	/* Feedback Component */
 	@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 	
-	.mailMe{
+	.MailMe{
 		display: flex;
 		width: 100%;
 		margin-top: 24px;
@@ -297,19 +340,19 @@
 		/* background-color: #122fa3; */
 	}
 
-	.mailMe p{
+	.MailMe p{
 		text-align: justify;
 		font-size: 14pt;
 		margin: 0px 8px 0px 8px;
 	}
 	
-	.mailMe form {
+	.MailMe form {
 		/* background-color: red; */
 		width: 70%; 
 		margin: 10px auto;
 	}
 	
-	.formInput {
+	.FormInput {
 		display: flex;
 		align-items: center;
 		margin-top: 10px;
@@ -325,15 +368,16 @@
 		transition: border-color .2s;
 	}
 
-	.mailMe textarea {
+	.MailMe textarea {
 		height: 80px;
 		font-size: 14pt;
 		line-height: 100%;
 		resize:vertical;
 	}
-	.formInput:focus { border-bottom:1px solid #122fa3; }
 
-	.sendButton {
+	.FormInput:focus { border-bottom:1px solid #122fa3; }
+
+	.SendButton {
 		appearance: button;
 		background-color: #effffe;
 		background-image: none;
@@ -361,31 +405,31 @@
 		white-space: nowrap;
 	}
 
-	.sendButton:focus {
+	.SendButton:focus {
 		text-decoration: none;
 	}
 
-	.sendButton:hover {
+	.SendButton:hover {
 		text-decoration: none;
 	}
 
-	.sendButton:active {
+	.SendButton:active {
 		box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
 		outline: 0;
 	}
 
-	.sendButton:not([disabled]):active {
+	.SendButton:not([disabled]):active {
 		box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
 		transform: translate(2px, 2px);
 	}
 	
 	/* Skill Component */
-	.skill{
+	.Skill{
 		/* background-color: red; */
 		padding: 6px 0px 6px 8px;
 	}
 	
-	.skillInfo{
+	.SkillInfo{
 		background-color: #effffe;
 		padding-top: 4px;
 		padding-bottom: 4px;

@@ -5,10 +5,25 @@ import smLogo from '../../assets/Socials/SM-RegisterPage.png';
 import baLogo from '../../assets/BookAmigo/BA-logo.png'
 import portfolioLogo from '../../assets/Portfolio/portfolioLogo.png'
 import crmLogo from '../../assets/CRM/CRM-homePage.png'
-import { useNavigate } from 'react-router-dom';
+import { useFormAction, useNavigate } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import { async } from 'q';
 
 const Home = () => {
 	const navigate = useNavigate();
+
+	const { register, handleSubmit, watch, formState: { errors } } = useForm();
+
+	const onSubmit = async (data) => {
+
+		try {
+			await Axios.post("http://localhost:8800/", data);
+		} catch (err) {
+			console.log(err);
+		}
+	};
+
+	// console.log(watch({ register }))
 
 	const [inputs, setInputs] = useState({
 		name: "",
@@ -17,7 +32,7 @@ const Home = () => {
 	});
 
 	// Regex to check email validity
-	let regEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	let regEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g;
 
 	const [err, setErr] = useState(null);
 
@@ -27,47 +42,47 @@ const Home = () => {
 		}));
 	};
 
-	const handleSubmit = async (e) => {
-		e.preventDefault();
+	// const handleSubmit = async (e) => {
+	// 	e.preventDefault();
 
-		if (err) { };
+	// 	if (err) { };
 
-		if (inputs.name === '' || inputs.email === '' || inputs.comment === '') {
-			return alert("Please fill out all fields.")
-		} else if (!regEmail.test(inputs.email)) {
-			return alert("Please enter a valid Email address.")
-		}
-		try {
-			await Axios.post("http://localhost:8800/", inputs);
-		} catch (err) {
-			setErr(err.response?.data)
-		}
+	// 	if (inputs.name === '' || inputs.email === '' || inputs.comment === '') {
+	// 		return alert("Please fill out all fields.")
+	// 	} else if (!regEmail.test(inputs.email)) {
+	// 		return alert("Please enter a valid Email address.")
+	// 	}
+	// 	try {
+	// 		await Axios.post("http://localhost:8800/", inputs);
+	// 	} catch (err) {
+	// 		setErr(err.response.data)
+	// 	}
 
-		setInputs({
-			name: '',
-			email: '',
-			comment: ''
-		});
-		alert("Message sent!");
-	}
+	// 	setInputs({
+	// 		name: '',
+	// 		email: '',
+	// 		comment: ''
+	// 	});
+	// 	alert("Message sent!");
+	// }
 
 	return (
-		<div className='home'>
-			<div className='info'>
+		<div className='Home'>
+			<div className='Info'>
 				<p>Hey, I'm</p>
 				<h1>Abhay Gupta</h1>
 				<h2>Full Stack Web developer. </h2>
 				<p>Passionate about creating functional websites | Eager to contribute and grow professionally.</p>
 			</div>
-			<div className='work'>
+			<div className='Work'>
 				<h1>
 					Over the months I've built a few projects...
 				</h1>
-				<div className='projectCardContainer'>
+				<div className='ProjectCardContainer'>
 					<img src={smLogo} alt='' onClick={() => {
 						navigate("/projects/0");
 					}} />
-					<div className='containerText'>
+					<div className='ContainerText'>
 						<h2>Socials</h2>
 						<p>
 							Full Stack Social Media App <br />
@@ -75,11 +90,11 @@ const Home = () => {
 						</p>
 					</div>
 				</div>
-				<div className='projectCardContainer'>
+				<div className='ProjectCardContainer'>
 					<img src={baLogo} alt='' onClick={() => {
 						navigate("/projects/1");
 					}} />
-					<div className='containerText'>
+					<div className='ContainerText'>
 						<h2>BookAmigo</h2>
 						<p>
 							Front-End Hotel booking App <br />
@@ -87,11 +102,11 @@ const Home = () => {
 						</p>
 					</div>
 				</div>
-				<div className='projectCardContainer'>
+				<div className='ProjectCardContainer'>
 					<img src={portfolioLogo} alt='' onClick={() => {
 						navigate("/projects/2");
 					}} />
-					<div className='containerText'>
+					<div className='ContainerText'>
 						<h2>My Portfolio</h2>
 						<p>
 							Full Stack Website <br />
@@ -99,11 +114,11 @@ const Home = () => {
 						</p>
 					</div>
 				</div>
-				<div className='projectCardContainer'>
+				<div className='ProjectCardContainer'>
 					<img src={crmLogo} alt='' onClick={() => {
 						navigate("/projects/3");
 					}} />
-					<div className='containerText'>
+					<div className='ContainerText'>
 						<h2>Django CRM</h2>
 						<p>
 							Back-End based CRM App with Django <br />
@@ -111,21 +126,11 @@ const Home = () => {
 						</p>
 					</div>
 				</div>
-				{/* <div className='projectCardContainer'>
-					<img src={calcLogo} alt='' />
-					<div className='containerText'>
-						<h2>Calculator</h2>
-						<p>
-							Calculator App made with React & Redux <br />
-							<a href='#'>Find out more...</a>
-						</p>
-					</div>
-				</div> */}
 			</div>
-			<div className='mailMe'>
+			<div className='MailMe'>
 				<h1>Drop me a message!</h1>
 				<p>Like my work or want to connect, just let me know.</p>
-				<form>
+				{/* <form>
 					<input name='name' value={inputs.name} type="text" className='formInput'
 						placeholder='Enter your name' onChange={handleChange} required />
 					<input name='email' value={inputs.email} type="email" className='formInput'
@@ -134,11 +139,29 @@ const Home = () => {
 						placeholder='Enter your message' required></textarea>
 					<button type='submit' className="sendButton"
 						onClick={handleSubmit}>Send</button>
+				</form> */}
+				<form onSubmit={handleSubmit(onSubmit)}>
+					<input className='FormInput' placeholder='Your name'
+						{...register('name', { required: true, maxLength: 60 })} />
+					{errors.name?.type === "required" && (
+						<p role="alert">Your name is required</p>
+					)}
+					{/* {errors.name && <span> Please fill out this field. </span>} */}
+
+					<input className='FormInput' placeholder='Your email address'
+						{...register('email', { required: true, maxLength: 100, pattern: regEmail })} />
+					{errors.email && <span> Please fill out this field.</span>}
+
+					<input className='FormInput' placeholder='Hi! We like some of your work, we would like to collaborate.'
+						{...register('comment', { required: true, })} />
+					{errors.comment && <span> Please fill out this field.</span>}
+
+					<input type='submit' />
 				</form>
 			</div>
-			<div className='skill'>
+			<div className='Skill'>
 				<h2>Tech Skills</h2>
-				<ul className='skillInfo'>
+				<ul className='SkillInfo'>
 					<li>
 						Front-End: ReactJS, HTML, CSS
 					</li>
@@ -148,7 +171,7 @@ const Home = () => {
 					</li>
 				</ul>
 				<h2>Languages</h2>
-				<ul className='skillInfo'>
+				<ul className='SkillInfo'>
 					<li>JavaScript, Python, Java, C</li>
 				</ul>
 			</div>
