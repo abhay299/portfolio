@@ -8,26 +8,35 @@ import Cookies from "universal-cookie";
 const app = express();
 // const router = express.Router();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+	origin: "https://abhay-develop.netlify.app"
+}));
+
 app.use((req, res, next) => {
-
-	const corsWhiteList = [
-		"http://localhost:3000",
-		"https://abhay-gupta.netlify.app",
-		"https://abhay-develop.netlify.app"
-	];
-
-	if (corsWhiteList.indexOf(req.headers.origin) !== -1) {
-		res.header("Access-Control-Allow-Origin", req.headers.origin)
-		res.header("Access-Control-Allow-Headers", 'Origin, X-Request-With, Content-Type, Accept');
-		res.header({
-			"Access-Control-Allow-Credentials": true,
-			"Access-Control-Allow-Private-Network": true,
-		});
-	}
+	res.header("Access-Control-Allow-Private-Network", true)
+	res.header("Access-Control-Allow-Origin", true)
 
 	next();
-});
+})
+// app.use((req, res, next) => {
+
+// 	const corsWhiteList = [
+// 		"http://localhost:3000",
+// 		"https://abhay-gupta.netlify.app",
+// 		"https://abhay-develop.netlify.app"
+// 	];
+
+// 	if (corsWhiteList.indexOf(req.headers.origin) !== -1) {
+// 		res.header("Access-Control-Allow-Origin", req.headers.origin)
+// 		res.header("Access-Control-Allow-Headers", 'Origin, X-Request-With, Content-Type, Accept');
+// 		res.header({
+// 			// "Access-Control-Allow-Credentials": true,
+// 			"Access-Control-Allow-Private-Network": true,
+// 		});
+// 	}
+
+// 	next();
+// });
 
 app.use(cookieParser());
 const cookies = new Cookies();
@@ -40,7 +49,7 @@ db.connect((err) => {
 // Add new feedback
 app.post('/', (req, res) => {
 
-	console.log("req:", req.body)
+	// console.log("req:", req.body)
 	const name = req.body.name;
 	const email = req.body.email;
 	const comment = req.body.comment;
