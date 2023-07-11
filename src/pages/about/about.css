@@ -3,24 +3,24 @@
 	
 	@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
-  .about {
+  .About {
     color: #000;;
     --bgColor: rgba(245, 245, 245);
     min-height: 100vh;
     display: grid;
     align-content: center;
-    gap: 1rem;
-    /* font-family: 'Poppins', sans-serif; */
-    padding: 1.5rem;
+    gap: 2rem;
+    font-family: 'Poppins', sans-serif;
+    padding: 2rem;
     color: #000;
     background: var(--bgColor);
   }
 
-  .about h1 {
+  .About h1 {
     text-align: center;
   }
 
-  .about ul {
+  .About ul {
     --col-gap: 2rem;
     --row-gap: 2rem;
     --line-w: 0.25rem;
@@ -29,12 +29,13 @@
     grid-auto-columns: max-content;
     column-gap: var(--col-gap);
     list-style: none;
-    width: min(60rem, 90%);
+    width: 98%;
     margin-inline: auto;
+    /* background-color: rgb(245, 73, 73); */
   }
 
   /* line */
-  .about ul::before {
+  .About ul::before {
     content: "";
     grid-column: 1;
     grid-row: 1 / span 20;
@@ -45,12 +46,12 @@
   /* columns*/
 
   /* row gaps */
-  .about ul li:not(:last-child) {
+  .About ul li:not(:last-child) {
     margin-bottom: var(--row-gap);
   }
 
   /* card */
-  .about ul li {
+  .About ul li {
     grid-column: 2;
     --inlineP: 1.5rem;
     margin-inline: var(--inlineP);
@@ -60,7 +61,7 @@
   }
 
   /* date */
-  ul li .date {
+  ul li .Date {
     --dateH: 3rem;
     height: var(--dateH);
     margin-inline: calc(var(--inlineP) * -1);
@@ -80,7 +81,7 @@
   }
 
   /* date flap */
-  ul li .date::before {
+  ul li .Date::before {
     content: "";
     width: var(--inlineP);
     aspect-ratio: 1;
@@ -94,7 +95,7 @@
   }
 
   /* circle */
-  ul li .date::after {
+    ul li .Date::after {
     content: "";
     position: absolute;
     width: 2rem;
@@ -108,27 +109,27 @@
     right: calc(100% + var(--col-gap) + var(--line-w) / 2);
   }
 
-  /* title desc */
-  ul li .title,
-  ul li .desc {
+  /* Title desc */
+  li .Title,
+  ul li .Desc {
     background: var(--bgColor);
     position: relative;
-    padding-inline: 1rem;
+    padding-inline: 1.5rem;
   }
-  ul li .title {
+  ul li .Title {
     overflow: hidden;
     padding-block-start: 1.5rem;
     padding-block-end: 1rem;
     font-weight: 500;
   }
-  ul li .desc {
+  ul li .Desc {
     padding-block-end: 1.5rem;
-    font-weight: 300;
+    /* font-weight: 300; */
   }
 
   /* shadows */
-  ul li .title::before,
-  ul li .desc::before {
+  ul li .Title::before,
+  ul li .Desc::before {
     content: "";
     position: absolute;
     width: 90%;
@@ -139,79 +140,70 @@
     filter: blur(4px);
     transform: translate(-50%, 50%);
   }
-  ul li .title::before {
+  ul li .Title::before {
     bottom: calc(100% + 0.125rem);
   }
 
-  ul li .desc::before {
-    z-index: -1;
-    bottom: 0.25rem;
+  ul li .Desc::before {
+    z-index: 0;
+    bottom: 0.3rem;
   }
 
   @media (min-width: 45rem) {
-    ul {
+    .About ul {
       grid-template-columns: 1fr var(--line-w) 1fr;
     }
-    ul::before {
+    .About ul::before {
       grid-column: 2;
     }
-    ul li:nth-child(odd) {
+    .About ul li:nth-child(odd) {
       grid-column: 1;
     }
-    ul li:nth-child(even) {
+    .About ul li:nth-child(even) {
       grid-column: 3;
     }
 
     /* start second card */
-    ul li:nth-child(2) {
+    .About ul li:nth-child(2) {
       grid-row: 2/4;
     }
 
-    ul li:nth-child(odd) .date::before {
+    ul li:nth-child(odd) .Date::before {
       clip-path: polygon(0 0, 100% 0, 100% 100%);
       left: 0;
     }
 
-    ul li:nth-child(odd) .date::after {
+    ul li:nth-child(odd) .Date::after {
       transform: translate(-50%, -50%);
       left: calc(100% + var(--col-gap) + var(--line-w) / 2);
     }
-    ul li:nth-child(odd) .date {
+    ul li:nth-child(odd) .Date {
       border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
     }
   }
-
-  .credits {
-    margin-top: 1rem;
-    text-align: right;
-  }
-  .credits a {
-    color: var(--color);
-  }
-
 }
 
 @media only screen and (max-width: 680px){
 	@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
-  .about {
+  .About {
     color: #000;;
     --bgColor: rgba(245, 245, 245);
     min-height: 100vh;
     display: grid;
     align-content: center;
     gap: 1rem;
-    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Poppins', sans-serif;
     padding: 1.5rem;
     color: #000;
     background: var(--bgColor);
   }
 
-  .about h1 {
+  .About h1 {
     text-align: center;
   }
 
-  .about ul {
+  .About ul {
     --col-gap: 1.25rem;
     --row-gap: 2rem;
     --line-w: 0.25rem;
@@ -220,12 +212,12 @@
     grid-auto-columns: max-content;
     column-gap: var(--col-gap);
     list-style: none;
-    width: min(60rem, 90%);
+    width: 98%;
     margin-inline: auto;
   }
 
   /* line */
-  .about ul::before {
+  .About ul::before {
     content: "";
     grid-column: 1;
     grid-row: 1 / span 20;
@@ -236,12 +228,12 @@
   /* columns*/
 
   /* row gaps */
-  .about ul li:not(:last-child) {
+  .About ul li:not(:last-child) {
     margin-bottom: var(--row-gap);
   }
 
   /* card */
-  .about ul li {
+  .About ul li {
     grid-column: 2;
     --inlineP: 0.5rem;
     margin-inline: var(--inlineP);
@@ -251,7 +243,7 @@
   }
 
   /* date */
-  ul li .date {
+  ul li .Date {
     --dateH: 3rem;
     height: var(--dateH);
     margin-inline: calc(var(--inlineP) * -1);
@@ -271,7 +263,7 @@
   }
 
   /* date flap */
-  ul li .date::before {
+  ul li .Date::before {
     content: "";
     width: var(--inlineP);
     aspect-ratio: 1;
@@ -285,7 +277,7 @@
   }
 
   /* circle */
-  ul li .date::after {
+  ul li .Date::after {
     content: "";
     position: absolute;
     width: 2rem;
@@ -299,27 +291,26 @@
     right: calc(100% + var(--col-gap) + var(--line-w) / 2);
   }
 
-  /* title desc */
-  ul li .title,
-  ul li .desc {
+  /* Title desc */
+  ul li .Title,
+  ul li .Desc {
     background: var(--bgColor);
     position: relative;
     padding-inline: 1rem;
   }
-  ul li .title {
+  ul li .Title {
     overflow: hidden;
     padding-block-start: 1.5rem;
     padding-block-end: 1rem;
     font-weight: 500;
   }
-  ul li .desc {
+  ul li .Desc {
     padding-block-end: 1.5rem;
-    font-weight: 300;
   }
 
   /* shadows */
-  ul li .title::before,
-  ul li .desc::before {
+  ul li .Title::before,
+  ul li .Desc::before {
     content: "";
     position: absolute;
     width: 90%;
@@ -330,11 +321,11 @@
     filter: blur(4px);
     transform: translate(-50%, 50%);
   }
-  ul li .title::before {
+  ul li .Title::before {
     bottom: calc(100% + 0.125rem);
   }
 
-  ul li .desc::before {
+  ul li .Desc::before {
     z-index: 0;
     bottom: 0.25rem;
   }

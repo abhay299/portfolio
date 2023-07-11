@@ -3,13 +3,13 @@ import './about.css';
 
 const About = () => {
 	return (
-		<div className='about'>
+		<div className='About'>
 			<h1>A bit about myself</h1>
 			<ul>
 				<li style={{ "--accent-color": "#41516C" }}>
-					<div className="date">2022-23</div>
-					<div className="title">IIT-Bombay (e-Yantra)</div>
-					<div className="desc">
+					<div className="Date">2022-23</div>
+					<div className="Title">IIT-Bombay (e-Yantra)</div>
+					<div className="Desc">
 						Role: Technical Assistant (5 months)
 						<br />
 						<br />
@@ -20,17 +20,17 @@ const About = () => {
 					</div>
 				</li>
 				<li style={{ "--accent-color": "#FBCA3E" }}>
-					<div className="date">2022</div>
-					<div className="title">Mumbai University - Vidyalankar Institute of Technology</div>
-					<div className="desc">
+					<div className="Date">2022</div>
+					<div className="Title">Mumbai University - Vidyalankar Institute of Technology</div>
+					<div className="Desc">
 						BE in Electronics Engineering<br />
 						Graduated in Aug with CGPA of <b>8.27</b><br />
 					</div>
 				</li>
 				<li style={{ "--accent-color": "#E24A68" }}>
-					<div className="date">2018-22</div>
-					<div className="title">UnderGrad Life</div>
-					<div className="desc">
+					<div className="Date">2018-22</div>
+					<div className="Title">UnderGrad Life</div>
+					<div className="Desc">
 						<b>Achievements</b>:
 						Secured <b>2nd</b> rank in Tantra vihar competition (intra college tech competition).<br />
 						Secured <b>2nd</b> rank in Algorhythmic Hackathon competition.<br />
@@ -39,17 +39,17 @@ const About = () => {
 					</div>
 				</li>
 				<li style={{ "--accent-color": "#1B5F8C" }}>
-					<div className="date">2017-18</div>
-					<div className="title">Jr. College - HSC</div>
-					<div className="desc">
+					<div className="Date">2017-18</div>
+					<div className="Title">Jr. College - HSC</div>
+					<div className="Desc">
 						Graduated with 70.90% in Science.<br />
 						Won  <b>1st</b> Prize in <b>400M</b> Hurdles in BCDAAA (Mumbai district) Athletics competition.
 					</div>
 				</li>
 				<li style={{ "--accent-color": "#4CADAD" }}>
-					<div className="date">2016</div>
-					<div className="title">High School - SSC</div>
-					<div className="desc">
+					<div className="Date">2016</div>
+					<div className="Title">High School - SSC</div>
+					<div className="Desc">
 						Graduated with <b>90.40%</b>.<br />
 						Won <b>1st</b> Prize in <b>400M</b> Hurdles in BCDAAA (Mumbai district) Athletics competition.
 					</div>
