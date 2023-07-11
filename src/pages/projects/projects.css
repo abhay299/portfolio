@@ -1,5 +1,5 @@
 /* For Tablet/desktop */
-@media only screen and (min-width: 720px){
+@media only screen and (min-width: 680px){
 	.projects {
 		display: flex;
 		flex-direction: column;
