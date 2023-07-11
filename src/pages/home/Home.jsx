@@ -29,7 +29,7 @@ const Home = () => {
 			reset();
 		} catch (err) {
 			console.log(err);
-			alert("Something went wrong. Your submission has failed because -> ", err);
+			alert(`Something went wrong. Your submission has failed because -> ${err}`);
 		}
 	};
 
