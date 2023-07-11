@@ -1,5 +1,5 @@
 import express from "express";
-// import cors from "cors";
+import cors from "cors";
 import db from "./connect.js";
 import moment from "moment/moment.js";
 import cookieParser from "cookie-parser";
@@ -8,7 +8,7 @@ import Cookies from "universal-cookie";
 const app = express();
 // const router = express.Router();
 app.use(express.json());
-// app.use()
+app.use(cors());
 app.use((req, res, next) => {
 
 	const corsWhiteList = [
