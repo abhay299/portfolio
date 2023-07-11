@@ -24,7 +24,7 @@ const Home = () => {
 	const onSubmit = async (data) => {
 
 		try {
-			await Axios.post("http://localhost:8800/", data);
+			await Axios.post("http://10.0.2.2:8800/", data);
 			alert("Message Sent!");
 			reset();
 		} catch (err) {
