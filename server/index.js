@@ -3,11 +3,12 @@ import express from "express";
 import db from "./connect.js";
 import moment from "moment/moment.js";
 import cookieParser from "cookie-parser";
+import Cookies from "universal-cookie";
 
 const app = express();
 // const router = express.Router();
 app.use(express.json());
-
+// app.use()
 app.use((req, res, next) => {
 
 	const corsWhiteList = [
@@ -29,6 +30,8 @@ app.use((req, res, next) => {
 });
 
 app.use(cookieParser());
+const cookies = new Cookies();
+cookies.set({ secure: true, sameSite: 'none' });
 db.connect((err) => {
 	if (err) throw err;
 	console.log("Database Connected!")
