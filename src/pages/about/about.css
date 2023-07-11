@@ -293,7 +293,7 @@
 
   /* Title desc */
   ul li .Title,
-  ul li .desc {
+  ul li .Desc {
     background: var(--bgColor);
     position: relative;
     padding-inline: 1rem;
@@ -315,7 +315,7 @@
     position: absolute;
     width: 90%;
     height: 0.5rem;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
     left: 50%;
     border-radius: 50%;
     filter: blur(4px);
@@ -326,7 +326,7 @@
   }
 
   ul li .Desc::before {
-    z-index: -1;
+    z-index: 0;
     bottom: 0.25rem;
   }
 }
