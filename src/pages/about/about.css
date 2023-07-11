@@ -10,7 +10,7 @@
     display: grid;
     align-content: center;
     gap: 2rem;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     padding: 2rem;
     color: #000;
     background: var(--bgColor);
@@ -193,7 +193,7 @@
     display: grid;
     align-content: center;
     gap: 1rem;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     padding: 1.5rem;
     color: #000;
     background: var(--bgColor);
