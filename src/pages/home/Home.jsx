@@ -19,6 +19,8 @@ const Home = () => {
 		},
 	});
 
+	// console.log(watch(register));
+
 	const onSubmit = async (data) => {
 
 		try {
@@ -27,7 +29,7 @@ const Home = () => {
 			reset();
 		} catch (err) {
 			console.log(err);
-			alert("Something went wrong. Your submission has failed.")
+			alert("Something went wrong. Your submission has failed because -> ", err);
 		}
 	};
 

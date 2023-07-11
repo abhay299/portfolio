@@ -113,7 +113,6 @@
 	}
 	
 	.MailMeHeader form {
-		background-color: red;
 		width: 100%; 
 		margin: 10px auto;
 	}
@@ -170,18 +169,17 @@
 		cursor: pointer;
 		width: 40%;
 		height: 4rem;
-		display: inline-block;
+		display: flex;
 		/* align-items: center; */
-		/* justify-content: center; */
+		justify-content: center;
 		/* place-content: center; */
 		font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
 		font-size: 14pt;
 		font-weight: 600;
 		line-height: 20px;
-		margin: 12px 260px;
+		margin: 12px auto;
 		overflow: visible;
 		padding: 12px 0px;
-		text-align: center;
 		text-transform: none;
 		touch-action: manipulation;
 		user-select: none;
@@ -358,8 +356,12 @@
 	
 	.MailMeHeader form {
 		/* background-color: red; */
-		width: 70%; 
+		width: 100%; 
 		margin: 10px auto;
+	}
+
+	.MailMe-InnerContent{
+		width: 60%;
 	}
 	
 	.FormInput {

@@ -6,10 +6,9 @@ import cookieParser from "cookie-parser";
 
 const app = express();
 // const router = express.Router();
+app.use(express.json());
 
 app.use((req, res, next) => {
-
-	express.json();
 
 	const corsWhiteList = [
 		"http://localhost:3000",
@@ -20,15 +19,16 @@ app.use((req, res, next) => {
 	if (corsWhiteList.indexOf(req.headers.origin) !== -1) {
 		res.header("Access-Control-Allow-Origin", req.headers.origin)
 		res.header("Access-Control-Allow-Headers", 'Origin, X-Request-With, Content-Type, Accept');
+		res.header({
+			"Access-Control-Allow-Credentials": true,
+			"Access-Control-Allow-Private-Network": true,
+		});
 	}
-	// res.header({
-	// 	"Access-Control-Allow-Credentials": true,
-	// 	"Access-Control-Allow-Private-Network": true,
-	// });
-	cookieParser();
+
 	next();
 });
 
+app.use(cookieParser());
 db.connect((err) => {
 	if (err) throw err;
 	console.log("Database Connected!")
@@ -37,6 +37,7 @@ db.connect((err) => {
 // Add new feedback
 app.post('/', (req, res) => {
 
+	console.log("req:", req.body)
 	const name = req.body.name;
 	const email = req.body.email;
 	const comment = req.body.comment;
