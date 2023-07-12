@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Axios from 'axios';
+// import Axios from 'axios';
 import './home.css';
 import smLogo from '../../assets/Socials/SM-RegisterPage.png';
 import baLogo from '../../assets/BookAmigo/BA-logo.png'
@@ -7,6 +7,12 @@ import portfolioLogo from '../../assets/Portfolio/portfolioLogo.png'
 import crmLogo from '../../assets/CRM/CRM-homePage.png'
 import me2 from '../../assets/Portfolio/me.JPG'
 import { useNavigate } from 'react-router-dom';
+
+const encode = (data) => {
+	return Object.keys(data)
+		.map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+		.join("&");
+}
 
 const Home = () => {
 	const navigate = useNavigate();
@@ -17,10 +23,12 @@ const Home = () => {
 		comment: "",
 	});
 
+
+
 	// Regex to check email validity
 	let regEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-	const [err, setErr] = useState(null);
+	// const [err, setErr] = useState(null);
 
 	const handleChange = (e) => {
 		setInputs(prev => ({
@@ -28,29 +36,47 @@ const Home = () => {
 		}));
 	};
 
-	const handleSubmit = async (e) => {
-		e.preventDefault();
-
-		if (err) { };
-
+	const handleSubmit = (e) => {
 		if (inputs.name === '' || inputs.email === '' || inputs.comment === '') {
 			return alert("Please fill out all fields.")
 		} else if (!regEmail.test(inputs.email)) {
 			return alert("Please enter a valid Email address.")
 		}
-		try {
-			await Axios.post("http://localhost:8800/", inputs);
-		} catch (err) {
-			setErr(err.response?.data)
-		}
 
-		setInputs({
-			name: '',
-			email: '',
-			comment: ''
-		});
-		alert("Message sent!");
-	}
+		fetch("/", {
+			method: "POST",
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			body: encode({ "form-name": "contact", inputs })
+		})
+			.then(() => alert("Success!"))
+			.catch(error => alert(error));
+
+		e.preventDefault();
+	};
+
+	// const handleSubmit = async (e) => {
+	// 	e.preventDefault();
+
+	// 	if (err) { };
+
+	// 	if (inputs.name === '' || inputs.email === '' || inputs.comment === '') {
+	// 		return alert("Please fill out all fields.")
+	// 	} else if (!regEmail.test(inputs.email)) {
+	// 		return alert("Please enter a valid Email address.")
+	// 	}
+	// 	try {
+	// 		await Axios.post("http://localhost:8800/", inputs);
+	// 	} catch (err) {
+	// 		setErr(err.response?.data)
+	// 	}
+
+	// 	setInputs({
+	// 		name: '',
+	// 		email: '',
+	// 		comment: ''
+	// 	});
+	// 	alert("Message sent!");
+	// }
 
 	return (
 		<div className='Home'>
@@ -123,7 +149,7 @@ const Home = () => {
 				<p>Like my work or want to connect, just let me know.</p>
 				<div className='MailMe-InnerContent'>
 
-					<form>
+					<form onSubmit={handleSubmit}>
 						<div className='Form-Row'>
 							<input name='name' value={inputs.name} type="text" className='Abhay FormInput'
 								placeholder='Enter your name' onChange={handleChange} required />
@@ -134,8 +160,7 @@ const Home = () => {
 							<textarea name='comment' value={inputs.comment} className='FormInput' onChange={handleChange}
 								placeholder='Enter your message' required></textarea>
 						</div>
-						<button type='submit' className="SendButton"
-							onClick={handleSubmit}>Send</button>
+						<button type='submit' className="SendButton">Send</button>
 					</form>
 				</div>
 			</div>
