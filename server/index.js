@@ -3,7 +3,6 @@ import cors from "cors";
 import db from "./connect.js";
 import moment from "moment/moment.js";
 import cookieParser from "cookie-parser";
-import Cookies from "universal-cookie";
 
 const app = express();
 // const router = express.Router();
@@ -30,17 +29,18 @@ app.use((req, res, next) => {
 });
 
 app.use(cookieParser());
-const cookies = new Cookies();
-cookies.set({ secure: true, sameSite: 'none' });
+// const cookies = new Cookies();
+// cookies.set({ secure: true, sameSite: 'none' });
 db.connect((err) => {
 	if (err) throw err;
 	console.log("Database Connected!")
 })
 
 // Add new feedback
+
 app.post('/', (req, res) => {
 
-	console.log("req:", req.body)
+	// console.log("req:", req.body)
 	const name = req.body.name;
 	const email = req.body.email;
 	const comment = req.body.comment;
@@ -53,6 +53,18 @@ app.post('/', (req, res) => {
 			} else {
 				res.send(err);
 			}
+		}
+	);
+});
+
+app.get('/api/feedback', (req, res) => {
+
+	// console.log("req:", req.body)
+
+	db.query("SELECT * FROM feedback", [],
+		(err, result) => {
+			if (err) return res.status(500).json(err);
+			return res.status(200).json(result);
 		}
 	);
 });
