@@ -50,8 +50,14 @@ const Home = () => {
 		})
 			.then(() => alert("Success!"))
 			.catch(error => alert(error));
+		console.log(inputs);
 
 		e.preventDefault();
+		setInputs({
+			name: '',
+			email: '',
+			comment: ''
+		});
 	};
 
 	// const handleSubmit = async (e) => {
@@ -149,8 +155,9 @@ const Home = () => {
 				<p>Like my work or want to connect, just let me know.</p>
 				<div className='MailMe-InnerContent'>
 
-					<form onSubmit={handleSubmit}>
+					<form onSubmit={handleSubmit} name='contact' method='POST' data-netlify='true'>
 						<div className='Form-Row'>
+							<input type='hidden' name='form-name' value="contact" />
 							<input name='name' value={inputs.name} type="text" className='Abhay FormInput'
 								placeholder='Enter your name' onChange={handleChange} required />
 							<input name='email' value={inputs.email} type="email" className='Abhay FormInput'
