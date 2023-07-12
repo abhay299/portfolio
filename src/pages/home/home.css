@@ -357,10 +357,10 @@
 	/* Feedback Component */
 	@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 	
-	.MailMe{
+	.MailMeHeader{
 		display: flex;
 		width: 100%;
-		margin-top: 24px;
+		margin: 2.2rem 0rem;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
@@ -368,16 +368,20 @@
 		/* background-color: #122fa3; */
 	}
 
-	.MailMe p{
+	.MailMeHeader p{
 		text-align: justify;
 		font-size: 14pt;
-		margin: 0rem 1.2rem;
+		margin: 1rem 1rem;
 	}
 	
-	.MailMe form {
+	.MailMe-InnerContent form {
 		/* background-color: red; */
-		width: 70%; 
+		width: 100%; 
 		margin: 10px auto;
+	}
+
+	.MailMe-InnerContent{
+		width: 70%;
 	}
 	
 	.FormInput {
@@ -396,12 +400,13 @@
 		transition: border-color .2s;
 	}
 
-	.MailMe textarea {
+	.MailMeHeader textarea {
 		height: 80px;
 		font-size: 14pt;
 		line-height: 100%;
 		resize:vertical;
 	}
+
 	.FormInput:focus { border-bottom:1px solid #122fa3; }
 
 	.SendButton {
@@ -415,6 +420,7 @@
 		color: midnightblue;
 		cursor: pointer;
 		width: 100%;
+		height: 3rem;
 		display: inline-block;
 		font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
 		font-size: 14pt;
