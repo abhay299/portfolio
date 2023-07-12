@@ -118,19 +118,26 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-			<div className='MailMe'>
+			<div className='MailMeHeader'>
 				<h1>Drop me a message!</h1>
 				<p>Like my work or want to connect, just let me know.</p>
-				<form>
-					<input name='name' value={inputs.name} type="text" className='FormInput'
-						placeholder='Enter your name' onChange={handleChange} required />
-					<input name='email' value={inputs.email} type="email" className='FormInput'
-						placeholder='Enter your email' onChange={handleChange} required />
-					<textarea name='comment' value={inputs.comment} className='FormInput' onChange={handleChange}
-						placeholder='Enter your message' required></textarea>
-					<button type='submit' className="SendButton"
-						onClick={handleSubmit}>Send</button>
-				</form>
+				<div className='MailMe-InnerContent'>
+
+					<form>
+						<div className='Form-Row'>
+							<input name='name' value={inputs.name} type="text" className='Abhay FormInput'
+								placeholder='Enter your name' onChange={handleChange} required />
+							<input name='email' value={inputs.email} type="email" className='Abhay FormInput'
+								placeholder='Enter your email' onChange={handleChange} required />
+						</div>
+						<div className='Form-Row'>
+							<textarea name='comment' value={inputs.comment} className='Abhay FormInput' onChange={handleChange}
+								placeholder='Enter your message' required></textarea>
+						</div>
+						<button type='submit' className="SendButton"
+							onClick={handleSubmit}>Send</button>
+					</form>
+				</div>
 			</div>
 			<div className='Skill'>
 				<h2>Tech Skills</h2>

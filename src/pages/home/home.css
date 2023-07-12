@@ -121,7 +121,7 @@
 	/* Feedback Component */
 	@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 	
-	.MailMe{
+	.MailMeHeader{
 		display: flex;
 		width: 100%;
 		margin-top: 24px;
@@ -132,16 +132,34 @@
 		/* background-color: #122fa3; */
 	}
 
-	.MailMe p{
+	.MailMeHeader p{
 		text-align: justify;
 		font-size: 14pt;
 		margin: 0px 8px 0px 8px;
 	}
 	
-	.MailMe form {
-		/* background-color: red; */
-		width: 70%; 
+	.MailMe-InnerContent form {
+		width: 100%; 
 		margin: 10px auto;
+	}
+
+	.MailMe-InnerContent{
+		display: flex;
+		/* background-color: #334454; */
+		width: 60%;
+	}
+
+	.Form-Row{
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.Form-Row:first-of-type .FormInput{
+		width: 45%;
+	}
+
+	.Abhay:not(:last-child){
+		margin-right: 50px;
 	}
 	
 	.FormInput {
@@ -158,16 +176,12 @@
 		font-size: 14pt;
 		outline: none;
 		transition: border-color .2s;
+		background-color: white;
 	}
-
-	.MailMe textarea {
-		height: 80px;
-		font-size: 14pt;
-		line-height: 100%;
-		resize:vertical;
+	
+	.FormInput:focus { 
+		border-bottom:1px solid #122fa3;
 	}
-	.FormInput:focus { border-bottom:1px solid #122fa3; }
-
 	.SendButton {
 		appearance: button;
 		background-color: #effffe;
