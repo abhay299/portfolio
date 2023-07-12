@@ -23,14 +23,14 @@ const Home = () => {
 
 	const onSubmit = async (data) => {
 
-		try {
-			await Axios.post("http://localhost:8800/", data);
-			alert("Message Sent!");
-			reset();
-		} catch (err) {
-			console.log(err);
-			alert(`Something went wrong. Your submission has failed because -> ${err}`);
-		}
+		// try {
+		// 	await Axios.post("https://abhay-develop.netlify.app/", data);
+		// 	alert("Message Sent!");
+		// 	reset();
+		// } catch (err) {
+		// 	console.log(err);
+		// 	alert(`Something went wrong. Your submission has failed because -> ${err}`);
+		// }
 	};
 
 	// Regex to check email validity

@@ -57,7 +57,7 @@ app.post('/', (req, res) => {
 	);
 });
 
-app.get('/api/feedback', (req, res) => {
+app.get('/feedback', (req, res) => {
 
 	// console.log("req:", req.body)
 
