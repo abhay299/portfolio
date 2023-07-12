@@ -5,6 +5,7 @@ import smLogo from '../../assets/Socials/SM-RegisterPage.png';
 import baLogo from '../../assets/BookAmigo/BA-logo.png'
 import portfolioLogo from '../../assets/Portfolio/portfolioLogo.png'
 import crmLogo from '../../assets/CRM/CRM-homePage.png'
+import me2 from '../../assets/Portfolio/me.JPG'
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
@@ -52,22 +53,27 @@ const Home = () => {
 	}
 
 	return (
-		<div className='home'>
-			<div className='info'>
-				<p>Hey, I'm</p>
-				<h1>Abhay Gupta</h1>
-				<h2>Full Stack Web developer. </h2>
-				<p>Passionate about creating functional websites | Eager to contribute and grow professionally.</p>
+		<div className='Home'>
+			<div className='InfoContainer'>
+				<div className='InfoText'>
+					<p>Hey, I'm</p>
+					<h1>Abhay Gupta</h1>
+					<h2>Full Stack Web developer. </h2>
+					<p>Passionate about creating functional websites | Eager to contribute and grow professionally.</p>
+				</div>
+				<div className='InfoImg'>
+					<img src={me2} alt='myPhoto' />
+				</div>
 			</div>
-			<div className='work'>
+			<div className='Work'>
 				<h1>
 					Over the months I've built a few projects...
 				</h1>
-				<div className='projectCardContainer'>
+				<div className='ProjectCardContainer'>
 					<img src={smLogo} alt='' onClick={() => {
 						navigate("/projects/0");
 					}} />
-					<div className='containerText'>
+					<div className='ContainerText'>
 						<h2>Socials</h2>
 						<p>
 							Full Stack Social Media App <br />
@@ -75,11 +81,11 @@ const Home = () => {
 						</p>
 					</div>
 				</div>
-				<div className='projectCardContainer'>
+				<div className='ProjectCardContainer'>
 					<img src={baLogo} alt='' onClick={() => {
 						navigate("/projects/1");
 					}} />
-					<div className='containerText'>
+					<div className='ContainerText'>
 						<h2>BookAmigo</h2>
 						<p>
 							Front-End Hotel booking App <br />
@@ -87,11 +93,11 @@ const Home = () => {
 						</p>
 					</div>
 				</div>
-				<div className='projectCardContainer'>
+				<div className='ProjectCardContainer'>
 					<img src={portfolioLogo} alt='' onClick={() => {
 						navigate("/projects/2");
 					}} />
-					<div className='containerText'>
+					<div className='ContainerText'>
 						<h2>My Portfolio</h2>
 						<p>
 							Full Stack Website <br />
@@ -99,11 +105,11 @@ const Home = () => {
 						</p>
 					</div>
 				</div>
-				<div className='projectCardContainer'>
+				<div className='ProjectCardContainer'>
 					<img src={crmLogo} alt='' onClick={() => {
 						navigate("/projects/3");
 					}} />
-					<div className='containerText'>
+					<div className='ContainerText'>
 						<h2>Django CRM</h2>
 						<p>
 							Back-End based CRM App with Django <br />
@@ -111,34 +117,24 @@ const Home = () => {
 						</p>
 					</div>
 				</div>
-				{/* <div className='projectCardContainer'>
-					<img src={calcLogo} alt='' />
-					<div className='containerText'>
-						<h2>Calculator</h2>
-						<p>
-							Calculator App made with React & Redux <br />
-							<a href='#'>Find out more...</a>
-						</p>
-					</div>
-				</div> */}
 			</div>
-			<div className='mailMe'>
+			<div className='MailMe'>
 				<h1>Drop me a message!</h1>
 				<p>Like my work or want to connect, just let me know.</p>
 				<form>
-					<input name='name' value={inputs.name} type="text" className='formInput'
+					<input name='name' value={inputs.name} type="text" className='FormInput'
 						placeholder='Enter your name' onChange={handleChange} required />
-					<input name='email' value={inputs.email} type="email" className='formInput'
+					<input name='email' value={inputs.email} type="email" className='FormInput'
 						placeholder='Enter your email' onChange={handleChange} required />
-					<textarea name='comment' value={inputs.comment} className='formInput' onChange={handleChange}
+					<textarea name='comment' value={inputs.comment} className='FormInput' onChange={handleChange}
 						placeholder='Enter your message' required></textarea>
-					<button type='submit' className="sendButton"
+					<button type='submit' className="SendButton"
 						onClick={handleSubmit}>Send</button>
 				</form>
 			</div>
-			<div className='skill'>
+			<div className='Skill'>
 				<h2>Tech Skills</h2>
-				<ul className='skillInfo'>
+				<ul className='SkillInfo'>
 					<li>
 						Front-End: ReactJS, HTML, CSS
 					</li>
@@ -148,7 +144,7 @@ const Home = () => {
 					</li>
 				</ul>
 				<h2>Languages</h2>
-				<ul className='skillInfo'>
+				<ul className='SkillInfo'>
 					<li>JavaScript, Python, Java, C</li>
 				</ul>
 			</div>

@@ -1,42 +1,66 @@
 /* For Desktop */
 @media only screen and (min-width: 680px){
 	/* Main Component */
-	.home{
+	.Home{
 		/* margin-top: -24px; */
 		background-color: white;
 	}
 
 	/* Info Component */
-	.info{
-		/* background-image: url("https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"); */
-		/* background-image: url("https://images.unsplash.com/photo-1688413708993-39da5ee59315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60"); */
-		/* background-image: url("../../assets/Portfolio/pexels-junior-teixeira-2047905.jpg"); */
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		background-color: lavender;
+	.InfoContainer{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
 		color: black;
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 22pt;
-		padding: 30px 8px 2px 8px;
+		/* padding: 2rem 2rem 1rem 3rem; */
+	}
+	.InfoText{
+		/* background-image: url("https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"); */
+		/* background-image: url("https://images.unsplash.com/photo-1688413708993-39da5ee59315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60"); */
+		/* background-image: url("../../assets/Portfolio/me.JPG"); */
+		/* background-repeat: no-repeat;
+		background-position: right;
+		background-size: contain; */
+		width: 100%;
+		height: 100%;
+		background-color: #E3DFFD;
+		color: black;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 22pt;
+		padding: 2rem 2rem 1rem 3rem;
 	}
 
-	.info h1{
+	.InfoText h1{
 		font-size: 40pt;
 		color: #122fa3;
 	}
 	
-	.info h2{
+	.InfoText h2{
 		font-size: 28pt;
 		color: #220f70;
 	}
 
-	.checkout svg{
+	.InfoImg{
+		width: 100%;
+		padding: 5rem 0rem;
+		background-color: #E5D1FA;
+	}
+
+	.InfoImg img{
+		display: block;
+		margin: auto;
+		width: fit-content;
+		height: 210px;
+	}
+
+	.Checkout svg{
 		color: white;
 	}
 	
 	/* Work Component */
-	.work{
+	.Work{
 		display: flex;
 		flex-direction: column;
 		background-color: white;
@@ -45,25 +69,25 @@
 		/* padding: 0px 0px 0px 0px; */
 	}
 
-	.work h1{
+	.Work h1{
 		text-align: left;
 		padding-inline: 1rem;
 		font-weight: 600;
 		font-size: 30pt;
-		margin: 1.5rem 0rem 1.5rem 0rem;
+		margin: 2rem 0rem;
 	}
 	
-	.projectCardContainer{
+	.ProjectCardContainer{
 		display: flex;
 		width: 90%;
 		height: fit-content;
 		flex-direction: column;
 		background-color: #effffe;
 		box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-		margin-bottom: 16px;
+		margin: 2.5rem;
 	}
 	
-	.projectCardContainer img {
+	.ProjectCardContainer img {
 		/* background-color: red; */
 		height: fit-content;
 		border-radius: 0;
@@ -71,22 +95,24 @@
 		object-position: center;
 	}
 
-	.containerText {
+	.ContainerText {
 		/* display: flex;
 		flex-direction: column; */
 		background-color: #effffe;
-		padding-left: 12px;
+		height: fit-content;
+		padding-left: 2rem;
 	}
-	.containerText h2 {
+	.ContainerText h2 {
 		color: #334454;
 		text-align: center;
-		font-size: 1.6rem;
+		font-size: 1.8rem;
+		margin-top: 1rem;
 	}
-	.containerText p {
+	.ContainerText p {
 		color: grey;
 		font-size: 1.1rem;
 	}
-	.containerText a {
+	.ContainerText a {
 		text-decoration:none;
 		color: midnightblue;
 		font-size: 1rem;
@@ -95,7 +121,7 @@
 	/* Feedback Component */
 	@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 	
-	.mailMe{
+	.MailMe{
 		display: flex;
 		width: 100%;
 		margin-top: 24px;
@@ -106,19 +132,19 @@
 		/* background-color: #122fa3; */
 	}
 
-	.mailMe p{
+	.MailMe p{
 		text-align: justify;
 		font-size: 14pt;
 		margin: 0px 8px 0px 8px;
 	}
 	
-	.mailMe form {
+	.MailMe form {
 		/* background-color: red; */
 		width: 70%; 
 		margin: 10px auto;
 	}
 	
-	.formInput {
+	.FormInput {
 		display: flex;
 		align-items: center;
 		margin-top: 10px;
@@ -134,15 +160,15 @@
 		transition: border-color .2s;
 	}
 
-	.mailMe textarea {
+	.MailMe textarea {
 		height: 80px;
 		font-size: 14pt;
 		line-height: 100%;
 		resize:vertical;
 	}
-	.formInput:focus { border-bottom:1px solid #122fa3; }
+	.FormInput:focus { border-bottom:1px solid #122fa3; }
 
-	.sendButton {
+	.SendButton {
 		appearance: button;
 		background-color: #effffe;
 		background-image: none;
@@ -170,31 +196,31 @@
 		white-space: nowrap;
 	}
 
-	.sendButton:focus {
+	.SendButton:focus {
 		text-decoration: none;
 	}
 
-	.sendButton:hover {
+	.SendButton:hover {
 		text-decoration: none;
 	}
 
-	.sendButton:active {
+	.SendButton:active {
 		box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
 		outline: 0;
 	}
 
-	.sendButton:not([disabled]):active {
+	.SendButton:not([disabled]):active {
 		box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
 		transform: translate(2px, 2px);
 	}
 	
 	/* Skill Component */
-	.skill{
+	.Skill{
 		/* background-color: red; */
-		padding: 6px 0px 6px 8px;
+		padding: 1rem 2.5rem 1rem 2.5rem;
 	}
 	
-	.skillInfo{
+	.SkillInfo{
 		background-color: #effffe;
 		padding-top: 4px;
 		padding-bottom: 4px;
@@ -205,56 +231,81 @@
 
 @media only screen and (max-width: 680px){
 	/* Main Component */
-	.home{
+	.Home{
 		/* margin-top: -24px; */
 		background-color: white;
 	}
 
 	/* Info Component */
-	.info{
-		background-image: url("https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60");
-		/* background-image: url("https://images.unsplash.com/photo-1688413708993-39da5ee59315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60"); */
-		/* background-image: url("https://images.unsplash.com/photo-1688494930045-328d0f95efe9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=60"); */
+	.InfoContainer{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding-bottom: 0.5rem;
+		
+	}
+	
+	.InfoText{
+		background-image: url("../../assets/Portfolio/luke-chesser-3rWagdKBF7U-unsplash.jpg");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
+		/* background-image: url("https://images.unsplash.com/photo-1688494930045-328d0f95efe9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=60"); */
 		color: white;
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 22px;
-		padding: 30px 8px 2px 8px;
+		padding: 2rem 2rem 0.5rem 1.5rem;
 	}
 
-	.checkout svg{
+	.InfoImg{
+		display: block;
+		width: 100%;
+		padding: 1.5rem 0rem 1.5rem 0rem;
+		margin: 0px auto;
+		/* background-image: url("../../assets/Portfolio/thomas-lefebvre-_0eMNseqmYk-unsplash.jpg"); */
+		/* background-position: bottom;
+		background-size: cover; */
+		background-color: #E6FFFD;
+	}
+
+	.InfoImg img{
+		display: block;
+		width: fit-content;
+		height:200px;
+		margin: 2px auto;
+	}
+
+	.Checkout svg{
 		color: white;
 	}
 	
 	/* Work Component */
-	.work{
+	.Work{
 		display: flex;
 		flex-direction: column;
 		background-color:white;
 		justify-content: center;
 		align-items: center;
-		padding: 0px 0px 0px 0px;
+		padding-top: 1rem;
 	}
 
-	.work h1{
+	.Work h1{
 		text-align: left;
 		padding-inline: 1rem;
 		font-weight: 600;
 	}
 	
-	.projectCardContainer{
+	.ProjectCardContainer{
 		display: flex;
 		width: 90%;
 		height: fit-content;
 		flex-direction: column;
 		background-color: #effffe;
 		box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-		margin-bottom: 16px;
+		margin: 1rem 0rem;
 	}
 	
-	.projectCardContainer img {
+	.ProjectCardContainer img {
 		/* background-color: red; */
 		height: fit-content;
 		border-radius: 0;
@@ -262,22 +313,22 @@
 		object-position: center;
 	}
 
-	.containerText {
+	.ContainerText {
 		/* display: flex;
 		flex-direction: column; */
 		background-color: #effffe;
 		padding-left: 12px;
 	}
-	.containerText h2 {
+	.ContainerText h2 {
 		color: #334454;
 		text-align: center;
 		font-size: 1.6rem;
 	}
-	.containerText p {
+	.ContainerText p {
 		color: grey;
 		font-size: 1.1rem;
 	}
-	.containerText a {
+	.ContainerText a {
 		text-decoration:none;
 		color: midnightblue;
 		font-size: 1rem;
@@ -286,7 +337,7 @@
 	/* Feedback Component */
 	@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 	
-	.mailMe{
+	.MailMe{
 		display: flex;
 		width: 100%;
 		margin-top: 24px;
@@ -297,19 +348,19 @@
 		/* background-color: #122fa3; */
 	}
 
-	.mailMe p{
+	.MailMe p{
 		text-align: justify;
 		font-size: 14pt;
-		margin: 0px 8px 0px 8px;
+		margin: 0rem 1.2rem;
 	}
 	
-	.mailMe form {
+	.MailMe form {
 		/* background-color: red; */
 		width: 70%; 
 		margin: 10px auto;
 	}
 	
-	.formInput {
+	.FormInput {
 		display: flex;
 		align-items: center;
 		margin-top: 10px;
@@ -325,15 +376,15 @@
 		transition: border-color .2s;
 	}
 
-	.mailMe textarea {
+	.MailMe textarea {
 		height: 80px;
 		font-size: 14pt;
 		line-height: 100%;
 		resize:vertical;
 	}
-	.formInput:focus { border-bottom:1px solid #122fa3; }
+	.FormInput:focus { border-bottom:1px solid #122fa3; }
 
-	.sendButton {
+	.SendButton {
 		appearance: button;
 		background-color: #effffe;
 		background-image: none;
@@ -361,31 +412,31 @@
 		white-space: nowrap;
 	}
 
-	.sendButton:focus {
+	.SendButton:focus {
 		text-decoration: none;
 	}
 
-	.sendButton:hover {
+	.SendButton:hover {
 		text-decoration: none;
 	}
 
-	.sendButton:active {
+	.SendButton:active {
 		box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
 		outline: 0;
 	}
 
-	.sendButton:not([disabled]):active {
+	.SendButton:not([disabled]):active {
 		box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
 		transform: translate(2px, 2px);
 	}
 	
 	/* Skill Component */
-	.skill{
+	.Skill{
 		/* background-color: red; */
-		padding: 6px 0px 6px 8px;
+		padding: 1rem 0rem 1rem 1.2rem;
 	}
 	
-	.skillInfo{
+	.SkillInfo{
 		background-color: #effffe;
 		padding-top: 4px;
 		padding-bottom: 4px;
