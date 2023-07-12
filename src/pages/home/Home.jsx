@@ -43,14 +43,14 @@ const Home = () => {
 			return alert("Please enter a valid Email address.")
 		}
 
-		fetch("", {
+		fetch("/", {
 			method: "POST",
 			headers: { "Content-Type": "application/x-www-form-urlencoded" },
 			body: encode({ "form-name": "contact", ...inputs })
 		})
 			.then(() => alert("Success!"))
 			.catch(error => alert(error));
-		console.log(inputs);
+		// console.log(...inputs);
 
 		e.preventDefault();
 		setInputs({
@@ -155,7 +155,7 @@ const Home = () => {
 				<p>Like my work or want to connect, just let me know.</p>
 				<div className='MailMe-InnerContent'>
 
-					<form onSubmit={handleSubmit} name='contact' method='POST' data-netlify='true'>
+					<form onSubmit={handleSubmit} name='contact'>
 						<div className='Form-Row'>
 							<input type='hidden' name='form-name' value="contact" />
 							<input name='name' value={inputs.name} type="text" className='Abhay FormInput'
