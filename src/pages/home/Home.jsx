@@ -131,7 +131,7 @@ const Home = () => {
 								placeholder='Enter your email' onChange={handleChange} required />
 						</div>
 						<div className='Form-Row'>
-							<textarea name='comment' value={inputs.comment} className='Abhay FormInput' onChange={handleChange}
+							<textarea name='comment' value={inputs.comment} className='FormInput' onChange={handleChange}
 								placeholder='Enter your message' required></textarea>
 						</div>
 						<button type='submit' className="SendButton"

@@ -124,7 +124,7 @@
 	.MailMeHeader{
 		display: flex;
 		width: 100%;
-		margin-top: 24px;
+		margin-top: 2rem;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
@@ -135,12 +135,12 @@
 	.MailMeHeader p{
 		text-align: justify;
 		font-size: 14pt;
-		margin: 0px 8px 0px 8px;
+		margin: 1rem 1rem;
 	}
 	
 	.MailMe-InnerContent form {
 		width: 100%; 
-		margin: 10px auto;
+		margin: 1rem auto;
 	}
 
 	.MailMe-InnerContent{
@@ -152,6 +152,7 @@
 	.Form-Row{
 		display: flex;
 		justify-content: space-around;
+		margin-bottom: 1rem;
 	}
 
 	.Form-Row:first-of-type .FormInput{
@@ -182,6 +183,8 @@
 	.FormInput:focus { 
 		border-bottom:1px solid #122fa3;
 	}
+
+	/* Send Component */
 	.SendButton {
 		appearance: button;
 		background-color: #effffe;
@@ -192,16 +195,19 @@
 		box-sizing: border-box;
 		color: midnightblue;
 		cursor: pointer;
-		width: 100%;
-		display: inline-block;
+		width: 40%;
+		height: 4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		/* place-content: center; */
 		font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
 		font-size: 14pt;
 		font-weight: 600;
 		line-height: 20px;
-		margin: 12px 0px 10px 0px;
+		margin: 12px auto;
 		overflow: visible;
 		padding: 12px 0px;
-		text-align: center;
 		text-transform: none;
 		touch-action: manipulation;
 		user-select: none;
