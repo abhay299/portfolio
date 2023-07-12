@@ -43,10 +43,10 @@ const Home = () => {
 			return alert("Please enter a valid Email address.")
 		}
 
-		fetch("/", {
+		fetch("", {
 			method: "POST",
 			headers: { "Content-Type": "application/x-www-form-urlencoded" },
-			body: encode({ "form-name": "contact", inputs })
+			body: encode({ "form-name": "contact", ...inputs })
 		})
 			.then(() => alert("Success!"))
 			.catch(error => alert(error));
