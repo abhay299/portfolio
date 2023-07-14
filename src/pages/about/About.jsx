@@ -10,7 +10,7 @@ const About = () => {
 					<div className="Date">2022-23</div>
 					<div className="Title">IIT-Bombay (e-Yantra)</div>
 					<div className="Desc">
-						Role: Technical Assistant (5 months)
+						Role: Technical Assistant (<b>5</b> months)
 						<br />
 						<br />
 						Worked on a Robotics based project to create a theme-based competition for <b>K-12</b> students.<br />
@@ -39,9 +39,9 @@ const About = () => {
 					</div>
 				</li>
 				<li style={{ "--accent-color": "#1B5F8C" }}>
-					<div className="Date">2017-18</div>
-					<div className="Title">Jr. College - HSC</div>
-					<div className="Desc">
+					<div className="date">2017-18</div>
+					<div className="title">Jr. College - HSC</div>
+					<div className="desc">
 						Graduated with 70.90% in Science.<br />
 						Won  <b>1st</b> Prize in <b>400M</b> Hurdles in BCDAAA (Mumbai district) Athletics competition.
 					</div>

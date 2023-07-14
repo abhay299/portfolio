@@ -6,7 +6,7 @@
 		width: 100%;
 		align-items: center;
 		justify-content: center;
-		padding: 0px 0px 0px 0px;
+		/* padding: 0px 0px 0px 0px; */
 		background-color:#ffeaf7;
 	}
 
@@ -14,15 +14,15 @@
 		text-align: left;
 		padding-inline: 1rem;
 		font-weight: 500;
-		font-size: 1.9rem;
+		font-size: 2.4rem;
 		margin: 2rem 0rem 1rem 0rem;
 	}
 
 	.projects p {
 		color: grey;
 		line-height: 1rem;
-		font-size: small;
-		padding-inline: 1rem;
+		font-size: 0.8rem;
+		padding-inline: 3rem;
 	}
 	
 	.projectItem {
@@ -33,7 +33,7 @@
 		/* background-color: red; */
 		background-color: #FDF4F5;
 		box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-		margin-bottom: 16px;
+		margin: 2rem 0rem;
 	}
 	
 	.projectItem img {
@@ -47,7 +47,7 @@
 		font-size: 22px;
 		color:#334454;
 		text-align: center;
-		font-size: 1.6rem;
+		font-size: 2rem;
 	}
 
 	.projectItem p {

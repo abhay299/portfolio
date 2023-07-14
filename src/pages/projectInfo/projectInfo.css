@@ -1,6 +1,6 @@
 /* For Desktop */
-@media only screen and (min-width:680px){
-	.project{
+@media only screen and (min-width: 720px) {
+	.project {
 		display: flex;
 		width: 100%;
 		/* height: calc(100vh-100px); */
@@ -10,62 +10,64 @@
 		flex-direction: column;
 		background-color: #f3ebfa;
 	}
-	
-	.project h1{
+
+	.Project h1 {
 		/* color:midnightblue; */
 		color: #17669f;
 		font-size: 34pt;
 		margin-top: 50px;
 	}
 
-	.project p{
+	.Project p {
 		margin: 0px 6px 12px 6px;
 		font-size: 16pt;
 	}
-	
-	/* .project img{
+
+	/* .Project img{
 		width: 80%;
 		border-radius: 10px;
 		margin: 10px 0px 10px 0px;
 	} */
 
-	.textContainer{
+	.TextContainer {
 		width: 95%;
+		margin: 1.5rem 0rem;
 		background-color: white;
 	}
-	
-	
-	.textContainer p{
-		color: #3D155F;
-		text-align:left;
+
+	.TextContainer p {
+		color: #3d155f;
+		text-align: left;
 		font-size: 14pt;
 		font-weight: 400;
 		padding: 2px 4px 0px 4px;
 	}
 
-	.carouselContainer {
+	.CarouselContainer {
 		width: 95%;
-		margin-top: 0.5rem;
+		margin: 1rem 0rem;
 	}
 
-	.projectFooter{
+	.ProjectFooter {
 		display: flex;
 		width: 95%;
 		justify-content: space-between;
-		margin: 0.5rem 0rem 0.5rem 0rem;
+		margin: 1rem 0rem;
+		/* margin: 0.5rem 0rem 0.5rem 0rem; */
 		/* background-color: red; */
 	}
 
-	.projectFooter a{
+	.ProjectFooter a {
 		margin-top: 9px;
 		color: black;
 	}
 
-	.nextBtn{
+	.NextBtn {
 		align-items: center;
-		background: #FFFFFF;
-		border: 0 solid #E2E8F0;
-		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+		background: #ffffff;
+		border: 0 solid #e2e8f0;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+			0 2px 4px -1px rgba(0, 0, 0, 0.06);
 		box-sizing: border-box;
 		color: #000;
 		display: inline-flex;
@@ -86,17 +88,19 @@
 		touch-action: manipulation;
 	}
 
-	.nextBtn :disabled, button[disabled]{
+	.NextBtn :disabled,
+	button[disabled] {
 		background-color: rgb(202, 202, 202);
 	}
 
-	.prevBtn{
+	.PrevBtn {
 		align-items: center;
-		background: #FFFFFF;
-		border: 0 solid #E2E8F0;
-		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+		background: #ffffff;
+		border: 0 solid #e2e8f0;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+			0 2px 4px -1px rgba(0, 0, 0, 0.06);
 		box-sizing: border-box;
-		color: #1A202C;
+		color: #1a202c;
 		display: inline-flex;
 		font-family: Inter, sans-serif;
 		font-size: 1rem;
@@ -115,14 +119,15 @@
 		touch-action: manipulation;
 	}
 
-	.prevBtn :disabled, button[disabled]{
+	.PrevBtn :disabled,
+	button[disabled] {
 		background-color: rgb(202, 202, 202);
 	}
 }
 
 /* For Mobile device */
-@media only screen and (max-width: 680px){
-	.project{
+@media only screen and (max-width: 680px) {
+	.Project {
 		display: flex;
 		width: 100%;
 		/* height: calc(100vh-100px); */
@@ -132,62 +137,63 @@
 		flex-direction: column;
 		background-color: #f3ebfa;
 	}
-	
-	.project h1{
+
+	.Project h1 {
 		/* color:midnightblue; */
 		color: #17669f;
 		font-size: 34pt;
 		margin-top: 50px;
 	}
 
-	.project p{
+	.Project p {
 		margin: 0px 6px 12px 6px;
 		font-size: 16pt;
 	}
-	
-	/* .project img{
+
+	/* .Project img{
 		width: 80%;
 		border-radius: 10px;
 		margin: 10px 0px 10px 0px;
 	} */
 
-	.textContainer{
+	.TextContainer {
 		width: 95%;
 		background-color: white;
+		margin: 1rem 0rem;
 	}
-	
-	
-	.textContainer p{
-		color: #3D155F;
-		text-align:left;
+
+	.TextContainer p {
+		color: #3d155f;
+		text-align: left;
 		font-size: 14pt;
 		font-weight: 400;
 		padding: 2px 4px 0px 4px;
 	}
 
-	.carouselContainer {
+	.CarouselContainer {
 		width: 95%;
-		margin-top: 0.5rem;
+		margin: 1rem 0rem;
 	}
 
-	.projectFooter{
+	.ProjectFooter {
 		display: flex;
 		width: 95%;
 		justify-content: space-between;
-		margin: 0.5rem 0rem 0.5rem 0rem;
+		margin: 1rem 0rem;
 		/* background-color: red; */
 	}
 
-	.projectFooter a{
+	.ProjectFooter a {
 		margin-top: 9px;
 		color: black;
 	}
 
-	.nextBtn{
+	.NextBtn {
 		align-items: center;
-		background: #FFFFFF;
-		border: 0 solid #E2E8F0;
-		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+		background: #ffffff;
+		border: 0 solid #e2e8f0;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+			0 2px 4px -1px rgba(0, 0, 0, 0.06);
 		box-sizing: border-box;
 		color: #000;
 		display: inline-flex;
@@ -208,17 +214,19 @@
 		touch-action: manipulation;
 	}
 
-	.nextBtn :disabled, button[disabled]{
+	.NextBtn :disabled,
+	button[disabled] {
 		background-color: rgb(202, 202, 202);
 	}
 
-	.prevBtn{
+	.PrevBtn {
 		align-items: center;
-		background: #FFFFFF;
-		border: 0 solid #E2E8F0;
-		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+		background: #ffffff;
+		border: 0 solid #e2e8f0;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+			0 2px 4px -1px rgba(0, 0, 0, 0.06);
 		box-sizing: border-box;
-		color: #1A202C;
+		color: #1a202c;
 		display: inline-flex;
 		font-family: Inter, sans-serif;
 		font-size: 1rem;
@@ -237,8 +245,8 @@
 		touch-action: manipulation;
 	}
 
-	.prevBtn :disabled, button[disabled]{
+	.PrevBtn :disabled,
+	button[disabled] {
 		background-color: rgb(202, 202, 202);
 	}
-	
 }

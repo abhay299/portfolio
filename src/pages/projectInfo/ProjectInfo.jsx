@@ -21,13 +21,13 @@ const ProjectInfo = () => {
 	};
 
 	return (
-		<div className='project'>
+		<div className='Project'>
 			<h1>{project.name}</h1>
 			<p>Stack: {project.stack}</p>
-			<div className='textContainer'>
+			<div className='TextContainer'>
 				<p>{project.desc}</p>
 			</div>
-			<div className='carouselContainer'>
+			<div className='CarouselContainer'>
 
 				{
 					(project.imgLen === 2) ?
@@ -127,12 +127,12 @@ const ProjectInfo = () => {
 							</Carousel>
 				}
 			</div>
-			<div className='projectFooter'>
-				<button className='prevBtn' disabled={parseInt(id) === 0 ? true : false} onClick={handlePrev}>prev</button>
+			<div className='ProjectFooter'>
+				<button className='PrevBtn' disabled={parseInt(id) === 0 ? true : false} onClick={handlePrev}>prev</button>
 				<a href={project.gitUrl}>
 					<GitHub fontSize='large' />
 				</a>
-				<button className='nextBtn' disabled={parseInt(id) === projectList.length - 1 ? true : false} onClick={handleNext} >next</button>
+				<button className='NextBtn' disabled={parseInt(id) === projectList.length - 1 ? true : false} onClick={handleNext} >next</button>
 			</div>
 		</div>
 	)
