@@ -2,8 +2,145 @@
 @media only screen and (min-width: 680px) {
 	/* Main Component */
 	.Home {
-		/* margin-top: -24px; */
-		background-color: white;
+		background-color: #f9f8fd;
+		padding-bottom: 3rem;
+	}
+
+	.Hero {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		min-height: 100vh;
+		background: #fff;
+		overflow: hidden;
+	}
+
+	.Glowing {
+		position: relative;
+		width: 50%;
+		height: 550px;
+		margin: -120px;
+		transform-origin: right;
+		animation: colorChange 5s linear infinite;
+	}
+
+	.Glowing:nth-child(even) {
+		transform-origin: left;
+	}
+
+	@keyframes colorChange {
+		0% {
+			filter: hue-rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100% {
+			filter: hue-rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+
+	.Glowing span {
+		position: absolute;
+		top: calc(100px * var(--i));
+		left: calc(80px * var(--i));
+		bottom: calc(1px * var(--i));
+		right: calc(-100px * var(--i));
+	}
+
+	.Glowing span::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: -8px;
+		width: 15px;
+		height: 15px;
+		background: #f00;
+		border-radius: 50%;
+	}
+
+	.Glowing span:nth-child(3n + 1)::before {
+		background: rgba(134, 255, 0, 1);
+		box-shadow: 0 0 20px rgba(134, 255, 0, 1), 0 0 40px rgba(134, 255, 0, 1),
+			0 0 60px rgba(134, 255, 0, 1), 0 0 80px rgba(134, 255, 0, 1),
+			0 0 0 8px rgba(134, 255, 0, 0.1);
+	}
+
+	.Glowing span:nth-child(3n + 2)::before {
+		background: rgba(255, 214, 0, 1);
+		box-shadow: 0 0 20px rgba(255, 214, 0, 1), 0 0 40px rgba(255, 214, 0, 1),
+			0 0 60px rgba(255, 214, 0, 1), 0 0 80px rgba(255, 214, 0, 1),
+			0 0 0 8px rgba(255, 214, 0, 0.1);
+	}
+
+	.Glowing span:nth-child(3n + 3)::before {
+		background: rgba(0, 226, 255, 1);
+		box-shadow: 0 0 20px rgba(0, 226, 255, 1), 0 0 40px rgba(0, 226, 255, 1),
+			0 0 60px rgba(0, 226, 255, 1), 0 0 80px rgba(0, 226, 255, 1),
+			0 0 0 8px rgba(0, 226, 255, 0.1);
+	}
+
+	.Glowing span:nth-child(3n + 4)::before {
+		background: rgb(255, 0, 0);
+		box-shadow: 0 0 20px rgb(255, 255, 255), 0 0 40px rgb(255, 255, 255),
+			0 0 60px rgb(255, 255, 255) 80px rgb(255, 255, 255),
+			0 0 0 8px rgba(255, 255, 255, 0.578);
+	}
+
+	.Glowing span:nth-child(3n + 1) {
+		animation: animate 12s alternate infinite;
+	}
+
+	.Glowing span:nth-child(3n + 2) {
+		animation: animate-reverse 4s alternate-reverse infinite;
+	}
+
+	.Glowing span:nth-child(3n + 3) {
+		animation: animate 10s alternate infinite;
+	}
+
+	.Glowing span:nth-child(3n + 4) {
+		animation: animate 8s alternate-reverse infinite;
+	}
+
+	@keyframes animate {
+		0% {
+			transform: rotate(180deg);
+		}
+		/* 25% {
+			transform: rotate(90deg);
+		} */
+		50% {
+			transform: rotate(0deg);
+		}
+		/* 75% {
+			transform: rotate(90deg);
+		} */
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes animate-reverse {
+		0% {
+			transform: rotate(360deg);
+		}
+
+		/* 25% {
+			transform: rotate(90deg);
+		} */
+
+		50% {
+			transform: rotate(180deg);
+		}
+
+		/* 75% {
+			transform: rotate(90deg);
+		} */
+
+		100% {
+			transform: rotate(0deg);
+		}
 	}
 
 	/* Info Component */
@@ -11,10 +148,10 @@
 		display: flex;
 		flex-direction: row;
 		width: 100%;
-		color: black;
+		/* color: whitesmoke; */
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 22pt;
-		/* padding: 2rem 2rem 1rem 3rem; */
+		/* background-color: red; */
 	}
 	.InfoText {
 		/* background-image: url("https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"); */
@@ -25,66 +162,157 @@
 		background-size: contain; */
 		width: 100%;
 		height: 100%;
-		background-color: #e3dffd;
+		/* background-color: #e3dffd; */
 		color: black;
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 22pt;
 		padding: 2rem 2rem 1rem 3rem;
 	}
 
-	.info h1 {
+	.InfoText h1 {
 		font-size: 40pt;
-		color: #122fa3;
+		color: #696969;
 	}
 
-	.info h2 {
+	.InfoText h2 {
 		font-size: 28pt;
-		color: #220f70;
+		color: #9c9ba2;
 	}
 
-	.checkout svg {
+	.InfoImg {
+		width: 100%;
+		padding: 4rem 0rem;
+		/* background-color: #e5d1fa; */
+	}
+
+	.InfoImg img {
+		display: block;
+		margin: auto;
+		width: fit-content;
+		height: 210px;
+	}
+
+	.Checkout svg {
 		color: white;
 	}
 
 	/* Work Component */
+
 	.Work {
-		display: flex;
-		flex-direction: column;
-		background-color: white;
+		background-color: #f5f4fc;
+		/* place-content: center; */
+		/* flex-direction: column;
 		justify-content: center;
-		align-items: center;
+		align-items: center; */
+		/* padding: 50px; */
+		font-family: "Roboto", sans-serif;
+		scroll-behavior: smooth;
 		/* padding: 0px 0px 0px 0px; */
 	}
 
 	.Work h1 {
-		text-align: left;
-		padding-inline: 1rem;
+		text-align: center;
+		padding-top: 2rem;
 		font-weight: 600;
 		font-size: 30pt;
-		margin: 2rem 0rem;
+		margin: 3rem 0rem;
+	}
+
+	.WorkContainer {
+		display: grid;
+		place-items: center;
+		grid-template-rows: repeat(2, fit-content);
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 14px;
+		font-family: "Roboto", sans-serif;
+		background-color: #f5f4fc;
 	}
 
 	.ProjectCardContainer {
-		display: flex;
+		/* display: flex;
 		width: 90%;
 		height: fit-content;
 		flex-direction: column;
 		background-color: #effffe;
 		box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-		margin: 2.5rem;
+		margin: 2.5rem; */
+		/* width: 24rem; */
+		width: 80%;
+		height: 36rem;
+		/* height: 36rem; */
+		border-radius: 10px;
+		overflow: hidden;
+		cursor: pointer;
+		position: relative;
+		color: rgb(240, 240, 240);
+		box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+		margin: 0rem 0rem 3rem 0rem;
+		scroll-snap-align: start none;
+		scroll-margin-block: 10px;
 	}
 
 	.ProjectCardContainer img {
 		/* background-color: red; */
-		height: fit-content;
-		border-radius: 0;
+		position: absolute;
 		object-fit: cover;
-		object-position: center;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0.9;
+		transition: opacity 0.2s ease-out;
 	}
 
-	.ContainerText {
-		/* display: flex;
-		flex-direction: column; */
+	.ProjectCardContainer h2 {
+		position: absolute;
+		inset: auto auto 30px 30px;
+		margin: 0;
+		transition: inset 0.3s 0.3s ease-out;
+		font-family: "Roboto Condensed", sans-serif;
+		color: #122fa3;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 22pt;
+	}
+
+	.ProjectCardContainer p,
+	.ProjectCardContainer a {
+		position: absolute;
+		opacity: 0;
+		max-width: 80%;
+		color: black;
+		transition: opacity 0.3s ease-out;
+	}
+
+	.ProjectCardContainer p {
+		inset: auto auto 60px 30px;
+	}
+
+	.ProjectCardContainer a {
+		inset: auto auto 40px 30px;
+		color: black;
+		text-decoration: none;
+	}
+
+	.ProjectCardContainer:hover h2 {
+		inset: auto auto 110px 30px;
+		transition: inset 0.3s ease-out;
+	}
+
+	.ProjectCardContainer:hover p,
+	.ProjectCardContainer:hover a {
+		opacity: 1;
+		transition: opacity 0.5s 0.1s ease-in;
+	}
+
+	.ProjectCardContainer:hover img {
+		transition: opacity 0.3s ease-in;
+		opacity: 0.6;
+	}
+
+	/* .ContainerText {
+		display: flex;
+	flex-direction: column;
 		background-color: #effffe;
 		height: fit-content;
 		padding-left: 2rem;
@@ -103,7 +331,7 @@
 		text-decoration: none;
 		color: midnightblue;
 		font-size: 1rem;
-	}
+	} */
 
 	/* Feedback Component */
 	@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
@@ -116,22 +344,43 @@
 		align-items: center;
 		justify-content: center;
 		line-height: 1rem;
-		/* background-color: #122fa3; */
+		color: #4831d4;
+		/* background-color: #4831d4; */
 	}
 
 	.MailMeHeader p {
 		text-align: justify;
 		font-size: 14pt;
 		margin: 1rem 1rem;
+		color: #4831d4;
 	}
 
-	.mailMe form {
-		/* background-color: red; */
-		width: 70%;
-		margin: 10px auto;
+	.MailMe-InnerContent form {
+		width: 100%;
+		margin: 1rem auto;
 	}
 
-	.formInput {
+	.MailMe-InnerContent {
+		display: flex;
+		/* background-color: #334454; */
+		width: 60%;
+	}
+
+	.Form-Row {
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 1rem;
+	}
+
+	.Form-Row:first-of-type .FormInput {
+		width: 50%;
+	}
+
+	.Abhay:not(:last-child) {
+		margin-right: 50px;
+	}
+
+	.FormInput {
 		display: flex;
 		align-items: center;
 		margin-top: 10px;
@@ -145,14 +394,130 @@
 		font-size: 14pt;
 		outline: none;
 		transition: border-color 0.2s;
-		background-color: white;
+		background-color: #f9f8fd;
 	}
 
 	.FormInput:focus {
 		border-bottom: 1px solid #122fa3;
 	}
 
-	.sendButton {
+	/* Send Component */
+	@import url("https://fonts.googleapis.com/css?family=Mukta:700");
+	.BtnBody {
+		font-family: "Mukta", sans-serif;
+		font-size: 1rem;
+		line-height: 1.5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+		/* min-height: 100vh; */
+		background: #f9f8fd;
+	}
+
+	button {
+		position: relative;
+		display: inline-block;
+		cursor: pointer;
+		outline: none;
+		border: 0;
+		vertical-align: middle;
+		text-decoration: none;
+		background: transparent;
+		padding: 0;
+		font-size: inherit;
+		font-family: inherit;
+	}
+
+	button.Learn-More {
+		width: 12rem;
+		height: auto;
+	}
+
+	button.Learn-More .Circle {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		position: relative;
+		display: block;
+		margin: 0;
+		width: 3rem;
+		height: 3rem;
+		background: #4831d4;
+		border-radius: 1.625rem;
+	}
+
+	button.Learn-More .Circle .Icon {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		background: #fff;
+	}
+
+	button.Learn-More .Circle .Icon.Arrow {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		left: 0.625rem;
+		width: 1.125rem;
+		height: 0.125rem;
+		background: none;
+	}
+
+	button.Learn-More .Circle .Icon.Arrow::before {
+		position: absolute;
+		content: "";
+		top: -0.25rem;
+		right: 0.0625rem;
+		width: 0.625rem;
+		height: 0.625rem;
+		border-top: 0.125rem solid #fff;
+		border-right: 0.125rem solid #fff;
+		transform: rotate(45deg);
+	}
+
+	button.Learn-More .Button-Text {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 0.75rem 0;
+		margin: 0 0 0 1.85rem;
+		color: #282936;
+		font-weight: 700;
+		line-height: 1.6;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	button:hover .Circle {
+		width: 100%;
+	}
+
+	button:hover .Circle .Icon.Arrow {
+		background: #fff;
+		transform: translate(1rem, 0);
+	}
+
+	button:hover .Button-Text {
+		color: #fff;
+	}
+
+	/* @supports (display: grid) {
+		.BtnBody {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 0.625rem;
+			grid-template-areas: ". main main ." ". main main .";
+		}
+
+		#BtnContainer {
+			grid-area: main;
+			align-self: center;
+			justify-self: center;
+		}
+	} */
+	/* .SendButton {
 		appearance: button;
 		background-color: #effffe;
 		background-image: none;
@@ -162,8 +527,11 @@
 		box-sizing: border-box;
 		color: midnightblue;
 		cursor: pointer;
-		width: 100%;
-		display: inline-block;
+		width: 40%;
+		height: 4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
 		font-size: 14pt;
 		font-weight: 600;
@@ -195,53 +563,200 @@
 	.SendButton:not([disabled]):active {
 		box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
 		transform: translate(2px, 2px);
-	}
-
-	/* .SendButton {
-		--c:  #122fa3;
-		box-shadow: 0 0 0 .1em inset var(--c); 
-		--_g: linear-gradient(var(--c) 0 0) no-repeat;
-		background: 
-		  var(--_g) calc(var(--_p,0%) - 100%) 0%,
-		  var(--_g) calc(200% - var(--_p,0%)) 0%,
-		  var(--_g) calc(var(--_p,0%) - 100%) 100%,
-		  var(--_g) calc(200% - var(--_p,0%)) 100%;
-		background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
-		outline-offset: .1em;
-		transition: background-size .4s, background-position 0s .4s;
-		font-family: system-ui, sans-serif;
-		font-size: 0rem;
-		cursor: pointer;
-		padding: 1em 6em;
-		font-weight: bold;
-		border: none;
-		display: inline-block;
-	}
-
-	.SendButton:hover {
-		--_p: 100%;
-		transition: background-position .4s, background-size 0s;
-		color: #fff;
-	}
-
-	.SendButton:active {
-		box-shadow: 0 0 9e9q inset #0a217b; 
-		background-color: var(--c);
-		color: #fff;
 	} */
 
 	/* Skill Component */
+	.SkillHead {
+		padding-top: 4rem;
+		background-color: #f1f1f1;
+		text-align: center;
+	}
 	.Skill {
-		/* background-color: red; */
-		padding: 1rem 2.5rem 1rem 2.5rem;
+		margin: 0;
+		padding: 0;
+		min-height: 100vh;
+		background: #333;
+		display: flex;
+		color: #000;
+		justify-content: center;
+		align-items: center;
+		font-family: sans-serif;
+		background-color: #f1f1f1;
 	}
 
-	.SkillInfo {
-		background-color: #effffe;
-		padding-top: 4px;
-		padding-bottom: 4px;
-		font-size: 13pt;
-		font-weight: 600;
+	.SkillContainer {
+		width: 100%;
+		position: relative;
+		display: flex;
+		justify-content: space-around;
+		background-color: red;
+	}
+
+	.SkillContainer .SkillCard {
+		position: relative;
+		border-radius: 10px;
+		width: 100%;
+		height: fit-content;
+		background-color: violet;
+	}
+
+	.SkillContainer .SkillCard .SkillIcon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		/* background-color: #f00; */
+		transition: 0.7s;
+		z-index: 1;
+	}
+
+	.SkillContainer .SkillCard:nth-child(1) .SkillIcon {
+		background: #014069;
+	}
+
+	.SkillContainer .SkillCard:nth-child(2) .SkillIcon {
+		background: #692a01;
+	}
+
+	.SkillContainer .SkillCard:nth-child(3) .SkillIcon {
+		background: #151e43;
+	}
+
+	.SkillContainer .SkillCard .SkillIcon .fa {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 80px;
+		transition: 0.7s;
+		color: #fff;
+	}
+
+	.SkillIcon img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 200px;
+		height: 150px;
+		transform: translate(-50%, -50%);
+		font-size: 80px;
+		transition: 0.7s;
+		color: #fff;
+	}
+
+	.SkillContainer .SkillCard .Face {
+		width: 90%;
+		height: 18rem;
+		transition: 0.5s;
+		/* background: red; */
+	}
+
+	.SkillContainer .SkillCard .Face.Face1 {
+		position: relative;
+		background: #333;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 1;
+		transform: translateY(100px);
+	}
+
+	.SkillContainer .SkillCard:hover .Face.Face1 {
+		transform: translateY(0px);
+	}
+
+	.SkillContainer .SkillCard .Face.Face1 .SkillContent {
+		opacity: 1;
+		transition: 0.5s;
+	}
+
+	.SkillContainer .SkillCard:hover .Face.Face1 .SkillContent {
+		opacity: 1;
+	}
+
+	.SkillContainer .SkillCard:hover .Face.Face1 .SkillContent img {
+		width: 200px;
+		height: 150px;
+	}
+
+	.SkillContainer .SkillCard .Face.Face2 .Frontend {
+		position: relative;
+		background: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px;
+		box-sizing: border-box;
+		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+		transform: translateY(-100px);
+		background-color: #b1e0ff;
+	}
+
+	.SkillContainer .SkillCard:hover .Face.Face2 .Frontend {
+		transform: translateY(0);
+		background-color: #b1e0ff;
+	}
+
+	.SkillContainer .SkillCard .Face.Face2 .Backend {
+		position: relative;
+		background: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px;
+		box-sizing: border-box;
+		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+		transform: translateY(-100px);
+		background-color: #ffe1ce;
+	}
+
+	.SkillContainer .SkillCard:hover .Face.Face2 .Backend {
+		transform: translateY(0);
+		background-color: #ffe1ce;
+	}
+
+	.SkillContainer .SkillCard .Face.Face2 .Language {
+		position: relative;
+		background: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px;
+		box-sizing: border-box;
+		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+		transform: translateY(-100px);
+		background-color: #b7c6ff;
+	}
+
+	.SkillContainer .SkillCard:hover .Face.Face2 .Language {
+		transform: translateY(0);
+		background-color: #b7c6ff;
+	}
+
+	.SkillContainer .SkillCard .Face.Face2 .SkillContent p {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		color: #414141;
+	}
+
+	.SkillContainer .SkillCard .Face.Face2 .SkillContent h3 {
+		margin: 0 0 10px 0;
+		padding: 0;
+		color: #fff;
+		font-size: 24px;
+		text-align: center;
+		color: #414141;
+	}
+
+	.SkillContainer a {
+		text-decoration: none;
+		color: #414141;
+	}
+
+	.SkillContent a {
+		padding: 2px 4px;
 	}
 }
 
@@ -253,10 +768,15 @@
 	}
 
 	/* Info Component */
-	.info {
-		background-image: url("https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60");
-		/* background-image: url("https://images.unsplash.com/photo-1688413708993-39da5ee59315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60"); */
-		/* background-image: url("https://images.unsplash.com/photo-1688494930045-328d0f95efe9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=60"); */
+	.InfoContainer {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding-bottom: 0.5rem;
+	}
+
+	.InfoText {
+		background-image: url("../../assets/Portfolio/luke-chesser-3rWagdKBF7U-unsplash.jpg");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
@@ -350,7 +870,7 @@
 	.MailMeHeader {
 		display: flex;
 		width: 100%;
-		margin-top: 24px;
+		margin: 2.2rem 0rem;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
