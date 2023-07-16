@@ -103,18 +103,6 @@ const Home = () => {
 					<span style={{ "--i": "3" }}></span>
 				</div>
 			</div>
-			{/* <div className='InfoContainer'>
-				<div className='InfoText'>
-					<p>Hey, I'm</p>
-					<h1>Abhay Gupta</h1>
-					<h2>Full Stack Web developer. </h2>
-					<p>Passionate about creating functional websites | Eager to contribute and grow professionally.</p>
-				</div>
-				<div className='InfoImg'>
-					<img src={me2}
-						alt='myPhoto' />
-				</div>
-			</div> */}
 			<div className='Work'>
 				<h1>
 					Over the months I've built a few projects...
@@ -163,219 +151,196 @@ const Home = () => {
 						<div className='Card-Content'>
 							<h2>CRM System</h2>
 							<p>
-								Back-End based CRM App with Django <br />
+								Back-End based with Django <br />
 							</p>
 							<a href='/projects/3'>Find out more...</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className='SkillHead'>
-				<h1>Tech Skills</h1>
-				<div className='Skill'>
-					<div className='SkillContainer'>
-						<div className='SkillCard'>
-							<div className='Face Face1'>
-								<div className='SkillContent'>
-									<div className='SkillIcon'>
-										<img className='fa'
-											aria-hidden='true'
-											src={frontend}
-											alt='frontend'></img>
-										{/* <h2>Frontend</h2> */}
-									</div>
-								</div>
-							</div>
-							<div className='Face Face2'>
-								<div className='Frontend'>
-									<div className='SkillContent'>
-										<p>
-											<a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-												<img
-													src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-													alt="react"
-													width="40"
-													height="40"
-												/>
-											</a>
-											<a href="https://redux.js.org" target="_blank" rel="noreferrer">
-												<img
-													src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
-													alt="redux"
-													width="40"
-													height="40"
-												/>
-											</a>
-											<a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
-												<img
-													src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
-													alt="bootstrap"
-													width="40"
-													height="40"
-												/>
-											</a>
-											<a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
-												<img
-													src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-													alt="html5"
-													width="40"
-													height="40"
-												/>
-											</a>
-											<a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
-												<img
-													src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
-													alt="css3"
-													width="40"
-													height="40"
-												/>
-											</a>
-											<a href="https://sass-lang.com" target="_blank" rel="noreferrer">
-												<img
-													src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
-													alt="sass"
-													width="40"
-													height="40"
-												/>
-											</a>
-										</p>
-										<p>React, Redux, Bootstrap, HTML5, CSS3, SASS</p>
-									</div>
+			<div className='Skill'>
+				<div className='SkillHead'>
+					<h1>Tech Skills</h1>
+				</div>
+				{/* <h1>Hello</h1> */}
+				<div className='SkillContainer'>
+					<div className='SkillCard'>
+						<div className='Face Face1'>
+							<div className='SkillContent'>
+								<div className='SkillIcon'>
+									<img className='fa'
+										aria-hidden='true'
+										src={frontend}
+										alt='frontend'></img>
+									{/* <h2>Frontend</h2> */}
 								</div>
 							</div>
 						</div>
-						<div className='SkillCard'>
-							<div className='Face Face1'>
+						<div className='Face Face2'>
+							<div className='Frontend'>
 								<div className='SkillContent'>
-									<div className='SkillIcon'>
-										<img className='fa'
-											aria-hidden='true'
-											src={backend}
-											alt='backend'></img>
-										{/* <h2>Backend</h2> */}
-									</div>
-								</div>
-							</div>
-							<div className='Face Face2'>
-								<div className='Backend'>
-									<div className='SkillContent'>
-										<p>
-											<a href="https://nodejs.org" target="_blank" rel="noreferrer">
-												<img
-													src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
-													alt="nodejs"
-													width="40"
-													height="40"
-												/>
-											</a>
-											<a href="https://expressjs.com" target="_blank" rel="noreferrer">
-												<img
-													src="https://e7.pngegg.com/pngimages/925/447/png-clipart-express-js-node-js-javascript-mongodb-node-js-text-trademark.png"
-													alt="express"
-													width="40"
-													height="40"
-												/>
-											</a>
-											<a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer">
-												<img
-													src="https://cdn.worldvectorlogo.com/logos/django.svg"
-													alt="django"
-													width="40"
-													height="40"
-												/>
-											</a>
-											<a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
-												<img
-													src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
-													alt="mysql"
-													width="40"
-													height="40"
-												/>
-											</a>
-										</p>
-										<p>Node.js, Express.js, Django, MySQL,</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className='SkillCard'>
-							<div className='Face Face1'>
-								<div className='SkillContent'>
-									<div className='SkillIcon'>
-										<img className='fa'
-											aria-hidden='true'
-											src={languageLogo}
-											alt='languageLogo'></img>
-										{/* <h2>Languages</h2> */}
-									</div>
-								</div>
-							</div>
-							<div className='Face Face2'>
-								<div className='Language'>
-									<div className='SkillContent'>
-										<p>
-											<a
-												href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-												target="_blank" rel="noreferrer">
-												<img
-													src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-													alt="javascript"
-													width="40"
-													height="40"
-												/>
-											</a>
-											<a href="https://www.python.org" target="_blank" rel="noreferrer">
-												<img
-													src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-													alt="python"
-													width="40"
-													height="40"
-												/>
-											</a>
-											<a href="https://www.java.com" target="_blank" rel="noreferrer">
-												<img
-													src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
-													alt="java"
-													width="40"
-													height="40"
-												/>
-											</a>
-										</p>
-										<p>JavaScript, Python, Java</p>
-									</div>
+									<h3>Frontend</h3>
+									<p>
+										<a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+											<img
+												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+												alt="react"
+												width="30"
+												height="30"
+											/>
+										</a>
+										<a href="https://redux.js.org" target="_blank" rel="noreferrer">
+											<img
+												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
+												alt="redux"
+												width="30"
+												height="30"
+											/>
+										</a>
+										<a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
+											<img
+												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
+												alt="bootstrap"
+												width="30"
+												height="30"
+											/>
+										</a>
+										<a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
+											<img
+												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+												alt="html5"
+												width="30"
+												height="30"
+											/>
+										</a>
+										<a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
+											<img
+												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+												alt="css3"
+												width="30"
+												height="30"
+											/>
+										</a>
+										<a href="https://sass-lang.com" target="_blank" rel="noreferrer">
+											<img
+												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+												alt="sass"
+												width="30"
+												height="30"
+											/>
+										</a>
+									</p>
+									<p>ReactJS, Redux, Bootstrap, HTML5, CSS3, SASS</p>
 								</div>
 							</div>
 						</div>
 					</div>
-					{/* <h2>Tech Skills</h2> */}
-					{/* <ul className='SkillInfo'>
-					<li>
-						<img
-							src={frontend}
-							alt="frontend"
-							width="40"
-							height="40"
-						/>
-						Frontend:
-					</li>
-					<br />
-					<li>
-						<img
-							src={backend}
-							alt="backend"
-							width="40"
-							height="40"
-						/>
-						Backend:
-					</li>
-				</ul> */}
-					{/* <h2>Languages</h2> */}
-					{/* <ul className='SkillInfo'>
-					<li>
-						
-					</li>
-				</ul> */}
+					<div className='SkillCard'>
+						<div className='Face Face1'>
+							<div className='SkillContent'>
+								<div className='SkillIcon'>
+									<img className='fa'
+										aria-hidden='true'
+										src={backend}
+										alt='backend'></img>
+									{/* <h2>Backend</h2> */}
+								</div>
+							</div>
+						</div>
+						<div className='Face Face2'>
+							<div className='Backend'>
+								<div className='SkillContent'>
+									<h3>Backend</h3>
+									<p>
+										<a href="https://nodejs.org" target="_blank" rel="noreferrer">
+											<img
+												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+												alt="nodejs"
+												width="30"
+												height="30"
+											/>
+										</a>
+										<a href="https://expressjs.com" target="_blank" rel="noreferrer">
+											<img
+												src="https://e7.pngegg.com/pngimages/925/447/png-clipart-express-js-node-js-javascript-mongodb-node-js-text-trademark.png"
+												alt="express"
+												width="30"
+												height="30"
+											/>
+										</a>
+										<a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer">
+											<img
+												src="https://cdn.worldvectorlogo.com/logos/django.svg"
+												alt="django"
+												width="30"
+												height="30"
+											/>
+										</a>
+										<a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
+											<img
+												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+												alt="mysql"
+												width="30"
+												height="30"
+											/>
+										</a>
+									</p>
+									<p>Node.js, Express.js, Django, MySQL,</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className='SkillCard'>
+						<div className='Face Face1'>
+							<div className='SkillContent'>
+								<div className='SkillIcon'>
+									<img className='fa'
+										aria-hidden='true'
+										src={languageLogo}
+										alt='languageLogo'></img>
+									{/* <h2>Languages</h2> */}
+								</div>
+							</div>
+						</div>
+						<div className='Face Face2'>
+							<div className='Language'>
+								<div className='SkillContent'>
+									<h3>Languages</h3>
+									<p>
+										<a
+											href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+											target="_blank" rel="noreferrer">
+											<img
+												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+												alt="javascript"
+												width="30"
+												height="30"
+											/>
+										</a>
+										<a href="https://www.python.org" target="_blank" rel="noreferrer">
+											<img
+												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+												alt="python"
+												width="30"
+												height="30"
+											/>
+										</a>
+										<a href="https://www.java.com" target="_blank" rel="noreferrer">
+											<img
+												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+												alt="java"
+												width="30"
+												height="30"
+											/>
+										</a>
+									</p>
+									<p>JavaScript, Python, Java</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+
 			</div>
 			<div className='MailMeHeader'>
 				<h1>Drop me a message!</h1>
@@ -384,18 +349,18 @@ const Home = () => {
 					<form onSubmit={handleSubmit(onSubmit)}>
 						<div className='Form-Row'>
 							{
-								<input className='Abhay FormInput' placeholder='Your name'
+								<input className='Abhay FormInput' placeholder='Your name.'
 									{...register('name', { required: true, maxLength: 60 })} />
 							}
 							{errors.name?.type === "required" && (
 								<p role="alert">Your name is required</p>
 							)}
-							<input className='Abhay FormInput' placeholder='Your email address'
+							<input className='Abhay FormInput' placeholder='Your email address.'
 								{...register('email', { required: true, maxLength: 100, pattern: regEmail })} />
 							{errors.email && <p> Please fill out this field correctly.</p>}
 						</div>
 						<div className='Form-Row'>
-							<textarea className='FormInput' placeholder='Hi! We like some of your work, we would like to collaborate.'
+							<textarea className='FormInput' placeholder='Hello, we would like to discuss about so and so position/project with you.'
 								{...register('comment', { required: true, })} />
 							{errors.comment && <p> Please fill out this field.</p>}
 						</div>
