@@ -150,7 +150,7 @@
 	.wrapper {
 		position: fixed;
 		top: 0;
-		z-index: 1;
+		z-index: 2;
 		right: -100%;
 		height: 100%;
 		width: 100%;
@@ -164,10 +164,10 @@
 
 	.menu-btn {
 		position: fixed;
-		z-index: 2;
-		right: 8px;
+		z-index: 3;
+		right: 18px;
 		/*left: 20px; */
-		top: 8px;
+		top: 10px;
 		height: 50px;
 		width: 50px;
 		text-align: center;
@@ -176,7 +176,7 @@
 		font-size: 20px;
 		cursor: pointer;
 		transition: all 0.1s ease-in-out;
-		background-color: rgba(218, 255, 251, 0.4);
+		background-color: #f9f8fd35;
 		/* background-color: #DAFFFB; */
 	}
 	.menu-btn span,
@@ -199,14 +199,14 @@
 		transform: translateY(8px);
 	}
 
-	.close {
-		z-index: 1;
+	/* .close {
+		z-index: 2;
 		width: 100%;
 		height: 100%;
-		/* background-color: red; */
+		background-color: red;
 		pointer-events: none;
 		transition: background 0.1s;
-	}
+	} */
 
 	/* closing animation */
 	#active:checked + .menu-btn span {
@@ -231,6 +231,7 @@
 		transform: translate(-50%, -50%);
 		list-style: none;
 		text-align: center;
+		/* color: red; */
 	}
 
 	.wrapper ul li {
@@ -263,7 +264,7 @@
 		top: 0;
 		border-radius: 50px;
 		transform: scaleY(0);
-		z-index: -1;
+		z-index: 1;
 		transition: transform 0.1s ease;
 	}
 	.wrapper ul li a:hover:after {

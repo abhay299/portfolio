@@ -559,15 +559,15 @@
 		color: #4831d4;
 	}
 
-	.MailMe-InnerContent form {
-		width: 100%;
-		margin: 1rem auto;
-	}
-
 	.MailMe-InnerContent {
 		display: flex;
 		/* background-color: #334454; */
 		width: 60%;
+	}
+
+	.MailMe-InnerContent form {
+		width: 100%;
+		margin: 1rem auto;
 	}
 
 	.Form-Row {
@@ -582,6 +582,11 @@
 
 	.Abhay:not(:last-child) {
 		margin-right: 50px;
+	}
+
+	.Form-Row textarea {
+		line-height: 1.2;
+		resize: vertical;
 	}
 
 	.FormInput {
@@ -727,23 +732,24 @@
 	/* Main Component */
 	.Home {
 		background-color: #f9f8fd;
-		/* padding-bottom: 3rem; */
+		padding-bottom: 3rem;
 		scroll-behavior: smooth;
 	}
+
 	.Hero {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 100%;
 		min-height: 100vh;
-		background: #fff;
 		overflow: hidden;
-		background-color: red;
+		background-image: url("https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60");
+		/* background-color: red; */
 	}
 
-	.Glowing {
+	/* .Glowing {
 		position: relative;
-		width: 50%;
+		width: 100%;
 		height: 550px;
 		margin: -120px;
 		transform-origin: right;
@@ -767,17 +773,17 @@
 
 	.Glowing span {
 		position: absolute;
-		top: calc(100px * var(--i));
+		top: calc(80px * var(--i));
 		left: calc(80px * var(--i));
-		bottom: calc(1px * var(--i));
-		right: calc(-100px * var(--i));
+		bottom: calc(80px * var(--i));
+		right: calc(80px * var(--i));
 	}
 
 	.Glowing span::before {
 		content: "";
 		position: absolute;
 		top: 50%;
-		left: -8px;
+		left: 8px;
 		width: 15px;
 		height: 15px;
 		background: #f00;
@@ -832,15 +838,11 @@
 		0% {
 			transform: rotate(180deg);
 		}
-		/* 25% {
-			transform: rotate(90deg);
-		} */
+		
 		50% {
 			transform: rotate(0deg);
 		}
-		/* 75% {
-			transform: rotate(90deg);
-		} */
+		
 		100% {
 			transform: rotate(360deg);
 		}
@@ -851,22 +853,14 @@
 			transform: rotate(360deg);
 		}
 
-		/* 25% {
-			transform: rotate(90deg);
-		} */
-
 		50% {
 			transform: rotate(180deg);
 		}
 
-		/* 75% {
-			transform: rotate(90deg);
-		} */
-
 		100% {
 			transform: rotate(0deg);
 		}
-	}
+	} */
 
 	/* Info Component */
 	.InfoContainer {
@@ -880,7 +874,6 @@
 	}
 
 	.InfoText {
-		/* background-image: url("https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"); */
 		/* background-image: url("https://images.unsplash.com/photo-1688413708993-39da5ee59315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60"); */
 		/* background-image: url("../../assets/Portfolio/me.JPG"); */
 		/* background-repeat: no-repeat;
@@ -889,20 +882,22 @@
 		width: 100%;
 		height: 100%;
 		/* background-color: #e3dffd; */
-		color: black;
+		color: rgba(255, 255, 255, 0.653);
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 22pt;
-		padding: 2rem 2rem 1rem 3rem;
+		padding: 2rem 2rem 1rem 2rem;
 	}
 
 	.InfoText h1 {
-		font-size: 40pt;
-		color: #696969;
+		font-size: 42pt;
+		color: #ffffff;
+		padding: 0.8rem 0rem;
 	}
 
 	.InfoText h2 {
-		font-size: 28pt;
-		color: #8f8f8f;
+		font-size: 30pt;
+		color: #ffffff;
+		padding: 0.8rem 0rem;
 	}
 
 	.InfoImg {
@@ -946,8 +941,8 @@
 	.WorkContainer {
 		display: grid;
 		place-items: center;
-		grid-template-rows: repeat(1, fit-content);
-		grid-template-columns: repeat(1, 1fr);
+		/* grid-template-rows: repeat(1, fit-content);
+		grid-template-columns: repeat(1, 1fr); */
 		grid-gap: 14px;
 		font-family: "Roboto", sans-serif;
 		background-color: #f5f4fc;
@@ -962,7 +957,7 @@
 		/* box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
 		margin: 2.5rem; */
 		/* width: 24rem; */
-		width: 70%;
+		width: 95%;
 		height: 36rem;
 		/* height: 36rem; */
 		border-radius: 10px;
@@ -1063,9 +1058,9 @@
 
 	.Skill {
 		min-height: 100vh;
-		/* min-height: 100vh; */
 		background: #333;
 		display: flex;
+		width: 100%;
 		flex-direction: column;
 		color: #000;
 		justify-content: center;
@@ -1076,8 +1071,7 @@
 	}
 
 	.SkillHead {
-		padding-bottom: 3rem;
-		/* background-color: red; */
+		padding: 1.5rem 0rem;
 		text-align: center;
 		color: #ccf381;
 	}
@@ -1088,16 +1082,13 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		background-color: red;
+		align-items: center;
 	}
 
 	.SkillCard {
 		position: relative;
-		border-radius: 10px;
-		width: 100%;
+		width: 90%;
 		height: fit-content;
-		margin-left: 2rem;
-		/* background-color: violet; */
 	}
 
 	.SkillContainer .SkillCard .SkillIcon {
@@ -1106,7 +1097,6 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		/* background-color: red; */
 		transition: 0.7s;
 		z-index: 1;
 	}
@@ -1137,7 +1127,7 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: 160px;
+		width: 47%;
 		height: 130px;
 		transform: translate(-50%, -50%);
 		font-size: 80px;
@@ -1146,10 +1136,9 @@
 	}
 
 	.SkillContainer .SkillCard .Face {
-		width: 90%;
+		width: 100%;
 		height: 9rem;
 		transition: 0.5s;
-		/* background: red; */
 	}
 
 	.SkillContainer .SkillCard .Face.Face1 {
@@ -1267,8 +1256,8 @@
 		display: flex;
 		width: 100%;
 		height: 90vh;
-		padding-top: 2rem;
-		/* margin-top: 2rem; */
+		/* padding-top: 2rem; */
+		margin-top: 2rem;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
@@ -1280,22 +1269,30 @@
 	.MailMeHeader p {
 		text-align: justify;
 		font-size: 14pt;
-		margin: 1rem 1rem;
+		padding: 1rem 2rem;
 		color: #4831d4;
+		line-height: 1.3rem;
+	}
+
+	.MailMe-InnerContent {
+		display: flex;
+		/* background-color: #494d51; */
+		width: 80%;
 	}
 
 	.MailMe-InnerContent form {
 		width: 100%;
 		margin: 1rem auto;
+		line-height: 1.2rem;
+		/* background-color: #1f7bb8; */
 	}
 
-	.MailMe-InnerContent {
-		display: flex;
-		/* background-color: #334454; */
-		width: 60%;
+	.MailMe-InnerContent textarea {
+		height: 80px;
+		resize: vertical;
 	}
 
-	.Form-Row {
+	/* .Form-Row {
 		display: flex;
 		justify-content: space-around;
 		margin-bottom: 1rem;
@@ -1303,11 +1300,11 @@
 
 	.Form-Row:first-of-type .FormInput {
 		width: 50%;
-	}
+	} */
 
-	.Abhay:not(:last-child) {
+	/* .Abhay:not(:last-child) {
 		margin-right: 50px;
-	}
+	} */
 
 	.FormInput {
 		display: flex;
