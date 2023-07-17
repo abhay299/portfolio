@@ -146,8 +146,9 @@
 	}
 
 	.Project p {
-		margin: 0px 6px 12px 6px;
+		padding: 4px 6px;
 		font-size: 16pt;
+		text-align: center;
 	}
 
 	/* .Project img{
@@ -172,14 +173,14 @@
 
 	.CarouselContainer {
 		width: 95%;
-		margin: 1rem 0rem;
+		margin-top: 1rem;
 	}
 
 	.ProjectFooter {
 		display: flex;
 		width: 95%;
 		justify-content: space-between;
-		margin: 1rem 0rem;
+		margin: 2rem 0rem;
 		/* background-color: red; */
 	}
 
