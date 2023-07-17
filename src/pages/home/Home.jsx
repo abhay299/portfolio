@@ -5,7 +5,7 @@ import smLogo from '../../assets/Socials/SM-logo.png';
 import baLogo from '../../assets/BookAmigo/BA-logo2.png'
 import portfolioLogo from '../../assets/Portfolio/myPortfolioLogo.png'
 import crmLogo from '../../assets/CRM/CRM-logo.png'
-import me2 from '../../assets/Portfolio/me.JPG'
+// import me2 from '../../assets/Portfolio/me.JPG'
 import frontend from '../../assets/Portfolio/Frontend.png'
 import backend from '../../assets/Portfolio/Backend.png'
 import languageLogo from '../../assets/Portfolio/LanguagesLogo.png'
@@ -15,7 +15,7 @@ import { useForm } from 'react-hook-form';
 const Home = () => {
 	const navigate = useNavigate();
 
-	const { register, handleSubmit, reset, formState: { errors } } = useForm({
+	const { register, handleSubmit, reset } = useForm({
 		defaultValues: {
 			name: '',
 			email: '',
@@ -352,17 +352,17 @@ const Home = () => {
 								<input className='Abhay FormInput' placeholder='Your name.'
 									{...register('name', { required: true, maxLength: 60 })} />
 							}
-							{errors.name?.type === "required" && (
+							{/* {errors.name?.type === "required" && (
 								<p role="alert">Your name is required</p>
-							)}
+							)} */}
 							<input className='Abhay FormInput' placeholder='Your email address.'
 								{...register('email', { required: true, maxLength: 100, pattern: regEmail })} />
-							{errors.email && <p> Please fill out this field correctly.</p>}
+							{/* {errors.email && <p> Please fill out this field correctly.</p>} */}
 						</div>
 						<div className='Form-Row'>
 							<textarea className='FormInput' placeholder='Hello, we would like to discuss about so and so position/project with you.'
 								{...register('comment', { required: true, })} />
-							{errors.comment && <p> Please fill out this field.</p>}
+							{/* {errors.comment && <p> Please fill out this field.</p>} */}
 						</div>
 						{/* <input className='SendButton' type='submit' /> */}
 						<div className='BtnBody' type='submit'>

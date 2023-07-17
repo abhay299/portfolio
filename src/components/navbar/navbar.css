@@ -29,7 +29,7 @@
 		font-size: 20px;
 		cursor: pointer;
 		transition: all 0.1s ease-in-out;
-		background-color: rgba(218, 255, 251, 0.4);
+		background-color: #f9f8fd35;
 		/* background-color: #DAFFFB; */
 	}
 	.menu-btn span,
@@ -115,6 +115,7 @@
 		height: 100%;
 		left: 0;
 		top: 0;
+		opacity: 0.2;
 		border-radius: 50px;
 		transform: scaleY(0);
 		z-index: 1;
@@ -124,7 +125,7 @@
 		transform: scaleY(1);
 	}
 	.wrapper ul li a:hover {
-		color: #1a73e8;
+		color: #207ef8;
 	}
 	input[type="checkbox"] {
 		display: none;
@@ -260,6 +261,7 @@
 		background: #fff;
 		width: 100%;
 		height: 100%;
+		opacity: 0.2;
 		left: 0;
 		top: 0;
 		border-radius: 50px;
@@ -271,7 +273,7 @@
 		transform: scaleY(1);
 	}
 	.wrapper ul li a:hover {
-		color: #1a73e8;
+		color: #207ef8;
 	}
 	input[type="checkbox"] {
 		display: none;

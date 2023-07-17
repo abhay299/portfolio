@@ -562,7 +562,7 @@
 	.MailMe-InnerContent {
 		display: flex;
 		/* background-color: #334454; */
-		width: 60%;
+		width: 80%;
 	}
 
 	.MailMe-InnerContent form {
