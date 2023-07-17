@@ -30,7 +30,7 @@ const Home = () => {
 	});
 
 	const onSubmit = (data) => {
-		// console.log(data);
+		console.log(data);
 
 		fetch("/", {
 			method: "POST",
