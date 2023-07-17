@@ -35,7 +35,7 @@ const Home = () => {
 		fetch("/", {
 			method: "POST",
 			headers: { "Content-Type": "application/x-www-form-urlencoded" },
-			body: encode({ "form-name": "contact", data })
+			body: encode({ "form-name": "contact", ...data })
 		})
 			.then(() => {
 				alert("Success!");
