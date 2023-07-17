@@ -2,7 +2,7 @@ import socialsLogo from '../assets/Socials/socialMediaProfilePage.png';
 import socialsLogin from '../assets/Socials/SM-LoginPage.png';
 import socialsReg from '../assets/Socials/SM-RegisterPage.png';
 import socialsUpdate from '../assets/Socials/socialMediaUpdate.png';
-import bookAmigoLogo from '../assets/BookAmigo/BA-logo.png';
+import bookAmigoLogo from '../assets/BookAmigo/BA-homePage.png';
 import bookAmigoHotel from '../assets/BookAmigo/BA-hotelPage.png';
 import bookAmigoFeatured from '../assets/BookAmigo/BA-featured.png';
 import bookAmigoSingleHotel from '../assets/BookAmigo/BA-singleHotelPage.png';

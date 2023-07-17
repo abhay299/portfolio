@@ -1,7 +1,7 @@
 // import React, { useState } from 'react';
 // import Axios from 'axios';
 import './home.css';
-import smLogo from '../../assets/Socials/SM-logo.png';
+import smLogo from '../../assets/Socials/SM-logo2.png';
 import baLogo from '../../assets/BookAmigo/BA-logo2.png'
 import portfolioLogo from '../../assets/Portfolio/myPortfolioLogo.png'
 import crmLogo from '../../assets/CRM/CRM-logo.png'
@@ -12,10 +12,16 @@ import languageLogo from '../../assets/Portfolio/LanguagesLogo.png'
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
+const encode = (data) => {
+	return Object.keys(data)
+		.map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+		.join("&");
+};
+
 const Home = () => {
 	const navigate = useNavigate();
 
-	const { register, handleSubmit, reset } = useForm({
+	const { register, handleSubmit, reset, formState: { errors } } = useForm({
 		defaultValues: {
 			name: '',
 			email: '',
@@ -24,8 +30,18 @@ const Home = () => {
 	});
 
 	const onSubmit = (data) => {
-		// console.log(data)
-		reset();
+		// console.log(data);
+
+		fetch("/", {
+			method: "POST",
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			body: encode({ "form-name": "contact", data })
+		})
+			.then(() => {
+				alert("Success!");
+				reset();
+			})
+			.catch(error => alert(error));
 	}
 
 	const regEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -352,17 +368,17 @@ const Home = () => {
 								<input className='Abhay FormInput' placeholder='Your name.'
 									{...register('name', { required: true, maxLength: 60 })} />
 							}
-							{/* {errors.name?.type === "required" && (
-								<p role="alert">Your name is required</p>
-							)} */}
+							{errors.name?.type === "required" && (
+								<p role="alert">Your name is required.</p>
+							)}
 							<input className='Abhay FormInput' placeholder='Your email address.'
 								{...register('email', { required: true, maxLength: 100, pattern: regEmail })} />
-							{/* {errors.email && <p> Please fill out this field correctly.</p>} */}
+							{errors.email && <p> Please fill out this field correctly.</p>}
 						</div>
 						<div className='Form-Row'>
 							<textarea className='FormInput' placeholder='Hello, we would like to discuss about so and so position/project with you.'
 								{...register('comment', { required: true, })} />
-							{/* {errors.comment && <p> Please fill out this field.</p>} */}
+							{errors.comment && <p> Please fill out this field.</p>}
 						</div>
 						{/* <input className='SendButton' type='submit' /> */}
 						<div className='BtnBody' type='submit'>

@@ -34,14 +34,14 @@ const About = () => {
 						<b>Achievements</b>:
 						Secured <b>2nd</b> rank in Tantra vihar competition (intra college tech competition).<br />
 						Secured <b>2nd</b> rank in Algorhythmic Hackathon competition.<br />
-						Won <b>1st</b> prize in Volleyball competition.<br />
-						Secured <b>2nd</b> prize in Spoorthi <br />
+						Won <b>2nd</b> prize in Enthusia(National level sport fest) in Volleyball event.<br />
+						Secured <b>2nd</b> prize in Spoorthi Volleyball event. <br />
 					</div>
 				</li>
 				<li style={{ "--accent-color": "#1B5F8C" }}>
-					<div className="date">2017-18</div>
-					<div className="title">Jr. College - HSC</div>
-					<div className="desc">
+					<div className="Date">2017-18</div>
+					<div className="Title">Jr. College - HSC</div>
+					<div className="Desc">
 						Graduated with 70.90% in Science.<br />
 						Won  <b>1st</b> Prize in <b>400M</b> Hurdles in BCDAAA (Mumbai district) Athletics competition.
 					</div>

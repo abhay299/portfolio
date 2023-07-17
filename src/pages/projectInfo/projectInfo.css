@@ -1,6 +1,6 @@
 /* For Desktop */
 @media only screen and (min-width: 720px) {
-	.project {
+	.Project {
 		display: flex;
 		width: 100%;
 		/* height: calc(100vh-100px); */
@@ -8,7 +8,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		background-color: #f3ebfa;
+		background-color: #f6f2fa;
 	}
 
 	.Project h1 {
@@ -31,8 +31,9 @@
 
 	.TextContainer {
 		width: 95%;
-		margin: 1.5rem 0rem;
-		background-color: white;
+		background-color: #f3ebfa;
+		/* background-color: white; */
+		margin: 1rem 0rem;
 	}
 
 	.TextContainer p {
@@ -40,20 +41,19 @@
 		text-align: left;
 		font-size: 14pt;
 		font-weight: 400;
-		padding: 2px 4px 0px 4px;
+		padding: 4px 6px;
 	}
 
 	.CarouselContainer {
 		width: 95%;
-		margin: 1rem 0rem;
+		margin-top: 1rem;
 	}
 
 	.ProjectFooter {
 		display: flex;
 		width: 95%;
 		justify-content: space-between;
-		margin: 1rem 0rem;
-		/* margin: 0.5rem 0rem 0.5rem 0rem; */
+		margin: 2.5rem 0rem;
 		/* background-color: red; */
 	}
 
@@ -135,7 +135,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		background-color: #f3ebfa;
+		background-color: #f6f2fa;
 	}
 
 	.Project h1 {
@@ -158,7 +158,7 @@
 
 	.TextContainer {
 		width: 95%;
-		background-color: white;
+		background-color: #f3ebfa;
 		margin: 1rem 0rem;
 	}
 
@@ -167,7 +167,7 @@
 		text-align: left;
 		font-size: 14pt;
 		font-weight: 400;
-		padding: 2px 4px 0px 4px;
+		padding: 4px 6px;
 	}
 
 	.CarouselContainer {

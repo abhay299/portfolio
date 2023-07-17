@@ -355,6 +355,7 @@
 		padding-bottom: 3rem;
 		/* background-color: red; */
 		text-align: center;
+		text-transform: uppercase;
 		color: #ccf381;
 	}
 
@@ -562,7 +563,7 @@
 	.MailMe-InnerContent {
 		display: flex;
 		/* background-color: #334454; */
-		width: 80%;
+		width: 75%;
 	}
 
 	.MailMe-InnerContent form {
@@ -574,6 +575,12 @@
 		display: flex;
 		justify-content: space-around;
 		margin-bottom: 1rem;
+	}
+
+	.Form-Row p {
+		font-size: 12pt;
+		color: red;
+		text-align: left;
 	}
 
 	.Form-Row:first-of-type .FormInput {
