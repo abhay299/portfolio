@@ -15,11 +15,11 @@
 		/* color:midnightblue; */
 		color: #17669f;
 		font-size: 34pt;
-		margin-top: 50px;
+		padding-top: 5rem;
 	}
 
 	.Project p {
-		margin: 0px 6px 12px 6px;
+		margin: 10px 6px;
 		font-size: 16pt;
 	}
 
@@ -46,7 +46,7 @@
 
 	.CarouselContainer {
 		width: 95%;
-		margin-top: 1rem;
+		margin-top: 2.5rem;
 	}
 
 	.ProjectFooter {
@@ -142,7 +142,7 @@
 		/* color:midnightblue; */
 		color: #17669f;
 		font-size: 34pt;
-		margin-top: 50px;
+		padding-top: 5rem;
 	}
 
 	.Project p {

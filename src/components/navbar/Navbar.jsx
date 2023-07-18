@@ -4,10 +4,11 @@ const Navbar = () => {
 
 	return (
 
-		<div>
+		<div className='NavContainer'>
+			<h1><a href='/'>Abhay Gupta</a></h1>
 			<input type='checkbox' id='active' />
-			<label htmlFor='active' className='menu-btn'><span></span></label>
-			{/* <label htmlFor='active' className='close'></label> */}
+			<label htmlFor='active' className='menu-btn'><span>
+			</span></label>
 			<div className='wrapper'>
 				<ul>
 					<li><a href='/'>Home</a></li>

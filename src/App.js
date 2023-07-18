@@ -10,7 +10,9 @@ import ProjectInfo from './pages/projectInfo/ProjectInfo.jsx';
 function App() {
   return (
     <Router>
-      <Navbar />
+      <section>
+        <Navbar />
+      </section>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/projects' element={<Projects />} />
