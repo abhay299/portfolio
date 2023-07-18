@@ -196,7 +196,7 @@
 	.menu-btn {
 		position: fixed;
 		z-index: 3;
-		right: 18px;
+		right: 10px;
 		/*left: 20px; */
 		top: 4px;
 		height: 50px;
