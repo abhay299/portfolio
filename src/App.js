@@ -17,7 +17,9 @@ function App() {
         <Route path='/projects/:id' element={<ProjectInfo />} />
         <Route path='/aboutMe' element={<About />} />
       </Routes>
-      <Footer />
+      <section>
+        <Footer />
+      </section>
     </Router>
   );
 }

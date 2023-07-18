@@ -1,4 +1,15 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 
+html {
+	scroll-snap-type: y mandatory;
+}
+
+section {
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+	/* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
