@@ -17,7 +17,7 @@ import crmIndividual from '../assets/CRM/CRM-individualRecord.png'
 import crmDel from '../assets/CRM/CRM-recordDelete.png'
 import crmUpdate from '../assets/CRM/CRM-update.png'
 import portfolio from '../assets/Portfolio/portfolioLogo.png';
-import navbarPortfolio from '../assets/Portfolio/navbar.png'
+import feedbackPF from '../assets/Portfolio/Feedback.png'
 
 export const projectList = [
 	{
@@ -48,7 +48,7 @@ export const projectList = [
 		name: "Portfolio",
 		imgLen: 2,
 		image: portfolio,
-		image1: navbarPortfolio,
+		image1: feedbackPF,
 		desc: "This is my portfolio that I built to connect with more people and showcase my knowledge and work to them. You can look around to find out more about my website.",
 		stack: "ReactJS, NodeJS, ExpressJS, MySQL, CSS",
 		gitUrl: "https://github.com/abhay299/my_Portfolio",
