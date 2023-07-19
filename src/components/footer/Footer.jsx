@@ -28,7 +28,7 @@ const Footer = () => {
 			<div className='Vl'></div>
 			<div className='FooterItems'>
 
-				<h2><a href='https://drive.google.com/file/d/1kHcHDc51cNCSeL20qqmiJ4Fy76EOl-34/view?usp=sharing'>Resume</a></h2>
+				<h2><a href='https://drive.google.com/file/d/1-F2jTUlR582Le6xi6mf4qAVoXoEogxvL/view?usp=sharing'>Resume</a></h2>
 				<h2><a href='/projects' >My work</a></h2>
 				<h2><a href='/aboutMe' >About Me</a></h2>
 
