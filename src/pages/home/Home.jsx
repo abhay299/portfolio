@@ -1,16 +1,13 @@
 // import React, { useState } from 'react';
 // import Axios from 'axios';
 import './home.css';
-import smLogo from '../../assets/Socials/SM-logo2.png';
-import baLogo from '../../assets/BookAmigo/BA-logo2.png'
-import portfolioLogo from '../../assets/Portfolio/myPortfolioLogo.png'
-import crmLogo from '../../assets/CRM/CRM-logo.png'
-// import me2 from '../../assets/Portfolio/me.JPG'
 import frontend from '../../assets/Portfolio/Frontend.png'
 import backend from '../../assets/Portfolio/Backend.png'
 import languageLogo from '../../assets/Portfolio/LanguagesLogo.png'
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { projectCards } from '../../helpers/projectCards';
+import { GitHub } from '@mui/icons-material';
 
 const encode = (data) => {
 	return Object.keys(data)
@@ -124,7 +121,26 @@ const Home = () => {
 					Over the months I've built a few projects...
 				</h1>
 				<div className='WorkContainer'>
-					<div className='ProjectCardContainer'>
+					{
+						projectCards.map((project, index) => (
+							<div className='ProjectCardContainer' key={index}>
+								<img src={project.image} alt='Project-Logo' onClick={() => {
+									navigate(`/projects/${index}`);
+								}} />
+								<div>
+									<h2>{project.title}</h2>
+									<p>
+										{project.desc}<br />
+									</p>
+									<span>
+										<a href={`/projects/${index}`}>Find out more...</a>
+										<a href={project.gitUrl}><GitHub /></a>
+									</span>
+								</div>
+							</div>
+						))
+					}
+					{/* <div className='ProjectCardContainer'>
 						<img src={smLogo} alt='' onClick={() => {
 							navigate("/projects/0");
 						}} />
@@ -132,6 +148,18 @@ const Home = () => {
 							<h2>Meet & Greet</h2>
 							<p>
 								Full Stack Social Media App <br />
+							</p>
+							<a href='/projects/0'>Find out more...</a>
+						</div>
+					</div>
+					<div className='ProjectCardContainer'>
+						<img src={myFitsLogo} alt='' onClick={() => {
+							navigate("/projects/0");
+						}} />
+						<div className='Card-Content'>
+							<h2>Find Your Fit</h2>
+							<p>
+								Full Stack E-commerce App <br />
 							</p>
 							<a href='/projects/0'>Find out more...</a>
 						</div>
@@ -171,7 +199,7 @@ const Home = () => {
 							</p>
 							<a href='/projects/3'>Find out more...</a>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</div>
 			<div className='Skill'>
@@ -197,9 +225,9 @@ const Home = () => {
 								<div className='SkillContent'>
 									<h3>Frontend</h3>
 									<p>
-										<a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+										<a href="https://reactjs.dev/" target="_blank" rel="noreferrer">
 											<img
-												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+												src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
 												alt="react"
 												width="30"
 												height="30"
@@ -207,7 +235,7 @@ const Home = () => {
 										</a>
 										<a href="https://redux.js.org" target="_blank" rel="noreferrer">
 											<img
-												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
+												src="https://assets.stickpng.com/images/5848309bcef1014c0b5e4a9a.png"
 												alt="redux"
 												width="30"
 												height="30"
@@ -215,7 +243,7 @@ const Home = () => {
 										</a>
 										<a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
 											<img
-												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
+												src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png"
 												alt="bootstrap"
 												width="30"
 												height="30"
@@ -223,7 +251,7 @@ const Home = () => {
 										</a>
 										<a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
 											<img
-												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+												src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
 												alt="html5"
 												width="30"
 												height="30"
@@ -231,7 +259,7 @@ const Home = () => {
 										</a>
 										<a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
 											<img
-												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+												src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
 												alt="css3"
 												width="30"
 												height="30"
@@ -239,7 +267,7 @@ const Home = () => {
 										</a>
 										<a href="https://sass-lang.com" target="_blank" rel="noreferrer">
 											<img
-												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+												src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1024px-Sass_Logo_Color.svg.png"
 												alt="sass"
 												width="30"
 												height="30"
@@ -270,7 +298,7 @@ const Home = () => {
 									<p>
 										<a href="https://nodejs.org" target="_blank" rel="noreferrer">
 											<img
-												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+												src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
 												alt="nodejs"
 												width="30"
 												height="30"
@@ -294,14 +322,22 @@ const Home = () => {
 										</a>
 										<a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
 											<img
-												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+												src="https://banner2.cleanpng.com/20180821/lyg/kisspng-mysql-workbench-database-mysql-cluster-5b7cdc87c3dd20.3638601015349095758023.jpg"
 												alt="mysql"
 												width="30"
 												height="30"
 											/>
 										</a>
+										<a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
+											<img
+												src="https://w7.pngwing.com/pngs/956/695/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail.png"
+												alt="mongoDB"
+												width="30"
+												height="30"
+											/>
+										</a>
 									</p>
-									<p>Node.js, Express.js, Django, MySQL,</p>
+									<p>Node.js, Express.js, Django, MySQL, MongoDB</p>
 								</div>
 							</div>
 						</div>
@@ -327,7 +363,7 @@ const Home = () => {
 											href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
 											target="_blank" rel="noreferrer">
 											<img
-												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+												src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
 												alt="javascript"
 												width="30"
 												height="30"
@@ -335,7 +371,7 @@ const Home = () => {
 										</a>
 										<a href="https://www.python.org" target="_blank" rel="noreferrer">
 											<img
-												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+												src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png"
 												alt="python"
 												width="30"
 												height="30"
@@ -343,7 +379,7 @@ const Home = () => {
 										</a>
 										<a href="https://www.java.com" target="_blank" rel="noreferrer">
 											<img
-												src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+												src="https://app.codingrooms.com/assets/ide/java-original.svg"
 												alt="java"
 												width="30"
 												height="30"

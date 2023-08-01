@@ -2,6 +2,12 @@ import socialsLogo from '../assets/Socials/socialMediaProfilePage.png';
 import socialsLogin from '../assets/Socials/SM-LoginPage.png';
 import socialsReg from '../assets/Socials/SM-RegisterPage.png';
 import socialsUpdate from '../assets/Socials/socialMediaUpdate.png';
+import myFitsLogo from '../assets/MyFits/mf-HomePage.png';
+import myFitsCategory from '../assets/MyFits/mf-Categories.png';
+import myFitsLogin from '../assets/MyFits/mf-Login.png';
+import myFitsRegister from '../assets/MyFits/mf-Register.png';
+import myFitsProducts from '../assets/MyFits/mf-womenProducts.png';
+import myFitsCart from '../assets/MyFits/mf-Cart.png';
 import bookAmigoLogo from '../assets/BookAmigo/BA-homePage.png';
 import bookAmigoHotel from '../assets/BookAmigo/BA-hotelPage.png';
 import bookAmigoFeatured from '../assets/BookAmigo/BA-featured.png';
@@ -32,6 +38,19 @@ export const projectList = [
 		gitUrl: "https://github.com/abhay299/social_media",
 	},
 	{
+		name: "MyFits",
+		imgLen: 6,
+		image: myFitsLogo,
+		image1: myFitsCategory,
+		image2: myFitsProducts,
+		image3: myFitsCart,
+		image4: myFitsLogin,
+		image5: myFitsRegister,
+		desc: "MyFits is an E-commerce Web App that sells clothes and footwear online.",
+		stack: "ReactJS (Redux), NodeJS, ExpressJS, MongoDB, CSS3",
+		gitUrl: "https://github.com/abhay299/e-commerce",
+	},
+	{
 		name: "BookAmigo",
 		imgLen: 6,
 		image: bookAmigoLogo,
@@ -50,7 +69,7 @@ export const projectList = [
 		image: portfolio,
 		image1: feedbackPF,
 		desc: "This is my portfolio that I built to connect with more people and showcase my knowledge and work to them. You can look around to find out more about my website.",
-		stack: "ReactJS, NodeJS, ExpressJS, MySQL, CSS",
+		stack: "ReactJS, NodeJS, ExpressJS, MySQL, CSS3",
 		gitUrl: "https://github.com/abhay299/my_Portfolio",
 	},
 	{
@@ -63,7 +82,7 @@ export const projectList = [
 		image4: crmUpdate,
 		image5: crmIndividual,
 		desc: "CRM is a Customer Relationship Management App. The motive to build this project was to grasp knowledge about Django framework and learn a bit about API calls using Django. As I have done a lot of python programming before hand, the syntax was not an issue. I have used Bootsrap framework instead of the normal CSS. The app keeps track of users, users can access the data only if they are logged in and they can add, update, delete records of their own. One can view all the records individually as well.",
-		stack: "HTML, Django, Bootstrap",
+		stack: "Django, HTML5, Bootstrap",
 		gitUrl: "https://github.com/abhay299/crm-App",
 	},
 	{
@@ -71,8 +90,8 @@ export const projectList = [
 		imgLen: 2,
 		image: calculator,
 		image1: calculator2,
-		desc: "As you can see it's a very basic calculator app that performs the elementary operations. It's among the first few static web apps that I built using ReactJS. Although, it's not that simple as I've used Redux in this project to manage state of operations. Also while building the app I found a bug which crashed the app, it was happening while pressing the 'Period' button so, I resolved that error with a optional chaining operator '?.' to check whether it's null/undefined state.",
-		stack: "ReactJS (Redux), CSS",
+		desc: "As you can see it's a very basic calculator app that performs the elementary operations. It's among the first few static web apps that I built using ReactJS. Although, it's not that simple as I've used Redux in this project to manage state of operations. Also while building the app I found a bug which crashed the app, it was happening while pressing the 'Period' button so, I resolved that error with an optional chaining operator '?.' to check whether it's null/undefined state.",
+		stack: "ReactJS (Redux), CSS3",
 		gitUrl: "https://github.com/abhay299/calc",
 	},
 ];
