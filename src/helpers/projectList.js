@@ -46,7 +46,7 @@ export const projectList = [
 		image3: myFitsCart,
 		image4: myFitsLogin,
 		image5: myFitsRegister,
-		desc: "MyFits is an E-commerce Web App that sells clothes and footwear online.",
+		desc: "MyFits is an E-commerce Web App that sells clothes and footwear online. It's a dynamic E-commerce web app that harnesses the power of React, Node.js, Express.js, MongoDB, and Redux. It seamlessly merges frontend and backend technologies, it offers an immersive online shopping experience. Users can explore a wide range of products, access detailed information, and securely manage their shopping carts. With Redux, state management becomes efficient, ensuring a smooth and responsive interface. MyFits not only simplifies online shopping but also guarantees data security and a user-friendly interface.",
 		stack: "ReactJS (Redux), NodeJS, ExpressJS, MongoDB, CSS3",
 		gitUrl: "https://github.com/abhay299/e-commerce",
 	},
