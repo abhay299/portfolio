@@ -1,111 +1,102 @@
 /* For Desktop */
-@media only screen and (min-width: 680px) {
-	.Footer {
-		width: 100%;
-		height: 160px;
-		/* background-color:#213555; */
-		background-image: url("https://images.unsplash.com/photo-1688516353461-540cd4b178fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+@media only screen and (min-width: 681px) {
+  .Footer {
+    width: 100%;
+    height: 160px;
+    background-image: url("https://images.unsplash.com/photo-1688516353461-540cd4b178fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-		background-repeat: no-repeat;
-		background-size: cover;
-		display: flex;
-		/* flex-direction: column; */
-		align-items: center;
-		justify-content: center;
-	}
+  .FooterItems {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
 
-	.FooterItems {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		color: white;
-		text-align: center;
-		/* background-color: green; */
-	}
+  .FooterItems h2 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 24pt;
+    font-weight: 300;
+    line-height: 2.5rem;
+    letter-spacing: 0.2rem;
+  }
 
-	.FooterItems h2 {
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 24pt;
-		font-weight: 300;
-		line-height: 2.2rem;
-	}
+  .FooterItems a {
+    color: white;
+    text-decoration: none;
+  }
 
-	.FooterItems a {
-		color: white;
-		text-decoration: none;
-	}
+  .FooterSvg {
+    display: flex;
+    width: 100%;
+    padding: 1rem 4rem;
+    justify-content: space-evenly;
+  }
 
-	.FooterSvg {
-		display: flex;
-		width: 100%;
-		padding: 1rem 4rem;
-		justify-content: space-evenly;
-		/* background-color: red; */
-	}
+  .Vl {
+    border-left: 1.5px solid white;
+    height: 120px;
+  }
 
-	.Vl {
-		border-left: 1.5px solid white;
-		height: 120px;
-	}
-
-	.FooterItems svg {
-		color: white;
-		font-size: 28pt;
-	}
+  .FooterItems svg {
+    color: white;
+    font-size: 28pt;
+  }
 }
 
 /* For Mobile device */
-@media only screen and (max-width: 680px) {
-	.Footer {
-		width: 100%;
-		height: 150px;
-		/* background-color:#213555; */
-		background-image: url("https://images.unsplash.com/photo-1688516353461-540cd4b178fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
-		/* background-image: url("https://images.unsplash.com/photo-1688413708929-8b2d281803df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNDV8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60"); */
-		/* background-image: url("https://images.unsplash.com/photo-1688494930045-328d0f95efe9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=60"); */
-		background-repeat: no-repeat;
-		background-size: cover;
-		display: flex;
-		/* flex-direction: column; */
-		align-items: center;
-		justify-content: center;
-	}
+@media only screen and (max-width: 681px) {
+  .Footer {
+    width: 100%;
+    height: 150px;
+    background-image: url("https://images.unsplash.com/photo-1688516353461-540cd4b178fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-	.FooterItems {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		color: white;
-		text-align: center;
-		/* background-color: green; */
-	}
+  .FooterItems {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.2rem;
+  }
 
-	.FooterItems h2 {
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 14pt;
-		font-weight: 300;
-		line-height: 1rem;
-	}
+  .FooterItems h2 {
+    font-size: 14pt;
+    font-weight: 300;
+    line-height: 1.5rem;
+    font-family: "JetBrains Mono", monospace;
+  }
 
-	.FooterItems a {
-		color: white;
-		text-decoration: none;
-	}
+  .FooterItems a {
+    color: white;
+    text-decoration: none;
+  }
 
-	.FooterSvg {
-		display: flex;
-		padding: 0px 10px 0px 10px;
-		justify-content: space-around;
-		/* background-color: red; */
-	}
+  .FooterSvg {
+    display: flex;
+    padding: 0px 10px 0px 10px;
+    justify-content: space-around;
+  }
 
-	.Vl {
-		border-left: 1.5px solid white;
-		height: 100px;
-	}
+  .Vl {
+    border-left: 1.5px solid white;
+    height: 100px;
+  }
 
-	.FooterItems svg {
-		color: white;
-		font-size: 22px;
-	}
+  .FooterItems svg {
+    color: white;
+    font-size: 22px;
+  }
 }
