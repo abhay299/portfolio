@@ -1,5 +1,5 @@
 /* For Desktop */
-@media only screen and (min-width: 681px) {
+@media only screen and (min-width: 1024px) {
   /* Main Component */
 
   .Home {
@@ -669,6 +669,677 @@
 	} */
 }
 
+/* For Tabs */
+@media only screen and (min-width: 681px) {
+  /* Main Component */
+
+  .Home {
+    background-color: #f9f8fd;
+    padding-bottom: 3rem;
+    scroll-behavior: smooth;
+  }
+
+  .Hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    background: #4831d4;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Info Component */
+  .InfoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    font-size: 22pt;
+  }
+
+  .InfoImg {
+    margin-top: 140px;
+    width: 100%;
+  }
+
+  .InfoImg span {
+    background: url("../../assets/Portfolio/me_in_HD.png") no-repeat;
+    background-size: cover;
+    -webkit-background-size: contain;
+    display: block;
+    width: 80%;
+    height: 80%;
+  }
+
+  .InfoText {
+    font-family: "JetBrains Mono", monospace;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    font-size: 22pt;
+    margin-top: 60px;
+    padding: 4rem 1rem 1rem 6rem;
+  }
+
+  .InfoText span {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .InfoText h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 42pt;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .InfoText h2 {
+    font-size: 28pt;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .InfoText p {
+    margin-top: 2rem;
+    font-size: 18pt;
+  }
+
+  .InfoBtn {
+    align-items: center;
+    appearance: none;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #322171;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 42px;
+    width: fit-content;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow 0.15s, transform 0.15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+    margin-top: 30px;
+  }
+
+  .InfoBtn:focus {
+    box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  }
+
+  .InfoBtn:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+
+  .InfoBtn:active {
+    box-shadow: #d6d6e7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+  /* Work Component */
+  .Work {
+    background-color: #f5f4fc;
+    font-family: "JetBrains Mono", monospace;
+    scroll-behavior: smooth;
+  }
+
+  .Work h1 {
+    text-align: center;
+    padding: 5rem 0rem;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 600;
+    font-size: 30pt;
+  }
+
+  .WorkContainer {
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(2, fit-content);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 14px;
+    font-family: "JetBrains Mono", monospace;
+    background-color: #f5f4fc;
+  }
+
+  .ProjectCardContainer {
+    background-color: #eefffe;
+    width: 70%;
+    height: 36rem;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    color: rgb(240, 240, 240);
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+    margin: 0rem 0rem 3rem 0rem;
+    scroll-snap-align: start none;
+    scroll-margin-block: 10px;
+  }
+
+  .ProjectCardContainer img {
+    /* background-color: red; */
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity 0.2s ease-out;
+  }
+
+  .ProjectCardContainer h2 {
+    position: absolute;
+    inset: auto auto 30px 30px;
+    margin-right: 20px;
+    /* text-align: cen	ter; */
+    padding: 0px;
+    transition: inset 0.3s 0.3s ease-out;
+    font-family: "Roboto Condensed", sans-serif;
+    color: #122fa3;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 22pt;
+    /* background-color: #692a01; */
+  }
+
+  .ProjectCardContainer p {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    color: black;
+    transition: opacity 0.3s ease-out;
+  }
+  .ProjectCardContainer span {
+    display: flex;
+    justify-content: space-between;
+
+    position: absolute;
+    opacity: 0;
+    width: 86%;
+    color: black;
+    transition: opacity 0.3s ease-out;
+  }
+  .ProjectCardContainer a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .ProjectCardContainer p {
+    inset: auto auto 60px 30px;
+  }
+
+  .ProjectCardContainer span {
+    inset: auto auto 40px 30px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .ProjectCardContainer:hover h2 {
+    inset: auto auto 110px 30px;
+    transition: inset 0.3s ease-out;
+  }
+
+  .ProjectCardContainer:hover p,
+  .ProjectCardContainer:hover span {
+    opacity: 1;
+    transition: opacity 0.5s 0.1s ease-in;
+  }
+
+  .ProjectCardContainer:hover img {
+    transition: opacity 0.3s ease-in;
+    opacity: 0.6;
+  }
+
+  /* Skill Component */
+  .Skill {
+    min-height: 100vh;
+    /* min-height: 100vh; */
+    background: #333;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    background-color: #4831d4;
+  }
+
+  .SkillHead {
+    padding: 5rem 0rem 2rem 0rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .SkillContainer {
+    width: 80%;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+
+  .SkillContainer img {
+    background-color: whitesmoke;
+    margin-right: 6px;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 50%;
+    padding: 4px;
+  }
+
+  .SkillContainer img:hover {
+    /* box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px; */
+    /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+    /* box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 4px -4px 0px -3px,
+      rgb(31, 193, 27) 4px -4px, rgb(255, 255, 255) 8px -8px 0px -3px,
+      rgb(255, 217, 19) 8px -8px, rgb(255, 255, 255) 12px -12px 0px -3px,
+      rgb(255, 156, 85) 12px -12px, rgb(255, 255, 255) 16px -16px 0px -3px,
+      rgb(255, 85, 85) 16px -16px; */
+    box-shadow: rgba(183, 201, 242, 0.4) -5px 5px,
+      rgba(183, 201, 242, 0.3) -10px 10px;
+    background-color: #9195f6;
+  }
+
+  .SkillCard {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: fit-content;
+    margin-left: 2rem;
+    /* background-color: violet; */
+  }
+
+  .SkillContainer .SkillCard .SkillIcon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    transition: 0.7s;
+    z-index: 1;
+  }
+
+  /* .SkillContainer .SkillCard:nth-child(1) .SkillIcon {
+    background: #014069;
+  }
+
+  .SkillContainer .SkillCard:nth-child(2) .SkillIcon {
+    background: #692a01;
+  }
+
+  .SkillContainer .SkillCard:nth-child(3) .SkillIcon {
+    background: #151e43;
+  }
+
+  .SkillContainer .SkillCard .SkillIcon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.7s;
+    color: #fff;
+  }
+
+  .SkillIcon img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 160px;
+    height: 130px;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.7s;
+    color: #fff;
+  } */
+
+  /* .SkillContainer .SkillCard .Face {
+    width: 90%;
+    height: 9rem;
+    transition: 0.5s;
+  }
+
+  .SkillContainer .SkillCard .Face.Face1 {
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+  }
+
+  .SkillContainer .SkillCard:hover .Face.Face1 {
+    transform: translateY(0px);
+  }
+
+  .SkillContainer .SkillCard .Face.Face1 .SkillContent {
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  .SkillContainer .SkillCard:hover .Face.Face1 .SkillContent {
+    opacity: 1;
+  }
+
+  .SkillContainer .SkillCard:hover .Face.Face1 .SkillContent img {
+    width: 180px;
+    height: 130px;
+  }
+
+  .SkillContainer .SkillCard .Face.Face2 .Frontend {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+    background-color: #b1e0ff;
+  }
+
+  .SkillContainer .SkillCard:hover .Face.Face2 .Frontend {
+    transform: translateY(0);
+    background-color: #b1e0ff;
+  }
+
+  .SkillContainer .SkillCard .Face.Face2 .Backend {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+    background-color: #ffe1ce;
+  }
+
+  .SkillContainer .SkillCard:hover .Face.Face2 .Backend {
+    transform: translateY(0);
+    background-color: #ffe1ce;
+  }
+
+  .SkillContainer .SkillCard .Face.Face2 .Language {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+    background-color: #b7c6ff;
+  }
+
+  .SkillContainer .SkillCard:hover .Face.Face2 .Language {
+    transform: translateY(0);
+    background-color: #b7c6ff;
+  }
+
+  .SkillContainer .SkillCard .Face.Face2 .SkillContent p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #414141;
+    font-size: 10pt;
+  }
+
+  .SkillContainer .SkillCard .Face.Face2 .SkillContent h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    color: #414141;
+  } */
+
+  .SkillContainer a {
+    text-decoration: none;
+    color: #414141;
+  }
+
+  .SkillContent a {
+    padding: 2px 4px;
+  }
+
+  /* Feedback Component */
+  @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+  .MailMeHeader {
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    padding-top: 2rem;
+    /* margin-top: 2rem; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1rem;
+    color: #4831d4;
+    /* background-color: #4831d4; */
+  }
+
+  .MailMeHeader p {
+    text-align: justify;
+    font-size: 14pt;
+    margin: 1rem 1rem;
+    color: #4831d4;
+  }
+
+  .MailMe-InnerContent {
+    display: flex;
+    /* background-color: #334454; */
+    width: 75%;
+  }
+
+  .MailMe-InnerContent form {
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  .Form-Row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+  }
+
+  .Form-Row p {
+    font-size: 12pt;
+    color: red;
+    text-align: left;
+  }
+
+  .Form-Row:first-of-type .FormInput {
+    width: 50%;
+  }
+
+  .Abhay:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .Form-Row textarea {
+    line-height: 1.2;
+    resize: vertical;
+  }
+
+  .FormInput {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: #122fa3;
+    font-size: 14pt;
+    outline: none;
+    transition: border-color 0.2s;
+    background-color: #f9f8fd;
+  }
+
+  .FormInput:focus {
+    border-bottom: 1px solid #122fa3;
+  }
+
+  /* Send Component */
+  @import url("https://fonts.googleapis.com/css?family=Mukta:700");
+  .BtnBody {
+    font-family: "Mukta", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    /* min-height: 100vh; */
+    background: #f9f8fd;
+  }
+
+  button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+  }
+
+  button.Learn-More {
+    width: 12rem;
+    height: auto;
+  }
+
+  button.Learn-More .Circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #4831d4;
+    border-radius: 1.625rem;
+  }
+
+  button.Learn-More .Circle .Icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+  }
+
+  button.Learn-More .Circle .Icon.Arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+  }
+
+  button.Learn-More .Circle .Icon.Arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+  }
+
+  button.Learn-More .Button-Text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  button:hover .Circle {
+    width: 100%;
+  }
+
+  button:hover .Circle .Icon.Arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+  }
+
+  button:hover .Button-Text {
+    color: #fff;
+  }
+
+  /* @supports (display: grid) {
+		.BtnBody {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 0.625rem;
+			grid-template-areas: ". main main ." ". main main .";
+		}
+
+		#BtnContainer {
+			grid-area: main;
+			align-self: center;
+			justify-self: center;
+		}
+	} */
+}
+
+/* For Mobile */
 @media only screen and (max-width: 681px) {
   /* Main Component */
   .Home {
@@ -682,7 +1353,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     overflow: hidden;
     background-color: #4831d4;
   }
@@ -692,7 +1363,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: 100%;
   }
 
   .InfoText {
@@ -730,7 +1401,7 @@
 
   .InfoImg {
     width: 100%;
-    height: 100%;
+    height: 50vh;
   }
 
   .InfoImg span {
@@ -739,7 +1410,7 @@
     -webkit-background-size: contain;
     display: block;
     width: 100%;
-    height: 100%;
+    height: 85%;
   }
 
   .InfoBtn {

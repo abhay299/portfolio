@@ -97,7 +97,7 @@ const Home = () => {
         </div>
       </div>
       <div className="Work">
-        <h1>Over the months I've built a few projects...</h1>
+        <h1>My Projects</h1>
         <div className="WorkContainer">
           {projectCards.map((project, index) => (
             <div className="ProjectCardContainer" key={index}>
