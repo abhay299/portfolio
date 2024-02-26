@@ -108,22 +108,31 @@ const Home = () => {
                   navigate(`/projects/${index}`);
                 }}
               />
-              <div>
+              <div className="ProjectCardContent">
                 <h2>{project.title}</h2>
                 <p>
                   {project.desc}
                   <br />
                 </p>
-                <span>
+                <div className="ProjectCardLink">
                   <a href={`/projects/${index}`}>Find out more...</a>
-                  <a href={project.gitUrl}>
-                    <GitHub />
-                  </a>
-                </span>
+                  <span>
+                    <a href={project.gitUrl}>
+                      <button>
+                        <GitHub style={{ marginRight: "10px" }} />
+                        Code
+                      </button>
+                    </a>
+                    <a href="#$">
+                      <button>Live Demo</button>
+                    </a>
+                  </span>
+                </div>
               </div>
             </div>
           ))}
         </div>
+        <h1>More projects coming soon...</h1>
       </div>
       <div className="Skill">
         <div className="SkillHead">

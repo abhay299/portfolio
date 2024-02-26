@@ -5,11 +5,15 @@ const About = () => {
   return (
     <div className="About">
       <section>
-        <h1>A bit about myself</h1>
+        <h1>
+          <b>A bit about myself</b>
+        </h1>
         <ul>
           <li style={{ "--accent-color": "#41516C" }}>
             <div className="Date">2022-23</div>
-            <div className="Title">IIT-Bombay (e-Yantra)</div>
+            <div className="Title">
+              <b>IIT-Bombay (e-Yantra)</b>
+            </div>
             <div className="Desc">
               Role: Technical Assistant (<b>5</b> months)
               <br />
@@ -27,7 +31,7 @@ const About = () => {
           <li style={{ "--accent-color": "#FBCA3E" }}>
             <div className="Date">2022</div>
             <div className="Title">
-              Mumbai University - Vidyalankar Institute of Technology
+              <b>Mumbai University - Vidyalankar Institute of Technology</b>
             </div>
             <div className="Desc">
               BE in Electronics Engineering
@@ -38,7 +42,9 @@ const About = () => {
           </li>
           <li style={{ "--accent-color": "#E24A68" }}>
             <div className="Date">2018-22</div>
-            <div className="Title">UnderGrad Life</div>
+            <div className="Title">
+              <b>UnderGrad Life</b>
+            </div>
             <div className="Desc">
               <b>Achievements</b>: Secured <b>2nd</b> rank in Tantra vihar
               competition (intra college tech competition).
@@ -53,7 +59,9 @@ const About = () => {
           </li>
           <li style={{ "--accent-color": "#1B5F8C" }}>
             <div className="Date">2017-18</div>
-            <div className="Title">Jr. College - HSC</div>
+            <div className="Title">
+              <b>Jr. College - HSC</b>
+            </div>
             <div className="Desc">
               Graduated with 70.90% in Science.
               <br />
@@ -63,7 +71,9 @@ const About = () => {
           </li>
           <li style={{ "--accent-color": "#4CADAD" }}>
             <div className="Date">2016</div>
-            <div className="Title">High School - SSC</div>
+            <div className="Title">
+              <b>High School - SSC</b>
+            </div>
             <div className="Desc">
               Graduated with <b>90.40%</b>.<br />
               Won <b>1st</b> Prize in <b>400M</b> Hurdles in BCDAAA (Mumbai

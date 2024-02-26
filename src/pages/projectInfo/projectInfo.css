@@ -116,7 +116,7 @@
   }
 }
 
-/* For Mobile device */
+/* For Mobile */
 @media only screen and (max-width: 681px) {
   .Project {
     display: flex;
@@ -134,16 +134,11 @@
   }
 
   .Project p {
+    color: #3d155f;
     padding: 4px 6px;
     font-size: 16pt;
     text-align: center;
   }
-
-  /* .Project img{
-		width: 80%;
-		border-radius: 10px;
-		margin: 10px 0px 10px 0px;
-	} */
 
   .TextContainer {
     width: 95%;
@@ -214,7 +209,7 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
       0 2px 4px -1px rgba(0, 0, 0, 0.06);
     box-sizing: border-box;
-    color: #1a202c;
+    color: #3d155f;
     display: inline-flex;
     font-family: Inter, sans-serif;
     font-size: 1rem;

@@ -1,8 +1,8 @@
 import React from "react";
 import "./navbar.css";
 import ModalImage from "react-modal-image";
-import me from "../../assets/Portfolio/me.JPG";
-import smallMe from "../../assets/Portfolio/smallMe.png";
+import me from "../../assets/Portfolio/me_in_HD.png";
+import smallMe from "../../assets/Portfolio/smallMe_in_HD.png";
 
 const Navbar = () => {
   return (

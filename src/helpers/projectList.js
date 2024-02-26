@@ -27,17 +27,6 @@ import feedbackPF from "../assets/Portfolio/Feedback.png";
 
 export const projectList = [
   {
-    name: "Socials",
-    imgLen: 4,
-    image: socialsLogo,
-    image1: socialsReg,
-    image2: socialsLogin,
-    image3: socialsUpdate,
-    desc: "Socials is a social media website, it's a full stack project. The social media app is a dynamic platform developed using ReactJS, NodeJS, MySQL, and ExpressJS. It offers a seamless user experience with its responsive design where users can create accounts, customize profiles effortlessly. The app leverages NodeJS and ExpressJS for efficient server-side operations, ensuring fast and secure handling of user requests. The MySQL database manages user data, posts, and comments, providing reliable and scalable data storage. Key features include user profiles, news feed, post creation. The app prioritizes security with secure authentication, it combines the power of these technologies to create a modern social media experience for users",
-    stack: "ReactJS, NodeJS, ExpressJS, MySQL",
-    gitUrl: "https://github.com/abhay299/social_media",
-  },
-  {
     name: "MyFits",
     imgLen: 6,
     image: myFitsLogo,
@@ -68,8 +57,8 @@ export const projectList = [
     imgLen: 2,
     image: portfolio,
     image1: feedbackPF,
-    desc: "This is my personal portfolio that I had built with MERN stack. The purpose was to connect with more people and showcase my knowledge and work to them. Please leave a feedback and surf around to find out more about me",
-    stack: "ReactJS, NodeJS, ExpressJS, MySQL, CSS3",
+    desc: "This is my personal website that I had built with React, from scratch. The purpose was to connect with more people and showcase my knowledge and work to them. Please leave a feedback and surf around to find out more about me",
+    stack: "ReactJS, CSS3",
     gitUrl: "https://github.com/abhay299/my_Portfolio",
   },
   {
@@ -81,9 +70,20 @@ export const projectList = [
     image3: crmDel,
     image4: crmUpdate,
     image5: crmIndividual,
-    desc: "CRM is a Customer Relationship Management App. The motive to build this project was to grasp knowledge about Django framework and learn a bit about API calls using Django. I have used Bootsrap framework instead of the basic CSS. The app keeps track of users, users can access the data only if they are logged in and they can add, update, delete records of their own. One can view all the records individually as well",
+    desc: "CRM is a Customer Relationship Management App. The motive to build this project was to grasp knowledge about Django framework and learn a bit about API calls using Django. The app keeps track of users, users can access the data only if they are logged in and then they can add, update, delete records of their own. Only the admin has access to delete anyone's data from the records. One can view all the records individually as well",
     stack: "Django, HTML5, Bootstrap",
     gitUrl: "https://github.com/abhay299/crm-App",
+  },
+  {
+    name: "Socials",
+    imgLen: 4,
+    image: socialsLogo,
+    image1: socialsReg,
+    image2: socialsLogin,
+    image3: socialsUpdate,
+    desc: "Socials is a social media website, it's a full stack project. The social media app is a dynamic platform developed using ReactJS, NodeJS, MySQL, and ExpressJS. It offers a seamless user experience with its responsive design where users can create accounts, customize profiles effortlessly. The app leverages NodeJS and ExpressJS for efficient server-side operations, ensuring fast and secure handling of user requests. The MySQL database manages user data, posts, and comments, providing reliable and scalable data storage. Key features include user profiles, news feed, post creation. The app prioritizes security with secure authentication, it combines the power of these technologies to create a modern social media experience for users",
+    stack: "ReactJS, NodeJS, ExpressJS, MySQL",
+    gitUrl: "https://github.com/abhay299/social_media",
   },
   {
     name: "Calculator",
