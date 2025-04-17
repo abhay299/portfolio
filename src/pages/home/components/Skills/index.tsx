@@ -4,30 +4,31 @@ import BackendLogo from "../../../../assets/Portfolio/Backend.png";
 import FrontendLogo from "../../../../assets/Portfolio/Frontend.png";
 import LanguageLogo from "../../../../assets/Portfolio/LanguagesLogo.png";
 
+import styles from "./index.module.css";
+
 function Skills() {
 	return (
-		<div className="Skill">
-			<div className="SkillHead">
+		<div className={styles.skill}>
+			<div className={styles.skill_head}>
 				<h1>Tech Skills</h1>
 			</div>
 
-			<div className="SkillContainer">
-				<div className="SkillCard">
-					<div className="Face Face1">
-						<div className="SkillContent">
-							<div className="SkillIcon">
+			<div className={styles.skill_container}>
+				<div className={styles.skill_card}>
+					<div className={`${styles.face} ${styles.face1}`}>
+						<div className={styles.skill_content}>
+							<div className={styles.skill_icon}>
 								<img
-									className="fa"
-									aria-hidden="true"
+									className={styles.fa}
 									src={FrontendLogo}
 									alt="frontend"
 								/>
 							</div>
 						</div>
 					</div>
-					<div className="Face Face2">
-						<div className="Frontend">
-							<div className="SkillContent">
+					<div className={`${styles.face} ${styles.face2}`}>
+						<div className={styles.frontend}>
+							<div className={styles.skill_content}>
 								<h3>Frontend</h3>
 								<p>
 									<a
@@ -110,22 +111,22 @@ function Skills() {
 						</div>
 					</div>
 				</div>
-				<div className="SkillCard">
-					<div className="Face Face1">
-						<div className="SkillContent">
-							<div className="SkillIcon">
+
+				<div className={styles.skill_card}>
+					<div className={`${styles.face} ${styles.face1}`}>
+						<div className={styles.skill_content}>
+							<div className={styles.skill_icon}>
 								<img
-									className="fa"
-									aria-hidden="true"
+									className={styles.fa}
 									src={BackendLogo}
 									alt="backend"
 								/>
 							</div>
 						</div>
 					</div>
-					<div className="Face Face2">
-						<div className="Backend">
-							<div className="SkillContent">
+					<div className={`${styles.face} ${styles.face2}`}>
+						<div className={styles.backend}>
+							<div className={styles.skill_content}>
 								<h3>Backend</h3>
 								<p>
 									<a
@@ -196,22 +197,22 @@ function Skills() {
 						</div>
 					</div>
 				</div>
-				<div className="SkillCard">
-					<div className="Face Face1">
-						<div className="SkillContent">
-							<div className="SkillIcon">
+
+				<div className={styles.skill_card}>
+					<div className={`${styles.face} ${styles.face1}`}>
+						<div className={styles.skill_content}>
+							<div className={styles.skill_icon}>
 								<img
-									className="fa"
-									aria-hidden="true"
+									className={styles.fa}
 									src={LanguageLogo}
 									alt="languageLogo"
 								/>
 							</div>
 						</div>
 					</div>
-					<div className="Face Face2">
-						<div className="Language">
-							<div className="SkillContent">
+					<div className={`${styles.face} ${styles.face2}`}>
+						<div className={styles.language}>
+							<div className={styles.skill_content}>
 								<h3>Languages</h3>
 								<p>
 									<a
