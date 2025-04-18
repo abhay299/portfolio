@@ -11,3 +11,35 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
 }
+
+:root {
+	/* === Minimal & Professional === */
+	--minimal-bg: #f9fafb;
+	--minimal-text: #111827;
+	--minimal-accent: #2563eb;
+	--minimal-muted: #9ca3af;
+
+	/* === Modern & Techy === */
+	--modern-bg: #0f172a;
+	--modern-primary: #fffdf6;
+	--modern-accent: #7c3aed;
+	--modern-muted-text: #94a3b8;
+
+	/* === Creative & Playful === */
+	--creative-bg: #fffdf6;
+	--creative-primary: #ef4444;
+	--creative-accent: #f59e0b;
+	--creative-text: #1f2937;
+
+	/* === Elegant & Luxury === */
+	--elegant-bg: #f5f5f4;
+	--elegant-primary: #3f3f46;
+	--elegant-accent: #d4af37;
+	--elegant-text: #1c1c1e;
+
+	/* === Earthy & Calm === */
+	--earthy-bg: #faf9f6;
+	--earthy-primary: #7c6a0a;
+	--earthy-accent: #9cafaa;
+	--earthy-text: #3b3a36;
+}
