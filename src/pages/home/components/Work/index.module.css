@@ -1,0 +1,76 @@
+/* For Desktop */
+@media only screen and (min-width: 680px) {
+	.work {
+		position: relative;
+		font-family: "Space Grotesk", "Poppins", sans-serif;
+		scroll-behavior: smooth;
+	}
+
+	.work_heading {
+		text-align: center;
+		padding: 0rem 1rem 4rem 1rem;
+		font-weight: 600;
+		font-size: 30pt;
+		z-index: 2;
+	}
+
+	.work_container {
+		display: grid;
+		place-items: center;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+	}
+
+	.project_card_container {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+		border-radius: 1rem;
+		width: 100%;
+		max-width: 500px;
+		transition: transform 0.2s ease;
+	}
+
+	.project_card {
+		position: relative;
+		z-index: 2;
+		padding: 1rem;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		height: 100%;
+	}
+
+	.project_card_container img {
+		cursor: pointer;
+	}
+
+	.project_card_text {
+		color: #212121;
+	}
+
+	.project_card_text h2 {
+		font-size: 20pt;
+		margin-bottom: 0rem;
+		color: #212121;
+	}
+
+	.project_card_text p {
+		margin-bottom: 0.2rem;
+		line-height: 1.6;
+		color: #212121;
+	}
+
+	.project_card_text span {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+	}
+
+	.project_card_text a {
+		text-decoration: none;
+		color: #212121;
+		font-weight: 500;
+	}
+}
