@@ -1,6 +1,6 @@
 @media only screen and (min-width: 680px) {
 	/* Feedback Component */
-	@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+	/* @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700); */
 
 	.mail_me_header {
 		display: flex;
@@ -70,7 +70,6 @@
 		font-size: 14pt;
 		outline: none;
 		transition: border-color 0.2s;
-		background-color: #f9f8fd;
 	}
 
 	.form_input:focus {
@@ -78,7 +77,7 @@
 	}
 
 	/* Send Component */
-	@import url("https://fonts.googleapis.com/css?family=Mukta:700");
+	/* @import url("https://fonts.googleapis.com/css?family=Mukta:700"); */
 	.btn_body {
 		font-family: "Mukta", sans-serif;
 		font-size: 1rem;
@@ -87,7 +86,6 @@
 		align-items: center;
 		justify-content: center;
 		margin-top: 3rem;
-		background: #f9f8fd;
 	}
 
 	button {
@@ -243,7 +241,6 @@
 		font-size: 14pt;
 		outline: none;
 		transition: border-color 0.2s;
-		background-color: #f9f8fd;
 	}
 
 	.form_input:focus {
@@ -251,7 +248,7 @@
 	}
 
 	/* Send Component */
-	@import url("https://fonts.googleapis.com/css?family=Mukta:700");
+	/* @import url("https://fonts.googleapis.com/css?family=Mukta:700"); */
 	.btn_body {
 		font-family: "Mukta", sans-serif;
 		font-size: 1rem;
@@ -260,7 +257,6 @@
 		align-items: center;
 		justify-content: center;
 		margin-top: 3rem;
-		background: #f9f8fd;
 	}
 
 	button {

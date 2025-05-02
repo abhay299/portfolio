@@ -15,9 +15,9 @@ const IMGS: string[] = [
 	"/icons/nodejs-logo-svgrepo.svg",
 	"/icons/mysql-logo-svgrepo.svg",
 	"/icons/mongodb-svgrepo.svg",
+	"/icons/python-svgrepo.svg",
 	"/icons/javascript-svgrepo.svg",
 	"/icons/typescript-svgrepo.svg",
-	"/icons/python-svgrepo.svg",
 ];
 
 interface RollingGalleryProps {
@@ -81,7 +81,7 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
 					transition: { duration: 2, ease: "linear" },
 				});
 				rotation.set(rotation.get() - 360 / faceCount);
-			}, 2000);
+			}, 750);
 
 			return () => {
 				if (autoplayRef.current) clearInterval(autoplayRef.current);
@@ -120,7 +120,7 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
 					transition: { duration: 2, ease: "linear" },
 				});
 				rotation.set(rotation.get() - 360 / faceCount);
-			}, 2000);
+			}, 750);
 		}
 	};
 
