@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import ModalImage from "react-modal-image";
-import "./navbar.css";
 
 import me from "../../assets/Portfolio/me.JPG";
 import smallMe from "../../assets/Portfolio/smallMe.png";
 
-const Navbar = () => {
+import styles from "./index.module.css";
+
+function Navbar() {
+	const [menuOpen, setMenuOpen] = useState(false);
+
 	return (
-		<div className="Navbar">
-			<div className="NavContainer">
+		<div className={styles.navbar}>
+			<div className={styles.nav_container}>
 				<ModalImage
 					hideDownload="true"
 					hideZoom="true"
@@ -22,28 +25,30 @@ const Navbar = () => {
 				</h1>
 			</div>
 
-			<input type="checkbox" id="active" />
-
-			<label htmlFor="active" className="menu-btn">
+			<button
+				className={`${styles.menu_btn} ${menuOpen ? styles.open : ""}`}
+				onClick={() => setMenuOpen((prev) => !prev)}
+				aria-label="Toggle menu"
+			>
 				<span />
-			</label>
+			</button>
 
-			<div className="wrapper">
+			<div className={`${styles.wrapper} ${menuOpen ? styles.show : ""}`}>
 				<ul>
 					<li>
 						<a href="/">Home</a>
 					</li>
 					<li>
-						<a href={"/projects"}>Work</a>
+						<a href="/projects">Work</a>
 					</li>
 					<li>
-						<a href={"/aboutMe"}>About</a>
+						<a href="/aboutMe">About</a>
 					</li>
 					<li>
 						<a
-							href={
-								"https://drive.google.com/file/d/1-F2jTUlR582Le6xi6mf4qAVoXoEogxvL/view?usp=sharing"
-							}
+							href="https://drive.google.com/file/d/1-F2jTUlR582Le6xi6mf4qAVoXoEogxvL/view?usp=sharing"
+							target="_blank"
+							rel="noopener noreferrer"
 						>
 							Resume
 						</a>
@@ -55,6 +60,6 @@ const Navbar = () => {
 			</div>
 		</div>
 	);
-};
+}
 
 export default Navbar;
