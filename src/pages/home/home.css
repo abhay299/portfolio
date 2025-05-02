@@ -9,19 +9,6 @@
 		scroll-behavior: smooth;
 	}
 
-	.InfoImg {
-		width: 100%;
-		padding: 4rem 0rem;
-		/* background-color: #e5d1fa; */
-	}
-
-	.InfoImg img {
-		display: block;
-		margin: auto;
-		width: fit-content;
-		height: 210px;
-	}
-
 	.Checkout svg {
 		color: white;
 	}
@@ -35,68 +22,6 @@
 		scroll-behavior: smooth;
 	}
 
-	.Hero {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		min-height: 100vh;
-		overflow: hidden;
-		background-image: url("https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60");
-		/* background-color: red; */
-	}
-
-	/* Info Component */
-	.InfoContainer {
-		display: flex;
-		flex-direction: row;
-		width: 100%;
-		/* color: whitesmoke; */
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 22pt;
-		/* background-color: red; */
-	}
-
-	.InfoText {
-		/* background-image: url("https://images.unsplash.com/photo-1688413708993-39da5ee59315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60"); */
-		/* background-image: url("../../assets/Portfolio/me.JPG"); */
-		/* background-repeat: no-repeat;
-		background-position: right;
-		background-size: contain; */
-		width: 100%;
-		height: 100%;
-		/* background-color: #e3dffd; */
-		color: rgba(255, 255, 255, 0.653);
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 22pt;
-		padding: 0rem 2rem 1rem 2rem;
-	}
-
-	.InfoText h1 {
-		font-size: 42pt;
-		color: #ffffff;
-		padding: 0.8rem 0rem;
-	}
-
-	.InfoText h2 {
-		font-size: 30pt;
-		color: #ffffff;
-		padding: 0.8rem 0rem;
-	}
-
-	.InfoImg {
-		width: 100%;
-		padding: 4rem 0rem;
-		/* background-color: #e5d1fa; */
-	}
-
-	.InfoImg img {
-		display: block;
-		margin: auto;
-		width: fit-content;
-		height: 210px;
-	}
-
 	.Checkout svg {
 		color: white;
 	}
@@ -105,14 +30,8 @@
 
 	.Work {
 		background-color: #f5f4fc;
-		/* place-content: center; */
-		/* flex-direction: column;
-		justify-content: center;
-		align-items: center; */
-		/* padding: 50px; */
 		font-family: "Roboto", sans-serif;
 		scroll-behavior: smooth;
-		/* padding: 0px 0px 0px 0px; */
 	}
 
 	.Work h1 {
@@ -133,17 +52,9 @@
 	}
 
 	.ProjectCardContainer {
-		/* display: flex;
-		width: 90%;
-		height: fit-content;
-		flex-direction: column; */
 		background-color: #eefffe;
-		/* box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-		margin: 2.5rem; */
-		/* width: 24rem; */
 		width: 95%;
 		height: 36rem;
-		/* height: 36rem; */
 		border-radius: 10px;
 		overflow: hidden;
 		cursor: pointer;
@@ -156,7 +67,6 @@
 	}
 
 	.ProjectCardContainer img {
-		/* background-color: red; */
 		position: absolute;
 		object-fit: cover;
 		width: 100%;
