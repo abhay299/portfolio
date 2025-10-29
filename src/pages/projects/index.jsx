@@ -7,8 +7,8 @@ import "./projects.css";
 
 const Projects = () => {
 	return (
-		<section>
-			<div className="projects">
+		<section className="section">
+			<div className="projects container">
 				<h1>Some of my recent work.</h1>
 				<p>
 					Disclaimer: Few of the projects listed below have been done

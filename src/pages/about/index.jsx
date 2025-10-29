@@ -3,8 +3,8 @@ import "./about.css";
 
 const About = () => {
 	return (
-		<div className="About">
-			<section>
+		<div className="About container">
+			<section className="section">
 				<h1>A bit about myself</h1>
 				<ul>
 					<li style={{ "--accent-color": "#41516C" }}>

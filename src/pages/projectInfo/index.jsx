@@ -22,8 +22,8 @@ const ProjectInfo = () => {
 	};
 
 	return (
-		<section>
-			<div className="Project">
+		<section className="section">
+			<div className="Project container">
 				<h1>{project.name}</h1>
 				<p>Stack: {project.stack}</p>
 				<div className="TextContainer">

@@ -2,10 +2,16 @@
 .navbar {
 	position: fixed;
 	width: 100%;
-	background-color: #322171;
+	background-color: color-mix(in oklab, var(--bg), white 6%);
+	backdrop-filter: saturate(180%) blur(10px);
+	-webkit-backdrop-filter: saturate(180%) blur(10px);
+	border-bottom: 1px solid color-mix(in oklab, var(--bg), white 14%);
 	z-index: 2;
-	padding: 0.5rem 2rem;
+	padding: 0.5rem 0;
 	height: 4.5rem;
+	box-shadow: var(--shadow-sm);
+	top: 0;
+	left: 0;
 }
 
 .nav_container h1 {
@@ -17,6 +23,9 @@
 	gap: 1rem;
 	justify-content: flex-start;
 	align-items: center;
+	max-width: var(--container-max);
+	margin-inline: auto;
+	padding-inline: var(--container-pad);
 }
 
 .nav_container img {
@@ -25,7 +34,7 @@
 
 .nav_container a {
 	text-decoration: none;
-	color: white;
+	color: var(--text);
 }
 
 /* Wrapper Menu */
@@ -35,7 +44,8 @@
 	right: -100%;
 	width: 100%;
 	height: 100%;
-	background-color: #322171;
+	background-color: color-mix(in oklab, var(--bg), white 6%);
+	backdrop-filter: saturate(180%) blur(10px);
 	z-index: 2;
 	transition: all 0.4s ease-in-out;
 }
@@ -58,13 +68,14 @@
 	display: inline-block;
 	text-decoration: none;
 	font-size: 30px;
-	font-weight: 500;
-	color: #fff;
-	border-radius: 50px;
+	font-weight: 600;
+	color: var(--text);
+	border-radius: 12px;
 	line-height: 50px;
 	opacity: 0;
 	transform: translateX(100px);
-	transition: opacity 1.2s, transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: opacity 1.2s, transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1),
+		color 0.2s ease;
 	position: relative;
 	padding: 5px 30px;
 }
@@ -72,16 +83,16 @@
 .wrapper ul li a::after {
 	content: "";
 	position: absolute;
-	background: #fff;
+	background: color-mix(in oklab, var(--accent), white 80%);
 	width: 100%;
 	height: 100%;
 	left: 0;
 	top: 0;
-	opacity: 0.2;
-	border-radius: 50px;
+	opacity: 0.15;
+	border-radius: 12px;
 	transform: scaleY(0);
 	z-index: -1;
-	transition: transform 0.1s ease;
+	transition: transform 0.12s ease;
 }
 
 .wrapper ul li a:hover::after {
@@ -89,7 +100,7 @@
 }
 
 .wrapper ul li a:hover {
-	color: #ccf381;
+	color: var(--accent);
 }
 
 /* Show menu when active */
@@ -129,8 +140,8 @@
 	top: calc(50% - 1px);
 	left: 30%;
 	width: 40%;
-	border-bottom: 2px solid #fff;
-	transition: transform 0.2s ease;
+	border-bottom: 2px solid var(--text);
+	transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .menu_btn::before {
@@ -148,19 +159,19 @@
 
 .open::before {
 	transform: rotate(45deg);
-	border-color: #fff;
+	border-color: var(--text);
 }
 
 .open::after {
 	transform: rotate(-45deg);
-	border-color: #fff;
+	border-color: var(--text);
 }
 
 /* Mobile styles */
 @media only screen and (max-width: 680px) {
 	.navbar {
 		height: 4.5rem;
-		padding-left: 1rem;
+		padding-left: 0;
 	}
 
 	.nav_container h1 {

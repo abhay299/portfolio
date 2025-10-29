@@ -11,7 +11,7 @@ function Home() {
 		useHomePage();
 
 	return (
-		<div className="Home">
+		<div className="Home container section">
 			<Hero />
 			<Work navigate={navigate} />
 			<Skills />
