@@ -1,11 +1,11 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from './components/Footer/Footer.jsx';
 import Navbar from './components/navbar/Navbar.jsx';
-import Home from './pages/home/Home.jsx';
-import Projects from './pages/projects/Projects.jsx';
-import About from './pages/about/About.jsx';
-import Footer from './components/footer/Footer.jsx';
-import ProjectInfo from './pages/projectInfo/ProjectInfo.jsx';
+import About from './pages/About/About.jsx';
+import Home from './pages/Home/Home.jsx';
+import ProjectInfo from './pages/ProjectInfo/ProjectInfo.jsx';
+import Projects from './pages/Projects/Projects.jsx';
 
 function App() {
   return (

@@ -1,8 +1,8 @@
-import "./home.css";
-import { useNavigate } from "react-router-dom";
-import { useForm } from "react-hook-form";
-import { projectCards } from "../../helpers/projectCards";
 import { GitHub } from "@mui/icons-material";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { projectCards } from "../../helpers/projectCards";
+import './home.css';
 
 const encode = (data) => {
   return Object.keys(data)

@@ -4,9 +4,10 @@
     position: fixed;
     height: 70px;
     width: 100%;
-    padding: 0.5rem 0rem 0rem 5rem;
     background-color: #322171;
     z-index: 2;
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: saturate(120%) blur(6px);
   }
 
   .NavContainer {
@@ -14,6 +15,9 @@
     gap: 1rem;
     justify-content: flex-start;
     align-items: center;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding: 0 var(--space-4);
   }
 
   .NavContainer img {
@@ -142,7 +146,7 @@
     transform: scaleY(1);
   }
   .wrapper ul li a:hover {
-    color: #ccf381;
+    color: var(--color-accent);
   }
   input[type="checkbox"] {
     display: none;

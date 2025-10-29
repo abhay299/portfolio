@@ -1,7 +1,7 @@
-import "./projects.css";
-import "../home/home.css";
 import ProjectItem from "../../components/projectItem/ProjectItem.jsx";
 import { projectList } from "../../helpers/projectList.js";
+import "../Home/home.css";
+import "./projects.css";
 
 const Projects = () => {
   return (

@@ -2,8 +2,8 @@
 @media only screen and (min-width: 1024px) {
   /* Main Component */
   .Home {
-    background-color: #f9f8fd;
-    padding-bottom: 3rem;
+    background-color: var(--color-bg);
+    padding-bottom: var(--space-12);
     scroll-behavior: smooth;
   }
 
@@ -13,7 +13,7 @@
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    background: #4831d4;
+    background: var(--color-primary);
     overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,6 +27,9 @@
     justify-content: center;
     width: 100%;
     font-size: 22pt;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--space-4);
   }
 
   .InfoImg {
@@ -50,10 +53,10 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    color: whitesmoke;
+    color: #fff;
     font-size: 22pt;
     margin-top: 60px;
-    padding: 4rem 1rem 1rem 6rem;
+    padding: 4rem 1rem 1rem 4rem;
   }
 
   .InfoText span {
@@ -132,57 +135,63 @@
 
   /* Work Component */
   .Work {
-    background-color: #f5f4fc;
+    background-color: var(--color-surface-alt);
     font-family: "JetBrains Mono", monospace;
     scroll-behavior: smooth;
   }
 
   .Work h1 {
     text-align: center;
-    padding: 5rem 0rem;
+    padding: var(--space-12) 0;
     font-family: "JetBrains Mono", monospace;
     font-weight: 600;
     font-size: 30pt;
-    color: #4831d4;
+    color: var(--color-primary);
   }
 
   .WorkContainer {
     display: grid;
-    place-items: center;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 14px;
-    background-color: #f5f4fc;
+    place-items: stretch;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-gap: var(--space-6);
+    background-color: var(--color-surface-alt);
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--space-4);
   }
 
   .ProjectCardContainer {
     display: flex;
-    background-color: #eefffe;
-    width: 60%;
-    height: 350px;
-    border-radius: 10px;
+    background-color: var(--color-surface);
+    width: 100%;
+    max-width: 900px;
+    min-height: 320px;
+    border-radius: var(--radius-md);
     cursor: pointer;
-    color: rgb(240, 240, 240);
-    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
-    margin: 0rem 0rem 3rem 0rem;
+    color: var(--color-text);
+    box-shadow: var(--shadow-lg);
+    margin: 0 auto var(--space-10) auto;
     scroll-snap-align: start none;
     scroll-margin-block: 10px;
     font-family: "JetBrains Mono", monospace;
+    overflow: hidden;
   }
 
   .ProjectCardContainer img {
-    object-fit: contain;
-    width: 350px;
-    height: 350px;
-    opacity: 0.9;
-    transition: opacity 0.2s ease-out;
+    object-fit: cover;
+    width: 360px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    opacity: 0.95;
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
   }
 
   .ProjectCardContent {
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-    color: #4831d4;
+    text-align: left;
+    margin: auto 0;
+    color: var(--color-text);
     width: 100%;
+    padding: var(--space-6);
   }
 
   .ProjectCardContent h2 {
@@ -190,36 +199,38 @@
   }
 
   .ProjectCardContent p {
-    text-align: justify;
-    padding: 0rem 3rem;
+    text-align: left;
+    padding: 0;
+    color: var(--color-text-muted);
   }
 
   .ProjectCardContent a {
     text-decoration: none;
     font-size: 14pt;
-    color: #322171;
+    color: var(--color-primary);
   }
 
   .ProjectCardLink {
     display: flex;
     flex-direction: column;
+    gap: var(--space-4);
+    margin-top: var(--space-4);
   }
 
   .ProjectCardLink span {
     display: flex;
-    justify-content: space-evenly;
+    gap: var(--space-4);
   }
 
-  .ProjectCardLink button {
+  .ProjectCardLink button { /* unify with .btn styles */
     align-items: center;
     appearance: none;
-    background-color: whitesmoke;
-    border-radius: 4px;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-sm);
     border-width: 0;
-    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+    box-shadow: var(--shadow-sm);
     box-sizing: border-box;
-    color: #322171;
+    color: var(--color-primary);
     cursor: pointer;
     display: inline-flex;
     font-family: "JetBrains Mono", monospace;
@@ -234,14 +245,15 @@
     position: relative;
     text-align: left;
     text-decoration: none;
-    transition: box-shadow 0.15s, transform 0.15s;
+    transition: box-shadow 0.15s, transform 0.15s, background 0.15s;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
     will-change: box-shadow, transform;
-    font-size: 18px;
-    margin-top: 30px;
+    font-size: 16px;
+    margin-top: 0;
+    border: 1px solid rgba(72,49,212,0.2);
   }
 
   .ProjectCardLink button:focus {
@@ -250,9 +262,9 @@
   }
 
   .ProjectCardLink button:hover {
-    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
-      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+    box-shadow: var(--shadow-md);
     transform: translateY(-2px);
+    background: #fafbff;
   }
 
   .ProjectCardLink button:active {
@@ -332,7 +344,7 @@
     align-items: center;
     font-family: sans-serif;
     scroll-behavior: smooth;
-    background-color: #4831d4;
+    background-color: var(--color-primary);
   }
 
   .SkillHead {
@@ -343,29 +355,33 @@
   }
 
   .SkillContainer {
-    width: 80%;
+    width: 100%;
+    max-width: var(--container-max);
     height: 70vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-items: center;
+    padding-inline: var(--space-4);
   }
 
   .SkillContainer img {
-    background-color: whitesmoke;
+    background-color: #fff;
     margin-right: 6px;
     width: 70px;
     height: 70px;
     object-fit: contain;
     object-position: center;
-    border-radius: 50%;
-    padding: 4px;
+    border-radius: 12px;
+    padding: 6px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 160ms ease, box-shadow 200ms ease, background 160ms ease;
   }
 
   .SkillContainer img:hover {
-    box-shadow: rgba(183, 201, 242, 0.4) -5px 5px,
-      rgba(183, 201, 242, 0.3) -10px 10px;
-    background-color: #9195f6;
+    box-shadow: var(--shadow-md);
+    background-color: #fafbff;
+    transform: translateY(-2px);
   }
 
   .SkillCard {
@@ -404,13 +420,13 @@
     display: flex;
     width: 100%;
     height: 90vh;
-    padding-top: 2rem;
+    padding-top: var(--space-8);
     /* margin-top: 2rem; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
     line-height: 1rem;
-    color: #4831d4;
+    color: var(--color-primary);
     /* background-color: #4831d4; */
   }
 
@@ -425,6 +441,7 @@
     display: flex;
     /* background-color: #334454; */
     width: 75%;
+    max-width: var(--container-max);
   }
 
   .MailMe-InnerContent form {
@@ -467,16 +484,14 @@
     background: none;
     border: none;
     border-bottom: 1px solid #666;
-    color: #122fa3;
+    color: var(--color-primary-900);
     font-size: 14pt;
     outline: none;
     transition: border-color 0.2s;
-    background-color: #f9f8fd;
+    background-color: var(--color-bg);
   }
 
-  .FormInput:focus {
-    border-bottom: 1px solid #122fa3;
-  }
+  .FormInput:focus { border-bottom: 1px solid var(--color-primary); }
 
   /* Send Component */
   @import url("https://fonts.googleapis.com/css?family=Mukta:700");
