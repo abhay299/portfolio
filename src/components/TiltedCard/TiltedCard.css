@@ -29,6 +29,8 @@
 .tilted-card-inner {
 	position: relative;
 	transform-style: preserve-3d;
+	border-radius: 16px;
+	overflow: hidden;
 }
 
 .tilted-card-img {
@@ -36,20 +38,24 @@
 	top: 0;
 	left: 0;
 	object-fit: cover;
-	border-radius: 15px;
+	border-radius: 16px;
 	will-change: transform;
 	transform: translateZ(0);
 }
 
 .tilted-card-overlay {
 	position: absolute;
-	bottom: 0;
-	left: 0;
+	inset: 0;
+	display: flex;
+	align-items: flex-end;
+	background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.5) 100%);
 	z-index: 2;
 	will-change: transform;
 	transform: translateZ(30px);
-	padding: 1rem;
+	pointer-events: none; /* let links inside manage their own events */
 }
+
+.tilted-card-overlay * { pointer-events: auto; }
 
 .tilted-card-caption {
 	pointer-events: none;

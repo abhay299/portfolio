@@ -8,69 +8,80 @@
 
 	.work_heading {
 		text-align: center;
-		padding: 0rem 1rem 4rem 1rem;
-		font-weight: 600;
-		font-size: 30pt;
+		padding: 0rem 1rem 2.5rem 1rem;
+		font-weight: 700;
+		font-size: var(--font-h2);
 		z-index: 2;
 	}
 
 	.work_container {
 		display: grid;
-		place-items: center;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1.5rem;
+		place-items: stretch;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: var(--space-6);
 	}
 
 	.project_card_container {
 		display: flex;
 		flex-direction: column;
-		padding: 1rem;
-		border-radius: 1rem;
+		padding: var(--space-2);
+		border-radius: var(--radius-lg);
 		width: 100%;
-		max-width: 500px;
+		max-width: 680px;
 		transition: transform 0.2s ease;
 	}
 
+	/* Overlay content sitting inside the TiltedCard overlay */
 	.project_card {
 		position: relative;
 		z-index: 2;
-		padding: 1rem;
-		color: #fff;
+		padding: var(--space-4);
+		color: var(--text);
 		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		height: 100%;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: space-between;
+		width: 100%;
+		/* transparent so it doesn't cover half the image */
+		background: transparent;
 	}
 
 	.project_card_container img {
 		cursor: pointer;
+		border-radius: var(--radius-lg);
 	}
 
 	.project_card_text {
-		color: #212121;
+		color: var(--text);
 	}
 
 	.project_card_text h2 {
-		font-size: 20pt;
-		margin-bottom: 0rem;
-		color: #212121;
+		font-size: var(--font-h3);
+		margin-bottom: var(--space-2);
+		color: var(--text);
 	}
 
 	.project_card_text p {
 		margin-bottom: 0.2rem;
 		line-height: 1.6;
-		color: #212121;
+		color: var(--muted);
 	}
 
 	.project_card_text span {
 		display: flex;
-		gap: 1rem;
+		gap: var(--space-4);
 		align-items: center;
 	}
 
 	.project_card_text a {
 		text-decoration: none;
-		color: #212121;
-		font-weight: 500;
+		color: var(--accent);
+		font-weight: 600;
 	}
+}
+
+@media only screen and (max-width: 679px) {
+	.work_heading { font-size: var(--font-h3); padding-bottom: var(--space-4); }
+	.work_container { display: grid; grid-template-columns: 1fr; gap: var(--space-5); }
+	.project_card { padding: var(--space-3); }
 }
