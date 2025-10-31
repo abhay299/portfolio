@@ -1,7 +1,5 @@
 import React from "react";
 
-import Particles from "../../../../components/Particles";
-
 import styles from "./index.module.css";
 
 function Hero() {
@@ -9,21 +7,13 @@ function Hero() {
 		<div
 			style={{
 				width: "100%",
-				height: "600px",
+				height: "100vh",
 				position: "relative",
-				background: "black",
+				background: "transparent",
+				marginLeft: "calc(-50vw + 50%)",
+				marginRight: "calc(-50vw + 50%)",
 			}}
 		>
-			<Particles
-				particleColors={["#ffffff", "#ffffff"]}
-				particleCount={200}
-				particleSpread={10}
-				speed={0.2}
-				particleBaseSize={100}
-				moveParticlesOnHover={true}
-				alphaParticles={false}
-				disableRotation={false}
-			/>
 			{/* Overlayed Info Text */}
 			<div
 				className={styles.info_container}
@@ -33,7 +23,7 @@ function Hero() {
 					left: "50%",
 					transform: "translate(-50%, -50%)",
 					zIndex: 1,
-					pointerEvents: "none", // Optional, lets you still interact with particles
+					pointerEvents: "none",
 				}}
 			>
 				<div className={styles.info_text}>

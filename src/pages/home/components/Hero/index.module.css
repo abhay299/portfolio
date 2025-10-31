@@ -21,21 +21,28 @@
 	.info_text {
 		width: 100%;
 		height: 100%;
-		color: #f4f4f4;
+		color: #667eea;
 		font-size: 22pt;
 		padding: 2rem 2rem 1rem 3rem;
+		font-family: "Space Grotesk", sans-serif;
 	}
 
 	.info_text h1 {
 		font-size: 44pt;
-		color: #00ffc3;
+		color: #4831d4;
 		font-weight: 700;
+		font-family: "Space Grotesk", sans-serif;
 	}
 
 	.info_text h2 {
 		font-size: 26pt;
-		color: #9e9e9e;
+		color: #5b4fc8;
 		font-weight: 500;
+		font-family: "Space Grotesk", sans-serif;
+	}
+
+	.info_text p {
+		color: #6d5edb;
 	}
 }
 
@@ -59,17 +66,24 @@
 	.info_text {
 		width: 100%;
 		height: 100%;
-		color: #f4f4f4;
+		color: #667eea;
 		padding: 0rem 2rem 1rem 2rem;
+		font-family: "Space Grotesk", sans-serif;
 	}
 
 	.info_text h1 {
-		color: #00ffc3;
+		color: #4831d4;
 		padding: 0.8rem 0rem;
+		font-family: "Space Grotesk", sans-serif;
 	}
 
 	.info_text h2 {
-		color: #9e9e9e;
+		color: #5b4fc8;
 		padding: 0.8rem 0rem;
+		font-family: "Space Grotesk", sans-serif;
+	}
+
+	.info_text p {
+		color: #6d5edb;
 	}
 }
