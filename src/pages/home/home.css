@@ -30,7 +30,7 @@
 
 	.Work {
 		background-color: #f5f4fc;
-		font-family: "Roboto", sans-serif;
+		font-family: "Space Grotesk", sans-serif;
 		scroll-behavior: smooth;
 	}
 
@@ -47,7 +47,7 @@
 		/* grid-template-rows: repeat(1, fit-content);
 		grid-template-columns: repeat(1, 1fr); */
 		grid-gap: 14px;
-		font-family: "Roboto", sans-serif;
+		font-family: "Space Grotesk", sans-serif;
 		background-color: #f5f4fc;
 	}
 
@@ -83,7 +83,7 @@
 		margin: 0;
 		padding: 0px 12px;
 		transition: inset 0.3s 0.3s ease-out;
-		font-family: "Roboto Condensed", sans-serif;
+		font-family: "Space Grotesk", sans-serif;
 		color: #122fa3;
 		font-weight: bold;
 		text-transform: uppercase;

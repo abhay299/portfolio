@@ -44,7 +44,7 @@
 }
 
 .FooterTitle {
-	font-family: "Space Grotesk", "Roboto", sans-serif;
+	font-family: "Space Grotesk", sans-serif;
 	font-size: 1.75rem;
 	font-weight: 600;
 	margin: 0 0 1rem 0;
@@ -53,7 +53,7 @@
 }
 
 .FooterSubtitle {
-	font-family: "Roboto", sans-serif;
+	font-family: "Space Grotesk", sans-serif;
 	font-size: 0.95rem;
 	margin: 0 0 1.5rem 0;
 	color: rgba(255, 255, 255, 0.9);
@@ -115,7 +115,7 @@
 }
 
 .FooterNavLink {
-	font-family: "Roboto", sans-serif;
+	font-family: "Space Grotesk", sans-serif;
 	font-size: 1.1rem;
 	color: rgba(255, 255, 255, 0.9);
 	text-decoration: none;
@@ -156,7 +156,7 @@
 }
 
 .FooterCopyright {
-	font-family: "Roboto", sans-serif;
+	font-family: "Space Grotesk", sans-serif;
 	font-size: 0.9rem;
 	margin: 0 0 0.5rem 0;
 	color: rgba(255, 255, 255, 0.8);
@@ -164,7 +164,7 @@
 }
 
 .FooterTagline {
-	font-family: "Roboto", sans-serif;
+	font-family: "Space Grotesk", sans-serif;
 	font-size: 0.85rem;
 	margin: 0;
 	color: rgba(255, 255, 255, 0.6);
