@@ -4,11 +4,11 @@
 		position: relative;
 		font-family: "Space Grotesk", sans-serif;
 		padding: 5rem 2rem;
-		background: linear-gradient(
+		/* background: linear-gradient(
 			to bottom,
 			#faf9f7 0%,
 			var(--elegant-bg) 100%
-		);
+		); */
 		min-height: 100vh;
 		overflow-x: hidden;
 	}
@@ -17,12 +17,13 @@
 		text-align: center;
 		font-size: clamp(2rem, 4vw, 2.5rem);
 		font-weight: 600;
-		color: var(--elegant-primary);
+		color: #4831d4;
 		letter-spacing: -0.02em;
 		line-height: 1.2;
 		margin: 0 0 4rem 0;
 		position: relative;
 		z-index: 2;
+		font-family: "Space Grotesk", sans-serif;
 	}
 
 	.skill_cards_container {
@@ -113,7 +114,7 @@
 	.card_title {
 		font-size: 1.75rem;
 		font-weight: 700;
-		color: var(--elegant-primary);
+		color: #4831d4;
 		margin: 0;
 		letter-spacing: -0.02em;
 		font-family: "Space Grotesk", sans-serif;
@@ -225,11 +226,11 @@
 		position: relative;
 		font-family: "Space Grotesk", sans-serif;
 		padding: 3rem 1rem;
-		background: linear-gradient(
+		/* background: linear-gradient(
 			to bottom,
 			#faf9f7 0%,
 			var(--elegant-bg) 100%
-		);
+		); */
 		overflow-x: hidden;
 		width: 100%;
 	}
@@ -238,9 +239,10 @@
 		text-align: center;
 		font-size: clamp(1.5rem, 6vw, 2rem);
 		font-weight: 600;
-		color: var(--elegant-primary);
+		color: #4831d4;
 		letter-spacing: -0.01em;
 		line-height: 1.2;
+		font-family: "Space Grotesk", sans-serif;
 		margin: 0 0 2.5rem 0;
 		position: relative;
 		z-index: 2;
