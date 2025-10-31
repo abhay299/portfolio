@@ -1,5 +1,7 @@
 import "./home.css";
 
+import Particles from "../../components/Particles";
+
 import Hero from "./components/Hero/index.tsx";
 import Mail from "./components/Mail/index.tsx";
 import Skills from "./components/Skills/index.tsx";
@@ -11,16 +13,30 @@ function Home() {
 		useHomePage();
 
 	return (
-		<div className="Home container section">
-			<Hero />
-			<Work navigate={navigate} />
-			<Skills />
-			<Mail
-				handleSubmit={handleSubmit}
-				register={register}
-				errors={errors}
-				onSubmit={onSubmit}
-			/>
+		<div className="Home section">
+			<div className="particles-wrapper">
+				<Particles
+					particleColors={["#000", "#000"]}
+					particleCount={200}
+					particleSpread={10}
+					speed={0.2}
+					particleBaseSize={100}
+					moveParticlesOnHover={true}
+					alphaParticles={false}
+					disableRotation={false}
+				/>
+			</div>
+			<div className="home-content">
+				<Hero />
+				<Work navigate={navigate} />
+				<Skills />
+				<Mail
+					handleSubmit={handleSubmit}
+					register={register}
+					errors={errors}
+					onSubmit={onSubmit}
+				/>
+			</div>
 		</div>
 	);
 }

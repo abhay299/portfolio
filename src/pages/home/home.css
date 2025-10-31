@@ -3,10 +3,28 @@
 	/* Main Component */
 
 	.Home {
-		background-color: var(--elegant-bg);
+		background-color: transparent;
 		color: var(--elegant-primary);
 		padding-bottom: 3rem;
 		scroll-behavior: smooth;
+		position: relative;
+		min-height: 100vh;
+	}
+
+	.particles-wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 0;
+		pointer-events: none;
+		overflow: hidden;
+	}
+
+	.home-content {
+		position: relative;
+		z-index: 1;
 	}
 
 	.Checkout svg {
@@ -17,14 +35,33 @@
 @media only screen and (max-width: 680px) {
 	/* Main Component */
 	.Home {
-		background-color: #f9f8fd;
+		background-color: transparent;
 		padding-bottom: 3rem;
 		scroll-behavior: smooth;
+		position: relative;
+		min-height: 100vh;
+	}
+
+	.particles-wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 0;
+		pointer-events: none;
+		overflow: hidden;
+	}
+
+	.home-content {
+		position: relative;
+		z-index: 1;
 	}
 
 	.Checkout svg {
 		color: white;
 	}
+}
 
 	/* Work Component */
 
