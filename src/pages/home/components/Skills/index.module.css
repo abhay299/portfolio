@@ -2,7 +2,7 @@
 @media only screen and (min-width: 680px) {
 	.skill_section {
 		position: relative;
-		font-family: "Space Grotesk", "Roboto", "Poppins", sans-serif;
+		font-family: "Space Grotesk", sans-serif;
 		padding: 5rem 2rem;
 		background: linear-gradient(
 			to bottom,
@@ -223,7 +223,7 @@
 @media only screen and (max-width: 680px) {
 	.skill_section {
 		position: relative;
-		font-family: "Space Grotesk", "Roboto", "Poppins", sans-serif;
+		font-family: "Space Grotesk", sans-serif;
 		padding: 3rem 1rem;
 		background: linear-gradient(
 			to bottom,

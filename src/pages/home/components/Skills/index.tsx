@@ -2,8 +2,6 @@ import { Cloud, Code, Palette } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
-import RollingGallery from "../../../../components/RollingGallery";
-
 import { backend, frontend, languages } from "./constant/data";
 import styles from "./index.module.css";
 
@@ -163,19 +161,6 @@ function SkillSection(): React.ReactElement {
 					);
 				})}
 			</div>
-
-			<motion.div
-				className={styles.gallery_container}
-				initial={{ opacity: 0, y: 30 }}
-				whileInView={{ opacity: 1, y: 0 }}
-				viewport={{ once: true }}
-				transition={{ duration: 0.6, delay: 0.5 }}
-			>
-				<h3 className={styles.gallery_title}>
-					Technologies I Work With
-				</h3>
-				<RollingGallery autoplay={true} pauseOnHover={true} />
-			</motion.div>
 		</section>
 	);
 }
