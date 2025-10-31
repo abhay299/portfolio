@@ -62,23 +62,15 @@ function Work({ navigate }) {
 						>
 							<motion.div
 								className={styles.project_card}
+								style={{ background: gradient }}
 								whileHover={
 									!isMobile ? { y: -8, scale: 1.02 } : {}
 								}
 								transition={{ type: "spring", stiffness: 300 }}
 							>
-								<div
-									className={styles.card_gradient}
-									style={{ background: gradient }}
-								/>
 								<div className={styles.card_content}>
 									<div className={styles.card_header}>
-										<div
-											className={styles.icon_wrapper}
-											style={{
-												background: gradient,
-											}}
-										>
+										<div className={styles.icon_wrapper}>
 											<IconComponent
 												className={styles.project_icon}
 											/>
