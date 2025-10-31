@@ -162,10 +162,35 @@ export default function AuroraBackground(props: AuroraProps) {
 			delete (geometry.attributes as any).uv;
 		}
 
-		const colorStopsArray = colorStops.map((hex) => {
-			const c = new Color(hex);
-			return [c.r, c.g, c.b];
-		});
+		// Helper function to validate and convert hex color
+		const parseColor = (hex: string): [number, number, number] => {
+			// Validate hex format
+			if (!hex || typeof hex !== "string") {
+				console.warn(
+					`Invalid color format: ${hex}, using default color`,
+				);
+				return [0, 0.85, 1]; // Default cyan color
+			}
+
+			// Check if it's a valid hex color format
+			const hexPattern = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
+			if (!hexPattern.test(hex)) {
+				console.warn(
+					`Color format not recognised: ${hex}, using default color`,
+				);
+				return [0, 0.85, 1]; // Default cyan color
+			}
+
+			try {
+				const c = new Color(hex);
+				return [c.r, c.g, c.b];
+			} catch (error) {
+				console.warn(`Error parsing color ${hex}:`, error);
+				return [0, 0.85, 1]; // Default cyan color
+			}
+		};
+
+		const colorStopsArray = colorStops.map(parseColor);
 
 		program = new Program(gl, {
 			vertex: VERT,
@@ -192,12 +217,10 @@ export default function AuroraBackground(props: AuroraProps) {
 					propsRef.current.amplitude ?? 1.0;
 				program.uniforms.uBlend.value = propsRef.current.blend ?? blend;
 				const stops = propsRef.current.colorStops ?? colorStops;
-				program.uniforms.uColorStops.value = stops.map(
-					(hex: string) => {
-						const c = new Color(hex);
-						return [c.r, c.g, c.b];
-					},
-				);
+				// Ensure stops is a valid array
+				if (Array.isArray(stops) && stops.length > 0) {
+					program.uniforms.uColorStops.value = stops.map(parseColor);
+				}
 				renderer.render({ scene: mesh });
 			}
 		};
@@ -213,7 +236,7 @@ export default function AuroraBackground(props: AuroraProps) {
 			}
 			gl.getExtension("WEBGL_lose_context")?.loseContext();
 		};
-	}, [amplitude]);
+	}, [amplitude, blend, colorStops]);
 
 	return <div ref={ctnDom} className="aurora-container" />;
 }
