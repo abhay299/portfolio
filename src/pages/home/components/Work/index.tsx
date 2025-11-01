@@ -11,7 +11,7 @@ import {
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
-import { projectCards } from "../../../../helpers/projectCards";
+import { PROJECT_CARDS } from "../../../../helpers/projectCards";
 
 import { gradientColours } from "./constants/gradientColours";
 import styles from "./index.module.css";
@@ -43,7 +43,7 @@ function Work({ navigate }) {
 			<h1 className={styles.work_heading}>Featured Projects</h1>
 
 			<div className={styles.work_container}>
-				{projectCards.map((project, index) => {
+				{PROJECT_CARDS.map((project, index) => {
 					const IconComponent = projectIcons[project.name] || Storage;
 					const gradient =
 						gradientColours[index % gradientColours.length];
