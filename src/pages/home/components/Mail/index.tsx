@@ -1,6 +1,6 @@
 import React from "react";
 
-import { EMAIL_REGEX } from "../../../../constants/regex";
+import { EMAIL_REGEX } from "@/constants/regex";
 
 import styles from "./index.module.css";
 

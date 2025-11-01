@@ -7,4 +7,3 @@ const gradientColours = [
 ];
 
 export { gradientColours };
-

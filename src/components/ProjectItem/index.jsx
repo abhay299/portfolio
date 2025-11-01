@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import LazyImage from "../LazyImage";
+import LazyImage from "@/components/LazyImage";
 
 import styles from "./index.module.css";
 

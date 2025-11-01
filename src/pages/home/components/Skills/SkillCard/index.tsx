@@ -1,6 +1,6 @@
 import React from "react";
 
-import Orb from "../../../../../components/Orb";
+import Orb from "@/components/Orb";
 
 import styles from "./index.module.css";
 

@@ -81,7 +81,7 @@ function SkillSection() {
 										? {
 												scale: 1.05,
 												zIndex: 10,
-										  }
+											}
 										: {}
 								}
 							>

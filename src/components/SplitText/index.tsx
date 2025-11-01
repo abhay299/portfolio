@@ -62,7 +62,7 @@ const SplitText: React.FC<SplitTextProps> = ({
 							opacity: number;
 							transform: string;
 						}) => Promise<void>,
-				  ) => {
+					) => {
 						await next(animationTo);
 						animatedCount.current += 1;
 						if (
@@ -71,7 +71,7 @@ const SplitText: React.FC<SplitTextProps> = ({
 						) {
 							onLetterAnimationComplete();
 						}
-				  }
+					}
 				: animationFrom,
 			delay: i * delay,
 			config: { easing },

@@ -1,8 +1,8 @@
-import baLogo from "../assets/BookAmigo/BA-logo2.png";
-import crmLogo from "../assets/CRM/CRM-logo.png";
-import myFitsLogo from "../assets/MyFits/MyFits-Logo.png";
-import portfolioLogo from "../assets/Portfolio/myPortfolioLogo.png";
-import smLogo from "../assets/Socials/SM-logo2.png";
+import baLogo from "@/assets/BookAmigo/BA-logo2.png";
+import crmLogo from "@/assets/CRM/CRM-logo.png";
+import myFitsLogo from "@/assets/MyFits/MyFits-Logo.png";
+import portfolioLogo from "@/assets/Portfolio/myPortfolioLogo.png";
+import smLogo from "@/assets/Socials/SM-logo2.png";
 
 export const PROJECT_CARDS = [
 	{

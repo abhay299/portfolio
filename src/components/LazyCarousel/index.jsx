@@ -1,10 +1,10 @@
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
-import LazyImage from "../LazyImage";
-
 import styles from "./index.module.css";
+
+import LazyImage from "@/components/LazyImage";
 
 const LazyCarousel = ({ images, autoPlayInterval = 2000 }) => {
 	const [index, setIndex] = useState(0);

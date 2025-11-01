@@ -47,10 +47,12 @@
 		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
 		"@vitejs/plugin-react": "^4.4.0",
 		"eslint": "^8.57.1",
-		"eslint-plugin-import": "^2.31.0",
+		"eslint-import-resolver-alias": "^1.1.2",
+		"eslint-plugin-import": "^2.32.0",
 		"eslint-plugin-react": "^7.37.5",
 		"eslint-plugin-unused-imports": "^4.1.4",
 		"nodemon": "^2.0.22",
+		"prettier": "^3.6.2",
 		"sass": "^1.63.6",
 		"vite": "^6.3.1",
 		"vite-plugin-svgr": "^4.3.0"
@@ -63,7 +65,8 @@
 		"vitedev": "vite",
 		"vitebuild": "vite build",
 		"vitebuild:watch": "vite build --watch",
-		"vitepreview": "vite preview"
+		"vitepreview": "vite preview",
+		"format": "prettier --write ."
 	},
 	"eslintConfig": {
 		"extends": [

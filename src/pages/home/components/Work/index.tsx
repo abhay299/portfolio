@@ -11,7 +11,7 @@ import {
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
-import { PROJECT_CARDS } from "../../../../helpers/projectCards";
+import { PROJECT_CARDS } from "@/helpers/projectCards";
 
 import { gradientColours } from "./constants/gradientColours";
 import styles from "./index.module.css";
@@ -128,7 +128,7 @@ function Work({ navigate }) {
 														? {
 																scale: 1.1,
 																rotate: 5,
-														  }
+															}
 														: {}
 												}
 												whileTap={{ scale: 0.9 }}

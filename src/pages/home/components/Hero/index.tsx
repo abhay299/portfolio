@@ -1,6 +1,6 @@
 import React from "react";
 
-import sayingHelloImage from "../../../../assets/Portfolio/generated-image-new.png";
+import sayingHelloImage from "@/assets/Portfolio/generated-image-new.png";
 
 import styles from "./index.module.css";
 
