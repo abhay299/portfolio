@@ -42,12 +42,12 @@ function Navbar() {
 		{ path: "/projects", label: "Work" },
 		{ path: "/aboutMe", label: "About" },
 		{
-			path: "https://drive.google.com/file/d/1-F2jTUlR582Le6xi6mf4qAVoXoEogxvL/view?usp=sharing",
+			path: "https://drive.google.com/file/d/1f8NoJjYrAB-oKEv_yuEx5n6gcn1iqjRa/view?usp=sharing",
 			label: "Resume",
 			external: true,
 		},
 		{
-			path: "mailto:abhaysg2000@gmail.com",
+			path: "mailto:abhaysgpt@gmail.com",
 			label: "Contact",
 			external: true,
 		},

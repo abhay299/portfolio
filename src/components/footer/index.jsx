@@ -27,7 +27,7 @@ const Footer = () => {
 							<LinkedInIcon />
 						</a>
 						<a
-							href="mailto:abhaysg2000@gmail.com"
+							href="mailto:abhaysgpt@gmail.com"
 							className="SocialLink"
 							aria-label="Email"
 						>
@@ -60,7 +60,7 @@ const Footer = () => {
 					<h3 className="FooterTitle">Quick Links</h3>
 					<nav className="FooterNav">
 						<a
-							href="https://drive.google.com/file/d/1-F2jTUlR582Le6xi6mf4qAVoXoEogxvL/view?usp=sharing"
+							href="https://drive.google.com/file/d/1f8NoJjYrAB-oKEv_yuEx5n6gcn1iqjRa/view?usp=sharing"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="FooterNavLink"
