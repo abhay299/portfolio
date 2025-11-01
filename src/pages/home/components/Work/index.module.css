@@ -246,10 +246,11 @@
 		font-size: clamp(1.5rem, 6vw, 2rem);
 		z-index: 2;
 		position: relative;
-		color: var(--elegant-primary);
+		color: #4831d4;
 		letter-spacing: -0.01em;
 		line-height: 1.2;
 		margin: 0;
+		font-family: "Space Grotesk", sans-serif;
 	}
 
 	.work_container {
