@@ -63,11 +63,427 @@
 	}
 }
 
-	/* Work Component */
+/* Work Component */
 
+.Work {
+	background-color: #f5f4fc;
+	font-family: "Space Grotesk", sans-serif;
+	scroll-behavior: smooth;
+}
+
+.Work h1 {
+	text-align: center;
+	padding: 5rem 0rem;
+	font-weight: 600;
+	font-size: 30pt;
+}
+
+.WorkContainer {
+	display: grid;
+	place-items: center;
+	/* grid-template-rows: repeat(1, fit-content);
+		grid-template-columns: repeat(1, 1fr); */
+	grid-gap: 14px;
+	font-family: "Space Grotesk", sans-serif;
+	background-color: #f5f4fc;
+}
+
+.ProjectCardContainer {
+	background-color: #eefffe;
+	width: 95%;
+	height: 36rem;
+	border-radius: 10px;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+	color: rgb(240, 240, 240);
+	box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+	margin: 0rem 0rem 3rem 0rem;
+	scroll-snap-align: start none;
+	scroll-margin-block: 10px;
+}
+
+.ProjectCardContainer img {
+	position: absolute;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0.9;
+	transition: opacity 0.2s ease-out;
+}
+
+.ProjectCardContainer h2 {
+	position: absolute;
+	inset: auto auto 30px 30px;
+	margin: 0;
+	padding: 0px 12px;
+	transition: inset 0.3s 0.3s ease-out;
+	font-family: "Space Grotesk", sans-serif;
+	color: #122fa3;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 22pt;
+}
+
+.ProjectCardContainer p,
+.ProjectCardContainer a {
+	position: absolute;
+	opacity: 0;
+	max-width: 80%;
+	color: black;
+	transition: opacity 0.3s ease-out;
+}
+
+.ProjectCardContainer p {
+	inset: auto auto 60px 30px;
+}
+
+.ProjectCardContainer a {
+	inset: auto auto 40px 30px;
+	color: black;
+	text-decoration: none;
+}
+
+.ProjectCardContainer:hover h2 {
+	inset: auto auto 110px 30px;
+	transition: inset 0.3s ease-out;
+}
+
+.ProjectCardContainer:hover p,
+.ProjectCardContainer:hover a {
+	opacity: 1;
+	transition: opacity 0.5s 0.1s ease-in;
+}
+
+.ProjectCardContainer:hover img {
+	transition: opacity 0.3s ease-in;
+	opacity: 0.6;
+}
+
+/* Skill Component */
+.Skill {
+	min-height: 100vh;
+	background: #333;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	color: #000;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+	scroll-behavior: smooth;
+	background-color: #4831d4;
+}
+
+.SkillHead {
+	padding: 5rem 0rem 2rem 0rem;
+	text-align: center;
+	color: #ccf381;
+}
+
+.SkillContainer {
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.SkillCard {
+	position: relative;
+	width: 90%;
+	height: fit-content;
+}
+
+.SkillContainer .SkillCard .SkillIcon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: 0.7s;
+	z-index: 1;
+}
+
+.SkillContainer .SkillCard:nth-child(1) .SkillIcon {
+	background: #014069;
+}
+
+.SkillContainer .SkillCard:nth-child(2) .SkillIcon {
+	background: #692a01;
+}
+
+.SkillContainer .SkillCard:nth-child(3) .SkillIcon {
+	background: #151e43;
+}
+
+.SkillContainer .SkillCard .SkillIcon .fa {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 80px;
+	transition: 0.7s;
+	color: #fff;
+}
+
+.SkillIcon img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 47%;
+	height: 130px;
+	transform: translate(-50%, -50%);
+	font-size: 80px;
+	transition: 0.7s;
+	color: #fff;
+}
+
+.SkillContainer .SkillCard .Face {
+	width: 100%;
+	height: 9rem;
+	transition: 0.5s;
+}
+
+.SkillContainer .SkillCard .Face.Face1 {
+	position: relative;
+	background: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	transform: translateY(100px);
+}
+
+.SkillContainer .SkillCard:hover .Face.Face1 {
+	transform: translateY(0px);
+}
+
+.SkillContainer .SkillCard .Face.Face1 .SkillContent {
+	opacity: 1;
+	transition: 0.5s;
+}
+
+.SkillContainer .SkillCard:hover .Face.Face1 .SkillContent {
+	opacity: 1;
+}
+
+.SkillContainer .SkillCard:hover .Face.Face1 .SkillContent img {
+	width: 180px;
+	height: 130px;
+}
+
+.SkillContainer .SkillCard .Face.Face2 .Frontend {
+	position: relative;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	box-sizing: border-box;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+	transform: translateY(-100px);
+	background-color: #b1e0ff;
+}
+
+.SkillContainer .SkillCard:hover .Face.Face2 .Frontend {
+	transform: translateY(0);
+	background-color: #b1e0ff;
+}
+
+.SkillContainer .SkillCard .Face.Face2 .Backend {
+	position: relative;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	box-sizing: border-box;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+	transform: translateY(-100px);
+	background-color: #ffe1ce;
+}
+
+.SkillContainer .SkillCard:hover .Face.Face2 .Backend {
+	transform: translateY(0);
+	background-color: #ffe1ce;
+}
+
+.SkillContainer .SkillCard .Face.Face2 .Language {
+	position: relative;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	box-sizing: border-box;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+	transform: translateY(-100px);
+	background-color: #b7c6ff;
+}
+
+.SkillContainer .SkillCard:hover .Face.Face2 .Language {
+	transform: translateY(0);
+	background-color: #b7c6ff;
+}
+
+.SkillContainer .SkillCard .Face.Face2 .SkillContent p {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #414141;
+	font-size: 10pt;
+}
+
+.SkillContainer .SkillCard .Face.Face2 .SkillContent h3 {
+	margin: 0 0 10px 0;
+	padding: 0;
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	color: #414141;
+}
+
+.SkillContainer a {
+	text-decoration: none;
+	color: #414141;
+}
+
+.SkillContent a {
+	padding: 2px 4px;
+}
+
+/* For Mobile */
+@media only screen and (max-width: 681px) {
+	/* Main Component */
+	.Home {
+		background-color: #f9f8fd;
+		padding-bottom: 3rem;
+		scroll-behavior: smooth;
+	}
+
+	.Hero {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background-color: #4831d4;
+	}
+
+	/* Info Component */
+	.InfoContainer {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+	}
+
+	.InfoText {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
+		padding-bottom: 3rem;
+		color: white;
+		font-family: "JetBrains Mono", monospace;
+		margin-top: 90px;
+	}
+
+	.InfoText h1 {
+		font-size: 40pt;
+		color: #ffffff;
+		padding: 0.8rem 0rem;
+		font-weight: 700;
+	}
+
+	.InfoText h2 {
+		font-size: 30pt;
+		color: #ffffff;
+		padding: 0.8rem 0rem;
+		font-weight: 700;
+	}
+
+	.InfoText p {
+		width: 100%;
+		margin-top: 3rem;
+		font-size: 12pt;
+	}
+
+	.InfoImg {
+		width: 100%;
+		height: 50vh;
+	}
+
+	.InfoImg span {
+		background: url("../../assets/Portfolio/me_in_HD.png") no-repeat center;
+		background-size: contain;
+		-webkit-background-size: contain;
+		display: block;
+		width: 100%;
+		height: 85%;
+	}
+
+	.InfoBtn {
+		align-items: center;
+		appearance: none;
+		background-color: whitesmoke;
+		border-radius: 4px;
+		border-width: 0;
+		box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+			rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+		box-sizing: border-box;
+		color: #322171;
+		cursor: pointer;
+		display: inline-flex;
+		font-family: "JetBrains Mono", monospace;
+		height: 42px;
+		width: fit-content;
+		justify-content: center;
+		line-height: 1;
+		list-style: none;
+		overflow: hidden;
+		padding-left: 16px;
+		padding-right: 16px;
+		position: relative;
+		text-align: left;
+		text-decoration: none;
+		transition: box-shadow 0.15s, transform 0.15s;
+		user-select: none;
+		-webkit-user-select: none;
+		touch-action: manipulation;
+		white-space: nowrap;
+		will-change: box-shadow, transform;
+		font-size: 18px;
+		margin-top: 30px;
+	}
+
+	.InfoBtn:focus {
+		box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+			rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+	}
+
+	.InfoBtn:hover {
+		box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+			rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+		transform: translateY(-2px);
+	}
+
+	.InfoBtn:active {
+		box-shadow: #d6d6e7 0 3px 7px inset;
+		transform: translateY(2px);
+	}
+
+	/* Work Component */
 	.Work {
 		background-color: #f5f4fc;
-		font-family: "Space Grotesk", sans-serif;
+		font-family: "JetBrains Mono", monospace;
 		scroll-behavior: smooth;
 	}
 
@@ -76,15 +492,13 @@
 		padding: 5rem 0rem;
 		font-weight: 600;
 		font-size: 30pt;
+		color: #4831d4;
 	}
 
 	.WorkContainer {
 		display: grid;
 		place-items: center;
-		/* grid-template-rows: repeat(1, fit-content);
-		grid-template-columns: repeat(1, 1fr); */
 		grid-gap: 14px;
-		font-family: "Space Grotesk", sans-serif;
 		background-color: #f5f4fc;
 	}
 
@@ -120,7 +534,7 @@
 		margin: 0;
 		padding: 0px 12px;
 		transition: inset 0.3s 0.3s ease-out;
-		font-family: "Space Grotesk", sans-serif;
+		font-family: "JetBrains Mono", monospace;
 		color: #122fa3;
 		font-weight: bold;
 		text-transform: uppercase;
@@ -169,7 +583,6 @@
 		display: flex;
 		width: 100%;
 		flex-direction: column;
-		color: #000;
 		justify-content: center;
 		align-items: center;
 		font-family: sans-serif;
@@ -177,182 +590,196 @@
 		background-color: #4831d4;
 	}
 
-	.SkillHead {
-		padding: 5rem 0rem 2rem 0rem;
+	.SkillHead h1 {
 		text-align: center;
-		color: #ccf381;
+		font-family: "JetBrains Mono", monospace;
+		color: #fff;
+		font-size: 30pt;
+		letter-spacing: 0.5rem;
 	}
 
 	.SkillContainer {
 		width: 100%;
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		height: 70vh;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
 		align-items: center;
+		justify-items: center;
 	}
 
-	.SkillCard {
+	.SkillContainer img {
+		background-color: whitesmoke;
+		width: 70px;
+		height: 70px;
+		object-fit: contain;
+		object-position: center;
+		border-radius: 30%;
+		padding: 6px;
+	}
+
+	/* Feedback Component */
+	@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+	.MailMeHeader {
+		display: flex;
+		width: 100%;
+		height: 90vh;
+		margin-top: 2rem;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		line-height: 1rem;
+		color: #4831d4;
+		font-family: "JetBrains Mono", monospace;
+	}
+
+	.MailMeHeader p {
+		text-align: justify;
+		font-size: 14pt;
+		padding: 1rem 2rem;
+		color: #4831d4;
+		line-height: 1.3rem;
+	}
+
+	.MailMe-InnerContent {
+		display: flex;
+		/* background-color: #494d51; */
+		width: 80%;
+	}
+
+	.MailMe-InnerContent form {
+		width: 100%;
+		margin: 1rem auto;
+		line-height: 1.2rem;
+		/* background-color: #1f7bb8; */
+	}
+
+	.MailMe-InnerContent textarea {
+		height: 80px;
+		resize: vertical;
+	}
+
+	.FormInput {
+		display: flex;
+		align-items: center;
+		margin-top: 10px;
+		justify-content: center;
+		width: 100%;
+		padding: 10px 0;
+		background: none;
+		border: none;
+		border-bottom: 1px solid #666;
+		color: #122fa3;
+		font-size: 14pt;
+		outline: none;
+		transition: border-color 0.2s;
+		background-color: #f9f8fd;
+	}
+
+	.FormInput:focus {
+		border-bottom: 1px solid #122fa3;
+	}
+
+	/* Send Component */
+	/* @import url("https://fonts.googleapis.com/css?family=Mukta:700"); */
+	.BtnBody {
+		/* font-family: "Mukta", sans-serif; */
+		font-family: "JetBrains Mono", monospace;
+		font-size: 1rem;
+		line-height: 1.5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		letter-spacing: 0.2rem;
+		margin-top: 3rem;
+		background: #f9f8fd;
+	}
+
+	button {
 		position: relative;
-		width: 90%;
-		height: fit-content;
+		display: inline-block;
+		cursor: pointer;
+		outline: none;
+		border: 0;
+		vertical-align: middle;
+		text-decoration: none;
+		background: transparent;
+		padding: 0;
+		font-size: inherit;
+		font-family: inherit;
 	}
 
-	.SkillContainer .SkillCard .SkillIcon {
+	button.Learn-More {
+		width: 12rem;
+		height: auto;
+	}
+
+	button.Learn-More .Circle {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		position: relative;
+		display: block;
+		margin: 0;
+		width: 3rem;
+		height: 3rem;
+		background: #4831d4;
+		border-radius: 1.625rem;
+	}
+
+	button.Learn-More .Circle .Icon {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		background: #fff;
+	}
+
+	button.Learn-More .Circle .Icon.Arrow {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		left: 0.625rem;
+		width: 1.125rem;
+		height: 0.125rem;
+		background: none;
+	}
+
+	button.Learn-More .Circle .Icon.Arrow::before {
+		position: absolute;
+		content: "";
+		top: -0.25rem;
+		right: 0.0625rem;
+		width: 0.625rem;
+		height: 0.625rem;
+		border-top: 0.125rem solid #fff;
+		border-right: 0.125rem solid #fff;
+		transform: rotate(45deg);
+	}
+
+	button.Learn-More .Button-Text {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
-		height: 100%;
-		transition: 0.7s;
-		z-index: 1;
-	}
-
-	.SkillContainer .SkillCard:nth-child(1) .SkillIcon {
-		background: #014069;
-	}
-
-	.SkillContainer .SkillCard:nth-child(2) .SkillIcon {
-		background: #692a01;
-	}
-
-	.SkillContainer .SkillCard:nth-child(3) .SkillIcon {
-		background: #151e43;
-	}
-
-	.SkillContainer .SkillCard .SkillIcon .fa {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		font-size: 80px;
-		transition: 0.7s;
-		color: #fff;
-	}
-
-	.SkillIcon img {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 47%;
-		height: 130px;
-		transform: translate(-50%, -50%);
-		font-size: 80px;
-		transition: 0.7s;
-		color: #fff;
-	}
-
-	.SkillContainer .SkillCard .Face {
-		width: 100%;
-		height: 9rem;
-		transition: 0.5s;
-	}
-
-	.SkillContainer .SkillCard .Face.Face1 {
-		position: relative;
-		background: #333;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		z-index: 1;
-		transform: translateY(100px);
-	}
-
-	.SkillContainer .SkillCard:hover .Face.Face1 {
-		transform: translateY(0px);
-	}
-
-	.SkillContainer .SkillCard .Face.Face1 .SkillContent {
-		opacity: 1;
-		transition: 0.5s;
-	}
-
-	.SkillContainer .SkillCard:hover .Face.Face1 .SkillContent {
-		opacity: 1;
-	}
-
-	.SkillContainer .SkillCard:hover .Face.Face1 .SkillContent img {
-		width: 180px;
-		height: 130px;
-	}
-
-	.SkillContainer .SkillCard .Face.Face2 .Frontend {
-		position: relative;
-		background: #fff;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 20px;
-		box-sizing: border-box;
-		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-		transform: translateY(-100px);
-		background-color: #b1e0ff;
-	}
-
-	.SkillContainer .SkillCard:hover .Face.Face2 .Frontend {
-		transform: translateY(0);
-		background-color: #b1e0ff;
-	}
-
-	.SkillContainer .SkillCard .Face.Face2 .Backend {
-		position: relative;
-		background: #fff;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 20px;
-		box-sizing: border-box;
-		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-		transform: translateY(-100px);
-		background-color: #ffe1ce;
-	}
-
-	.SkillContainer .SkillCard:hover .Face.Face2 .Backend {
-		transform: translateY(0);
-		background-color: #ffe1ce;
-	}
-
-	.SkillContainer .SkillCard .Face.Face2 .Language {
-		position: relative;
-		background: #fff;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 20px;
-		box-sizing: border-box;
-		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-		transform: translateY(-100px);
-		background-color: #b7c6ff;
-	}
-
-	.SkillContainer .SkillCard:hover .Face.Face2 .Language {
-		transform: translateY(0);
-		background-color: #b7c6ff;
-	}
-
-	.SkillContainer .SkillCard .Face.Face2 .SkillContent p {
-		margin: 0;
-		padding: 0;
+		right: 0;
+		bottom: 0;
+		padding: 0.75rem 0;
+		margin: 0 0 0 1.85rem;
+		color: #282936;
+		font-weight: 700;
+		line-height: 1.6;
 		text-align: center;
-		color: #414141;
-		font-size: 10pt;
+		text-transform: uppercase;
 	}
 
-	.SkillContainer .SkillCard .Face.Face2 .SkillContent h3 {
-		margin: 0 0 10px 0;
-		padding: 0;
+	button:hover .Circle {
+		width: 100%;
+	}
+
+	button:hover .Circle .Icon.Arrow {
+		background: #fff;
+		transform: translate(1rem, 0);
+	}
+
+	button:hover .Button-Text {
 		color: #fff;
-		font-size: 24px;
-		text-align: center;
-		color: #414141;
-	}
-
-	.SkillContainer a {
-		text-decoration: none;
-		color: #414141;
-	}
-
-	.SkillContent a {
-		padding: 2px 4px;
 	}
 }

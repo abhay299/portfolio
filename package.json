@@ -63,8 +63,7 @@
 		"vitedev": "vite",
 		"vitebuild": "vite build",
 		"vitebuild:watch": "vite build --watch",
-		"vitepreview": "vite preview",
-		"prepare": "husky"
+		"vitepreview": "vite preview"
 	},
 	"eslintConfig": {
 		"extends": [
