@@ -1,4 +1,5 @@
 /* For Tablet/desktop */
+<<<<<<< HEAD
 @media only screen and (min-width: 681px) {
   .projects {
     display: flex;
@@ -103,4 +104,126 @@
     line-height: 1.2rem;
     text-align: center;
   }
+=======
+@media only screen and (min-width: 680px) {
+	.projects {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		gap: var(--space-6);
+	}
+
+	.projects h1 {
+		text-align: left;
+		padding-inline: 1rem;
+		font-weight: 700;
+		font-size: var(--font-h1);
+		margin: var(--space-8) 0 var(--space-4) 0;
+	}
+
+	.projects p {
+		color: var(--muted);
+		line-height: 1.6;
+		font-size: var(--font-small);
+		padding-inline: 3rem;
+	}
+
+	.projectItem {
+		display: flex;
+		width: 90%;
+		height: fit-content;
+		flex-direction: column;
+		background: unset; /* unified by .card */
+		margin: var(--space-6) 0;
+		padding: var(--space-4);
+		overflow: hidden;
+	}
+
+	.projectItem img {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		border-radius: 12px;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.projectItem h3 {
+		color: var(--text);
+		text-align: center;
+		font-size: var(--font-h2);
+		margin: var(--space-4) 0 var(--space-2) 0;
+	}
+
+	.projectItem p {
+		color: var(--muted);
+		font-size: var(--font-body);
+		line-height: 1.4;
+		text-align: center;
+		margin: 0 0 var(--space-2);
+	}
+}
+
+/* For Mobile devices */
+@media only screen and (max-width: 680px) {
+	.projects {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		gap: var(--space-5);
+	}
+
+	.projects h1 {
+		text-align: left;
+		padding-inline: 1.2rem;
+		font-weight: 700;
+		font-size: var(--font-h2);
+		margin: var(--space-8) 0 var(--space-4) 0;
+	}
+
+	.projects p {
+		color: var(--muted);
+		line-height: 1.5;
+		font-size: var(--font-small);
+		padding-inline: 1.2rem;
+		margin-bottom: var(--space-6);
+	}
+
+	.projectItem {
+		display: flex;
+		width: 90%;
+		height: fit-content;
+		flex-direction: column;
+		background: unset; /* unified by .card */
+		margin-bottom: var(--space-6);
+		padding: var(--space-4);
+		overflow: hidden;
+	}
+
+	.projectItem img {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		border-radius: 12px;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.projectItem h3 {
+		color: var(--text);
+		text-align: center;
+		font-size: var(--font-h3);
+		margin: var(--space-4) 0 var(--space-2) 0;
+	}
+
+	.projectItem p {
+		color: var(--muted);
+		font-size: var(--font-body);
+		line-height: 1.4;
+		text-align: center;
+		margin: 0 0 var(--space-2);
+	}
+>>>>>>> dc2a38dcf0f0e1fe45790cd25d16dac141a3500f
 }
