@@ -222,7 +222,6 @@ function Navbar() {
 														cursor: "pointer",
 														width: "100%",
 														textAlign: "left",
-														padding: 0,
 													}}
 												>
 													{link.label}
