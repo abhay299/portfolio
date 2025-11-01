@@ -2,9 +2,10 @@
 .projects_section {
 	width: 100%;
 	min-height: 100vh;
-	padding: 2rem 1rem;
+	padding: 6rem 1rem 2rem 1rem;
 	background: transparent;
 	position: relative;
+	scroll-margin-top: 5rem;
 }
 
 .projects_container {
@@ -24,7 +25,10 @@
 	margin: 0 0 3rem 0;
 	padding: 0 1rem;
 	letter-spacing: -0.02em;
-	line-height: 1.2;
+	line-height: 1.3;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	hyphens: auto;
 }
 
 /* Disclaimer Container */
@@ -40,6 +44,8 @@
 	margin: 0 auto 3rem auto;
 	max-width: 1000px;
 	box-shadow: 0 4px 20px rgba(102, 126, 234, 0.1);
+	width: calc(100% - 2rem);
+	box-sizing: border-box;
 }
 
 .disclaimer_text {
@@ -85,6 +91,11 @@
 /* Scroll reveal animation - handled by Framer Motion in ProjectItem */
 
 @media only screen and (max-width: 960px) {
+	.projects_section {
+		padding-top: 5.5rem;
+		scroll-margin-top: 4.5rem;
+	}
+
 	.disclaimer_container {
 		padding: 1.25rem 1.5rem;
 		margin-bottom: 2.5rem;
@@ -100,12 +111,14 @@
 
 	.project_item_wrapper {
 		max-width: 100%;
+		padding: 0;
 	}
 }
 
 @media only screen and (max-width: 680px) {
 	.projects_section {
-		padding: 1rem 0.5rem;
+		padding: 5rem 0.5rem 1rem 0.5rem;
+		scroll-margin-top: 4rem;
 	}
 
 	.projects_container {
@@ -113,20 +126,27 @@
 	}
 
 	.projects_heading {
-		font-size: clamp(1.5rem, 6vw, 2rem);
+		font-size: clamp(1.25rem, 5vw, 1.75rem);
 		margin-bottom: 2rem;
-		padding: 0 0.5rem;
+		padding: 1.5rem 1rem 0;
+		line-height: 1.4;
+		max-width: 100%;
+		box-sizing: border-box;
 	}
 
 	.disclaimer_container {
 		padding: 1rem 1.25rem;
 		margin: 0 0.5rem 2rem 0.5rem;
 		border-left-width: 3px;
+		width: calc(100% - 1rem);
+		max-width: 100%;
 	}
 
 	.disclaimer_text {
 		font-size: 0.9rem;
-		line-height: 1.5;
+		line-height: 1.6;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
 	}
 
 	.projects_scroll_container {
@@ -135,26 +155,39 @@
 
 	.projects_scroll_content {
 		gap: 2rem;
+		padding: 0;
+	}
+
+	.project_item_wrapper {
+		padding: 0;
 	}
 }
 
 @media only screen and (max-width: 400px) {
 	.projects_section {
-		padding: 0.75rem 0.25rem;
+		padding: 4.5rem 0.25rem 0.75rem 0.25rem;
+		scroll-margin-top: 3.5rem;
 	}
 
 	.projects_heading {
-		font-size: 1.5rem;
+		font-size: clamp(1.15rem, 4vw, 1.5rem);
 		margin-bottom: 1.5rem;
+		padding: 1.5rem 0.75rem 0;
+		line-height: 1.4;
 	}
 
 	.disclaimer_container {
 		padding: 0.875rem 1rem;
 		margin: 0 0.25rem 1.5rem 0.25rem;
+		width: calc(100% - 0.5rem);
+		max-width: 100%;
 	}
 
 	.disclaimer_text {
 		font-size: 0.85rem;
+		line-height: 1.6;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
 	}
 
 	.projects_scroll_container {
@@ -165,4 +198,3 @@
 		gap: 1.5rem;
 	}
 }
-
