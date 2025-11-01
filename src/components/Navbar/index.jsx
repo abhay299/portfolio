@@ -5,7 +5,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import styles from "./index.module.css";
 
-import smallMe from "@/assets/Portfolio/smallMe.png";
 import { NAVIGATION_LINKS } from "@/constants/navigationLinks";
 
 function Navbar() {
@@ -162,16 +161,6 @@ function Navbar() {
 							}}
 						>
 							<div className={styles.mobile_menu_content}>
-								<div className={styles.mobile_profile}>
-									<img
-										src={smallMe}
-										alt="Abhay Gupta"
-										className={styles.mobile_profile_image}
-									/>
-									<h2 className={styles.mobile_profile_name}>
-										Abhay Gupta
-									</h2>
-								</div>
 								<ul className={styles.mobile_nav_list}>
 									{NAVIGATION_LINKS.map((link, index) => (
 										<motion.li

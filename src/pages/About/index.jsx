@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import styles from "./index.module.css";
 
+import hdImage from "@/assets/Portfolio/me_in_HD_without_bg.png";
 import { experienceData, stats } from "@/constants/experienceData";
 
 function About() {
@@ -52,24 +53,39 @@ function About() {
 				transition={{ duration: 0.6 }}
 			>
 				<div className={styles.hero_content}>
-					<motion.h1
-						className={styles.hero_title}
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
+					<motion.div
+						className={styles.hero_image_wrapper}
+						initial={{ opacity: 0, x: -30 }}
+						animate={{ opacity: 1, x: 0 }}
 						transition={{ delay: 0.2, duration: 0.6 }}
 					>
-						A Bit About Myself
-					</motion.h1>
-					<motion.p
-						className={styles.hero_subtitle}
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ delay: 0.4, duration: 0.6 }}
-					>
-						Passionate Full Stack Developer with a knack for
-						creating functional solutions. From robotics to web
-						development, I love turning ideas into reality.
-					</motion.p>
+						<img
+							src={hdImage}
+							alt="Abhay Gupta"
+							className={styles.hero_image}
+						/>
+						<div className={styles.image_overlay} />
+					</motion.div>
+					<div className={styles.hero_text}>
+						<motion.h1
+							className={styles.hero_title}
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.3, duration: 0.6 }}
+						>
+							A Bit About Myself
+						</motion.h1>
+						<motion.p
+							className={styles.hero_subtitle}
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.5, duration: 0.6 }}
+						>
+							Passionate Full Stack Developer with a knack for
+							creating functional solutions. From robotics to web
+							development, I love turning ideas into reality.
+						</motion.p>
+					</div>
 				</div>
 			</motion.section>
 

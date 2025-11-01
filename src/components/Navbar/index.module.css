@@ -43,53 +43,6 @@
 	transform: translateX(-2px);
 }
 
-.profile_image_wrapper {
-	position: relative;
-	width: 48px;
-	height: 48px;
-	border-radius: 50%;
-	overflow: hidden;
-	border: 2px solid rgba(102, 126, 234, 0.2);
-	transition: all 0.3s ease;
-	box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-}
-
-.logo_section:hover .profile_image_wrapper {
-	border-color: rgba(102, 126, 234, 0.4);
-	box-shadow: 0 6px 20px rgba(102, 126, 234, 0.25);
-	transform: scale(1.05);
-}
-
-.profile_image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	transition: transform 0.3s ease;
-}
-
-.logo_section:hover .profile_image {
-	transform: scale(1.1);
-}
-
-.image_overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: linear-gradient(
-		135deg,
-		rgba(102, 126, 234, 0.1) 0%,
-		rgba(118, 75, 162, 0.1) 100%
-	);
-	opacity: 0;
-	transition: opacity 0.3s ease;
-}
-
-.logo_section:hover .image_overlay {
-	opacity: 1;
-}
-
 .logo_text {
 	font-size: 1.5rem;
 	font-weight: 700;
@@ -216,34 +169,6 @@
 	flex-direction: column;
 }
 
-.mobile_profile {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 2rem 0;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	margin-bottom: 2rem;
-}
-
-.mobile_profile_image {
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	object-fit: cover;
-	border: 3px solid rgba(102, 126, 234, 0.2);
-	box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2);
-	margin-bottom: 1rem;
-}
-
-.mobile_profile_name {
-	font-size: 1.25rem;
-	font-weight: 700;
-	color: var(--elegant-primary);
-	margin: 0;
-	letter-spacing: -0.01em;
-	font-family: "Space Grotesk", sans-serif;
-}
-
 .mobile_nav_list {
 	list-style: none;
 	padding: 0;
@@ -320,11 +245,6 @@
 	.logo_text {
 		font-size: 1.25rem;
 	}
-
-	.profile_image_wrapper {
-		width: 44px;
-		height: 44px;
-	}
 }
 
 @media only screen and (max-width: 680px) {
@@ -340,12 +260,6 @@
 		font-size: 1.1rem;
 	}
 
-	.profile_image_wrapper {
-		width: 40px;
-		height: 40px;
-		border-width: 2px;
-	}
-
 	.menu_btn {
 		width: 40px;
 		height: 40px;
@@ -358,15 +272,6 @@
 	.mobile_menu {
 		width: 100%;
 		max-width: 100%;
-	}
-
-	.mobile_profile_image {
-		width: 72px;
-		height: 72px;
-	}
-
-	.mobile_profile_name {
-		font-size: 1.1rem;
 	}
 
 	.mobile_nav_link {
@@ -387,11 +292,6 @@
 
 	.logo_text {
 		font-size: 1rem;
-	}
-
-	.profile_image_wrapper {
-		width: 36px;
-		height: 36px;
 	}
 
 	.menu_btn {
