@@ -14,12 +14,20 @@
 	object-position: center;
 	display: block;
 	opacity: 0;
-	transition: opacity 0.5s ease-in-out, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	transition: opacity 0.5s ease-in-out,
+		transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 	will-change: opacity;
 }
 
 .lazy_image.loaded {
 	opacity: 1;
+}
+
+/* Support for contain object-fit for carousel */
+.lazy_image[style*="object-fit: contain"],
+.lazy_image.carousel_image {
+	object-fit: contain;
+	object-position: center;
 }
 
 .placeholder {
@@ -31,12 +39,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: linear-gradient(
-		90deg,
-		#f0f0f0 25%,
-		#e0e0e0 50%,
-		#f0f0f0 75%
-	);
+	background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
 	background-size: 200% 100%;
 	animation: shimmer 1.5s infinite;
 }
@@ -59,4 +62,3 @@
 		background-position: 200% 0;
 	}
 }
-
