@@ -64,14 +64,6 @@ function Navbar() {
 		<nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
 			<div className={styles.nav_container}>
 				<Link to="/" className={styles.logo_section}>
-					<div className={styles.profile_image_wrapper}>
-						<img
-							src={smallMe}
-							alt="Abhay Gupta"
-							className={styles.profile_image}
-						/>
-						<div className={styles.image_overlay} />
-					</div>
 					<h1 className={styles.logo_text}>Abhay Gupta</h1>
 				</Link>
 			</div>
