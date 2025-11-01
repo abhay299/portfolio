@@ -4,6 +4,9 @@ import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
 	plugins: [react(), svgr()],
+	resolve: {
+		extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
+	},
 	build: {
 		rollupOptions: {
 			treeshake: true,
