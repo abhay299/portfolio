@@ -1,5 +1,6 @@
 import { ArrowBack, ArrowForward, GitHub } from "@mui/icons-material";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect, useRef } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -10,9 +11,20 @@ import convertToBulletPoints from "@/utils/convertToBulletPoints";
 
 const ProjectInfo = () => {
 	const navigate = useNavigate();
+	const carouselRef = useRef(null);
 
 	const { id } = useParams();
 	const project = projectList[id];
+
+	// Scroll to carousel container when navigation changes
+	useEffect(() => {
+		if (carouselRef.current) {
+			carouselRef.current.scrollIntoView({
+				behavior: "smooth",
+				block: "nearest",
+			});
+		}
+	}, [id]);
 
 	const handleNext = () => {
 		navigate("/projects/" + (parseInt(id) + 1).toString());
@@ -160,7 +172,7 @@ const ProjectInfo = () => {
 					</ul>
 				</div>
 
-				<div className={styles.carousel_container}>
+				<div ref={carouselRef} className={styles.carousel_container}>
 					{renderCarousel()}
 				</div>
 
