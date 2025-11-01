@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { SKILL_CATEGORIES } from "./constant/data";
 import styles from "./index.module.css";
 
 function SkillSection() {
 	const [isMobile, setIsMobile] = useState(false);
-	const [flippedCards, setFlippedCards] = useState(new Set<number>());
+	const [flippedCards, setFlippedCards] = useState(new Set(0));
 
 	useEffect(() => {
 		const checkMobile = () => {
@@ -21,7 +21,7 @@ function SkillSection() {
 		};
 	}, []);
 
-	const handleCardFlip = (index: number) => {
+	const handleCardFlip = (index = 0) => {
 		setFlippedCards((prev) => {
 			const newSet = new Set(prev);
 			if (newSet.has(index)) {
@@ -107,8 +107,10 @@ function SkillSection() {
 										</h2>
 										{!isFlipped && (
 											<div className={styles.flip_hint}>
-												<span>{isMobile ? "Tap" : "Click"}</span>
-												<span>to flip</span>
+												<span>
+													{isMobile ? "Tap" : "Click"}
+												</span>
+												<span>to find out more</span>
 											</div>
 										)}
 									</div>
