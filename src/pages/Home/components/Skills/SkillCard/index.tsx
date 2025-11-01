@@ -1,8 +1,8 @@
 import React from "react";
 
-import Orb from "@/components/Orb";
-
 import styles from "./index.module.css";
+
+import Orb from "@/components/Orb";
 
 interface Skill {
 	name: string;

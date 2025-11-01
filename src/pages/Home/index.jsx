@@ -2,13 +2,13 @@ import "./home.css";
 
 import { useEffect } from "react";
 
-import Particles from "@/components/Particles";
-
-import Hero from "./components/Hero/index.tsx";
-import Mail from "./components/Mail/index.tsx";
-import Skills from "./components/Skills/index.tsx";
-import Work from "./components/Work/index.tsx";
+import Hero from "./components/Hero";
+import Mail from "./components/Mail";
+import Skills from "./components/Skills";
+import Work from "./components/Work";
 import useHomePage from "./hooks/useHomePage.js";
+
+import Particles from "@/components/Particles";
 
 function Home() {
 	const { navigate, register, handleSubmit, onSubmit, errors } =

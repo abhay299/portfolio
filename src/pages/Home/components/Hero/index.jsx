@@ -1,8 +1,6 @@
-import React from "react";
+import styles from "./index.module.css";
 
 import sayingHelloImage from "@/assets/Portfolio/generated-image-new.png";
-
-import styles from "./index.module.css";
 
 function Hero() {
 	const scrollToContact = () => {

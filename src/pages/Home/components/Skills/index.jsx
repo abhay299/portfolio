@@ -6,7 +6,7 @@ import styles from "./index.module.css";
 
 function SkillSection() {
 	const [isMobile, setIsMobile] = useState(false);
-	const [flippedCards, setFlippedCards] = useState(new Set(0));
+	const [flippedCards, setFlippedCards] = useState(new Set());
 
 	useEffect(() => {
 		const checkMobile = () => {

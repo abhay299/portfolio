@@ -9,12 +9,12 @@ import {
 	Storage,
 } from "@mui/icons-material";
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
-
-import { PROJECT_CARDS } from "@/helpers/projectCards";
+import { useEffect, useState } from "react";
 
 import { gradientColours } from "./constants/gradientColours";
 import styles from "./index.module.css";
+
+import { PROJECT_CARDS } from "@/helpers/projectCards";
 
 const projectIcons = {
 	Socials: Person,

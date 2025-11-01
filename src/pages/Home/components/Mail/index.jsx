@@ -1,8 +1,6 @@
-import React from "react";
+import styles from "./index.module.css";
 
 import { EMAIL_REGEX } from "@/constants/regex";
-
-import styles from "./index.module.css";
 
 const Mail = ({ handleSubmit, register, errors, onSubmit }) => {
 	return (
