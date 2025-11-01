@@ -4,7 +4,7 @@ import myFitsLogo from "../assets/MyFits/MyFits-Logo.png";
 import portfolioLogo from "../assets/Portfolio/myPortfolioLogo.png";
 import smLogo from "../assets/Socials/SM-logo2.png";
 
-export const projectCards = [
+export const PROJECT_CARDS = [
 	{
 		name: "Socials",
 		title: "Meet & Greet",
