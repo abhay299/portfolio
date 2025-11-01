@@ -1,37 +1,12 @@
-import { Cloud, Code, Palette } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
-import { backend, frontend, languages } from "./constant/data";
+import { SKILL_CATEGORIES } from "./constant/data";
 import styles from "./index.module.css";
 
-const skillCategories = [
-	{
-		title: "Frontend",
-		skills: frontend,
-		icon: Palette,
-		gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-		color: "#667eea",
-	},
-	{
-		title: "Backend",
-		skills: backend,
-		icon: Cloud,
-		gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-		color: "#f5576c",
-	},
-	{
-		title: "Languages",
-		skills: languages,
-		icon: Code,
-		gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-		color: "#4facfe",
-	},
-];
-
-function SkillSection(): React.ReactElement {
+function SkillSection() {
 	const [isMobile, setIsMobile] = useState(false);
-	const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
+	const [flippedCards, setFlippedCards] = useState(new Set<number>());
 
 	useEffect(() => {
 		const checkMobile = () => {
@@ -72,7 +47,7 @@ function SkillSection(): React.ReactElement {
 
 			{/* 3D Cards Container */}
 			<div className={styles.cards_container}>
-				{skillCategories.map((category, index) => {
+				{SKILL_CATEGORIES.map((category, index) => {
 					const IconComponent = category.icon;
 					const isFlipped = flippedCards.has(index);
 
@@ -111,10 +86,21 @@ function SkillSection(): React.ReactElement {
 								}
 							>
 								{/* Front Face */}
-								<div className={styles.card_face} style={{ "--card-gradient": category.gradient }}>
+								<div
+									className={styles.card_face}
+									style={{
+										"--card-gradient": category.gradient,
+									}}
+								>
 									<div className={styles.card_front}>
-										<div className={styles.front_icon_wrapper}>
-											<IconComponent className={styles.front_icon} />
+										<div
+											className={
+												styles.front_icon_wrapper
+											}
+										>
+											<IconComponent
+												className={styles.front_icon}
+											/>
 										</div>
 										<h2 className={styles.front_title}>
 											{category.title}
@@ -122,7 +108,7 @@ function SkillSection(): React.ReactElement {
 										<div className={styles.flip_hint}>
 											{!isMobile && (
 												<>
-													<span>Hover or Click</span>
+													<span>Click</span>
 													<span>to flip</span>
 												</>
 											)}
@@ -131,38 +117,66 @@ function SkillSection(): React.ReactElement {
 								</div>
 
 								{/* Back Face */}
-								<div className={`${styles.card_face} ${styles.card_back}`} style={{ "--card-gradient": category.gradient }}>
+								<div
+									className={`${styles.card_face} ${styles.card_back}`}
+									style={{
+										"--card-gradient": category.gradient,
+									}}
+								>
 									<div className={styles.back_content}>
 										<h3 className={styles.back_title}>
 											{category.title} Skills
 										</h3>
 										<div className={styles.skills_list}>
-											{category.skills.map((skill, skillIndex) => (
-												<motion.div
-													key={skill.name}
-													className={styles.skill_item}
-													initial={{ opacity: 0, x: -20 }}
-													animate={{
-														opacity: isFlipped ? 1 : 0,
-														x: isFlipped ? 0 : -20,
-													}}
-													transition={{
-														duration: 0.3,
-														delay: skillIndex * 0.1,
-													}}
-												>
-													<div className={styles.skill_icon_container}>
-														<img
-															src={skill.icon}
-															alt={skill.name}
-															className={styles.skill_icon}
-														/>
-													</div>
-													<span className={styles.skill_name}>
-														{skill.name}
-													</span>
-												</motion.div>
-											))}
+											{category.skills.map(
+												(skill, skillIndex) => (
+													<motion.div
+														key={skill.name}
+														className={
+															styles.skill_item
+														}
+														initial={{
+															opacity: 0,
+															x: -20,
+														}}
+														animate={{
+															opacity: isFlipped
+																? 1
+																: 0,
+															x: isFlipped
+																? 0
+																: -20,
+														}}
+														transition={{
+															duration: 0.3,
+															delay:
+																skillIndex *
+																0.1,
+														}}
+													>
+														<div
+															className={
+																styles.skill_icon_container
+															}
+														>
+															<img
+																src={skill.icon}
+																alt={skill.name}
+																className={
+																	styles.skill_icon
+																}
+															/>
+														</div>
+														<span
+															className={
+																styles.skill_name
+															}
+														>
+															{skill.name}
+														</span>
+													</motion.div>
+												),
+											)}
 										</div>
 									</div>
 								</div>
