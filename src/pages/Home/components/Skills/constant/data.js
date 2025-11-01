@@ -31,8 +31,8 @@ const SKILL_CATEGORIES = [
 		title: "Backend",
 		skills: BACKEND_SKILLS,
 		icon: Cloud,
-		gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-		color: "#f5576c",
+		gradient: "linear-gradient(135deg, #800020 0%, #5c0015 100%)",
+		color: "#800020",
 	},
 	{
 		title: "Languages",

@@ -62,8 +62,8 @@ function SkillSection() {
 								duration: 0.5,
 								delay: index * 0.15,
 							}}
-							onClick={() => !isMobile && handleCardFlip(index)}
-							style={{ cursor: isMobile ? "default" : "pointer" }}
+							onClick={() => handleCardFlip(index)}
+							style={{ cursor: "pointer" }}
 						>
 							<motion.div
 								className={`${styles.card_3d} ${
@@ -105,14 +105,12 @@ function SkillSection() {
 										<h2 className={styles.front_title}>
 											{category.title}
 										</h2>
-										<div className={styles.flip_hint}>
-											{!isMobile && (
-												<>
-													<span>Click</span>
-													<span>to flip</span>
-												</>
-											)}
-										</div>
+										{!isFlipped && (
+											<div className={styles.flip_hint}>
+												<span>{isMobile ? "Tap" : "Click"}</span>
+												<span>to flip</span>
+											</div>
+										)}
 									</div>
 								</div>
 
