@@ -1,5 +1,7 @@
 import "./home.css";
 
+import { useEffect } from "react";
+
 import Particles from "../../components/Particles";
 
 import Hero from "./components/Hero/index.tsx";
@@ -11,6 +13,19 @@ import useHomePage from "./hooks/useHomePage.js";
 function Home() {
 	const { navigate, register, handleSubmit, onSubmit, errors } =
 		useHomePage();
+
+	useEffect(() => {
+		// Check if there's a hash in the URL and scroll to contact section
+		if (window.location.hash === "#contact") {
+			// Use setTimeout to ensure the DOM is fully rendered
+			setTimeout(() => {
+				const contactSection = document.getElementById("contact");
+				if (contactSection) {
+					contactSection.scrollIntoView({ behavior: "smooth" });
+				}
+			}, 300);
+		}
+	}, []);
 
 	return (
 		<div className="Home section">

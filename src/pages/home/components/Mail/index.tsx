@@ -1,12 +1,12 @@
 import React from "react";
 
-import { regEmail } from "../../../../constants";
+import { EMAIL_REGEX } from "../../../../constants/regex";
 
 import styles from "./index.module.css";
 
 const Mail = ({ handleSubmit, register, errors, onSubmit }) => {
 	return (
-		<div className={styles.mail_me_header}>
+		<div id="contact" className={styles.mail_me_header}>
 			<h1>Drop me a message!</h1>
 			<p>Like my work or want to connect, just let me know.</p>
 
@@ -30,7 +30,7 @@ const Mail = ({ handleSubmit, register, errors, onSubmit }) => {
 							{...register("email", {
 								required: true,
 								maxLength: 100,
-								pattern: regEmail,
+								pattern: EMAIL_REGEX,
 							})}
 						/>
 						{errors.email && (

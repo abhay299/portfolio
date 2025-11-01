@@ -1,9 +1,10 @@
 import { Close, Menu } from "@mui/icons-material";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import smallMe from "../../assets/Portfolio/smallMe.png";
+import { NAVIGATION_LINKS } from "../../constants/navigationLinks";
 
 import styles from "./index.module.css";
 
@@ -11,6 +12,7 @@ function Navbar() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
 	const location = useLocation();
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -37,21 +39,26 @@ function Navbar() {
 		};
 	}, [menuOpen]);
 
-	const navLinks = [
-		{ path: "/", label: "Home" },
-		{ path: "/projects", label: "Work" },
-		{ path: "/aboutMe", label: "About" },
-		{
-			path: "https://drive.google.com/file/d/1f8NoJjYrAB-oKEv_yuEx5n6gcn1iqjRa/view?usp=sharing",
-			label: "Resume",
-			external: true,
-		},
-		{
-			path: "mailto:abhaysgpt@gmail.com",
-			label: "Contact",
-			external: true,
-		},
-	];
+	const scrollToContact = () => {
+		if (location.pathname === "/") {
+			// Already on home page, just scroll
+			const contactSection = document.getElementById("contact");
+			if (contactSection) {
+				contactSection.scrollIntoView({ behavior: "smooth" });
+			}
+		} else {
+			// Navigate to home first
+			navigate("/");
+			// Wait for navigation and DOM to be ready, then scroll
+			setTimeout(() => {
+				const contactSection = document.getElementById("contact");
+				if (contactSection) {
+					contactSection.scrollIntoView({ behavior: "smooth" });
+				}
+			}, 500);
+		}
+		setMenuOpen(false);
+	};
 
 	return (
 		<nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
@@ -71,7 +78,7 @@ function Navbar() {
 
 			{/* Desktop Navigation */}
 			<div className={styles.desktop_nav}>
-				{navLinks.map((link, index) => {
+				{NAVIGATION_LINKS.map((link) => {
 					if (link.external) {
 						return (
 							<a
@@ -91,6 +98,22 @@ function Navbar() {
 							>
 								{link.label}
 							</a>
+						);
+					}
+					if (link.isContact) {
+						return (
+							<button
+								key={link.path}
+								onClick={scrollToContact}
+								className={styles.nav_link}
+								style={{
+									background: "none",
+									border: "none",
+									cursor: "pointer",
+								}}
+							>
+								{link.label}
+							</button>
 						);
 					}
 					return (
@@ -158,7 +181,7 @@ function Navbar() {
 									</h2>
 								</div>
 								<ul className={styles.mobile_nav_list}>
-									{navLinks.map((link, index) => (
+									{NAVIGATION_LINKS.map((link, index) => (
 										<motion.li
 											key={link.path}
 											initial={{ opacity: 0, x: 50 }}
@@ -195,6 +218,23 @@ function Navbar() {
 												>
 													{link.label}
 												</a>
+											) : link.isContact ? (
+												<button
+													onClick={scrollToContact}
+													className={
+														styles.mobile_nav_link
+													}
+													style={{
+														background: "none",
+														border: "none",
+														cursor: "pointer",
+														width: "100%",
+														textAlign: "left",
+														padding: 0,
+													}}
+												>
+													{link.label}
+												</button>
 											) : (
 												<Link
 													to={link.path}
