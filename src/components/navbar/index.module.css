@@ -329,7 +329,7 @@
 
 @media only screen and (max-width: 680px) {
 	.navbar {
-		padding: 0.75rem 1rem;
+		padding: 0.75rem 2rem;
 	}
 
 	.logo_section {
@@ -382,7 +382,7 @@
 
 @media only screen and (max-width: 400px) {
 	.navbar {
-		padding: 0.625rem 0.875rem;
+		padding: 0.625rem 1.25rem;
 	}
 
 	.logo_text {

@@ -5,9 +5,9 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import React from "react";
 import "./footer.css";
 
-const Footer = () => {
-	const currentYear = new Date().getFullYear();
+const currentYear = new Date().getFullYear();
 
+const Footer = () => {
 	return (
 		<footer className="Footer">
 			<div className="FooterContainer">
