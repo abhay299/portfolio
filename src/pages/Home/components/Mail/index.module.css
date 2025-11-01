@@ -1,0 +1,399 @@
+@media only screen and (min-width: 680px) {
+	/* Feedback Component */
+	/* @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700); */
+
+	.mail_me_header {
+		display: flex;
+		width: 100%;
+		height: 90vh;
+		padding-top: 2rem;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		line-height: 1rem;
+		color: #4831d4;
+	}
+
+	.mail_me_header p {
+		text-align: justify;
+		font-size: 14pt;
+		margin: 1rem 1rem;
+		color: #4831d4;
+	}
+
+	.mail_me_inner_content {
+		display: flex;
+		width: 75%;
+	}
+
+	.mail_me_inner_content form {
+		width: 100%;
+		margin: 1rem auto;
+	}
+
+	.form_row {
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 1rem;
+	}
+
+	.form_row p {
+		font-size: 12pt;
+		color: red;
+		text-align: left;
+	}
+
+	.form_row:first-of-type .form_input {
+		width: 50%;
+	}
+
+	.abhay:not(:last-child) {
+		margin-right: 50px;
+	}
+
+	.form_row textarea {
+		line-height: 1.2;
+		resize: vertical;
+	}
+
+	.form_input {
+		display: flex;
+		align-items: center;
+		margin-top: 10px;
+		justify-content: center;
+		width: 100%;
+		padding: 10px 0;
+		background: none;
+		border: none;
+		border-bottom: 1px solid #666;
+		color: #122fa3;
+		font-size: 14pt;
+		outline: none;
+		transition: border-color 0.2s;
+	}
+
+	.form_input:focus {
+		border-bottom: 1px solid #122fa3;
+	}
+
+	/* Send Component */
+	/* @import url("https://fonts.googleapis.com/css?family=Mukta:700"); */
+	.btn_body {
+		font-family: "Space Grotesk", sans-serif;
+		font-size: 1rem;
+		line-height: 1.5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 3rem;
+	}
+
+	button {
+		position: relative;
+		display: inline-block;
+		cursor: pointer;
+		outline: none;
+		border: 0;
+		vertical-align: middle;
+		text-decoration: none;
+		background: transparent;
+		padding: 0;
+		font-size: inherit;
+		font-family: inherit;
+	}
+
+	button.learn_more {
+		width: 12rem;
+		height: auto;
+	}
+
+	button.learn_more .circle {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		position: relative;
+		display: block;
+		margin: 0;
+		width: 3rem;
+		height: 3rem;
+		background: #4831d4;
+		border-radius: 1.625rem;
+	}
+
+	button.learn_more .circle .icon {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		background: #fff;
+	}
+
+	button.learn_more .circle .icon.arrow {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		left: 0.625rem;
+		width: 1.125rem;
+		height: 0.125rem;
+		background: none;
+	}
+
+	button.learn_more .circle .icon.arrow::before {
+		position: absolute;
+		content: "";
+		top: -0.25rem;
+		right: 0.0625rem;
+		width: 0.625rem;
+		height: 0.625rem;
+		border-top: 0.125rem solid #fff;
+		border-right: 0.125rem solid #fff;
+		transform: rotate(45deg);
+	}
+
+	button.learn_more .button_text {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 0.75rem 0;
+		margin: 0 0 0 1.85rem;
+		color: #282936;
+		font-weight: 700;
+		line-height: 1.6;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	button:hover .circle {
+		width: 100%;
+	}
+
+	button:hover .circle .icon.arrow {
+		background: #fff;
+		transform: translate(1rem, 0);
+	}
+
+	button:hover .button_text {
+		color: #fff;
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	/* Feedback Component */
+	@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+	.mail_me_header {
+		display: flex;
+		width: 100%;
+		min-height: auto;
+		height: auto;
+		padding: 2rem 1rem;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		line-height: 1rem;
+		color: #4831d4;
+		overflow-x: hidden;
+	}
+
+	.mail_me_header h1 {
+		font-size: clamp(1.5rem, 6vw, 2rem);
+		margin-bottom: 1rem;
+		text-align: center;
+		padding: 0 1rem;
+	}
+
+	.mail_me_header p {
+		text-align: center;
+		font-size: 1rem;
+		padding: 0 1rem 1.5rem 1rem;
+		color: #4831d4;
+		line-height: 1.5rem;
+		margin: 0;
+	}
+
+	.mail_me_inner_content {
+		display: flex;
+		width: 100%;
+		max-width: 100%;
+		padding: 0 1rem;
+		opacity: 1;
+		transform: translateY(0);
+		pointer-events: auto;
+		box-sizing: border-box;
+	}
+
+	.mail_me_inner_content form {
+		width: 100%;
+		margin: 0 auto;
+		line-height: 1.2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.form_row {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		width: 100%;
+		margin-bottom: 0;
+	}
+
+	.form_row:first-of-type {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.form_row:first-of-type .form_input {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.abhay {
+		width: 100%;
+		margin-right: 0 !important;
+	}
+
+	.mail_me_inner_content textarea {
+		height: 100px;
+		min-height: 100px;
+		resize: vertical;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.form_input {
+		display: flex;
+		align-items: center;
+		margin-top: 0;
+		justify-content: flex-start;
+		width: 100%;
+		padding: 12px 0;
+		background: none;
+		border: none;
+		border-bottom: 1px solid #666;
+		color: #122fa3;
+		font-size: 1rem;
+		outline: none;
+		transition: border-color 0.2s;
+		box-sizing: border-box;
+		min-width: 0;
+	}
+
+	.form_input:focus {
+		border-bottom: 1px solid #122fa3;
+	}
+
+	.form_row p {
+		font-size: 0.875rem;
+		color: red;
+		text-align: left;
+		margin: 0.25rem 0 0 0;
+		padding: 0;
+	}
+
+	/* Send Component */
+	/* @import url("https://fonts.googleapis.com/css?family=Mukta:700"); */
+	.btn_body {
+		font-family: "Space Grotesk", sans-serif;
+		font-size: 1rem;
+		line-height: 1.5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	button {
+		position: relative;
+		display: inline-block;
+		cursor: pointer;
+		outline: none;
+		border: 0;
+		vertical-align: middle;
+		text-decoration: none;
+		background: transparent;
+		padding: 0;
+		font-size: inherit;
+		font-family: inherit;
+	}
+
+	button.learn_more {
+		width: 12rem;
+		height: auto;
+	}
+
+	button.learn_more .circle {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		position: relative;
+		display: block;
+		margin: 0;
+		width: 3rem;
+		height: 3rem;
+		background: #4831d4;
+		border-radius: 1.625rem;
+	}
+
+	button.learn_more .circle .icon {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		background: #fff;
+	}
+
+	button.learn_more .circle .icon.arrow {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		left: 0.625rem;
+		width: 1.125rem;
+		height: 0.125rem;
+		background: none;
+	}
+
+	button.learn_more .circle .icon.arrow::before {
+		position: absolute;
+		content: "";
+		top: -0.25rem;
+		right: 0.0625rem;
+		width: 0.625rem;
+		height: 0.625rem;
+		border-top: 0.125rem solid #fff;
+		border-right: 0.125rem solid #fff;
+		transform: rotate(45deg);
+	}
+
+	button.learn_more .button_text {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 0.75rem 0;
+		margin: 0 0 0 1.85rem;
+		color: #282936;
+		font-weight: 700;
+		line-height: 1.6;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	button:hover .circle {
+		width: 100%;
+	}
+
+	button:hover .circle .icon.arrow {
+		background: #fff;
+		transform: translate(1rem, 0);
+	}
+
+	button:hover .button_text {
+		color: #fff;
+	}
+}

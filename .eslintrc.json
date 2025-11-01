@@ -1,0 +1,45 @@
+{
+	"extends": ["react-app", "react-app/jest"],
+	"plugins": ["import", "unused-imports"],
+	"settings": {
+		"import/resolver": {
+			"alias": {
+				"map": [["@", "./src"]],
+				"extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]
+			}
+		}
+	},
+	"rules": {
+		"import/no-extraneous-dependencies": "off",
+		"import/prefer-default-export": "off",
+		"import/order": [
+			"error",
+			{
+				"groups": ["builtin", "external", "parent", "sibling", "index"],
+				"newlines-between": "always",
+				"alphabetize": {
+					"order": "asc",
+					"caseInsensitive": true
+				}
+			}
+		],
+		"no-unused-vars": "error",
+		"unused-imports/no-unused-vars": [
+			"warn",
+			{
+				"vars": "all",
+				"args": "after-used",
+				"argsIgnorePattern": "^_"
+			}
+		],
+		"react/self-closing-comp": [
+			"warn",
+			{
+				"component": true,
+				"html": true
+			}
+		],
+		"no-nested-ternary": "warn",
+		"import/no-unresolved": [2, { "caseSensitive": true }]
+	}
+}

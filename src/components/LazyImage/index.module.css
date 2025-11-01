@@ -1,0 +1,65 @@
+.lazy_image_container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: inherit;
+	overflow: hidden;
+}
+
+.lazy_image {
+	width: 100%;
+	height: 100%;
+	min-height: inherit;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+	opacity: 0;
+	transition:
+		opacity 0.5s ease-in-out,
+		transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	will-change: opacity;
+}
+
+.lazy_image.loaded {
+	opacity: 1;
+}
+
+/* Support for contain object-fit for carousel */
+.lazy_image[style*="object-fit: contain"],
+.lazy_image.carousel_image {
+	object-fit: contain;
+	object-position: center;
+}
+
+.placeholder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+	background-size: 200% 100%;
+	animation: shimmer 1.5s infinite;
+}
+
+.skeleton {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		135deg,
+		rgba(102, 126, 234, 0.05) 0%,
+		rgba(118, 75, 162, 0.05) 100%
+	);
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: -200% 0;
+	}
+	100% {
+		background-position: 200% 0;
+	}
+}
