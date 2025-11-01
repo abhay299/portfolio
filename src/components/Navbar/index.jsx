@@ -1,12 +1,12 @@
 import { Close, Menu } from "@mui/icons-material";
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-import smallMe from "../../assets/Portfolio/smallMe.png";
-import { NAVIGATION_LINKS } from "../../constants/navigationLinks";
-
 import styles from "./index.module.css";
+
+import smallMe from "@/assets/Portfolio/smallMe.png";
+import { NAVIGATION_LINKS } from "@/constants/navigationLinks";
 
 function Navbar() {
 	const [menuOpen, setMenuOpen] = useState(false);

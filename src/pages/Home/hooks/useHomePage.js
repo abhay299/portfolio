@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
-import encode from "../utils/encodeURI";
+import encode from "@/pages/Home/utils/encodeURI";
 
 function useHomePage() {
 	const navigate = useNavigate();

@@ -1,9 +1,7 @@
-import React from "react";
-
-import ProjectItem from "../../components/ProjectItem";
-import { projectList } from "../../helpers/projectList";
-
 import styles from "./index.module.css";
+
+import ProjectItem from "@/components/ProjectItem";
+import { projectList } from "@/helpers/projectList";
 
 const Projects = () => {
 	return (

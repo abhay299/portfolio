@@ -2,7 +2,7 @@ import "./home.css";
 
 import { useEffect } from "react";
 
-import Particles from "../../components/Particles";
+import Particles from "@/components/Particles";
 
 import Hero from "./components/Hero/index.tsx";
 import Mail from "./components/Mail/index.tsx";

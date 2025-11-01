@@ -3,10 +3,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "react-bootstrap/Carousel";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { projectList } from "../../helpers/projectList";
-import convertToBulletPoints from "../../utils/convertToBulletPoints";
-
 import styles from "./index.module.css";
+
+import { projectList } from "@/helpers/projectList";
+import convertToBulletPoints from "@/utils/convertToBulletPoints";
 
 const ProjectInfo = () => {
 	const navigate = useNavigate();
