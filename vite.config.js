@@ -20,7 +20,6 @@ export default defineConfig({
 	server: {
 		port: 3000,
 	},
-	envPrefix: "REACT_APP_",
 	css: {
 		modules: {
 			localsConvention: "dashes",

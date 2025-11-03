@@ -1,3 +1,4 @@
+import Clarity from "@microsoft/clarity";
 import { useEffect } from "react";
 import {
 	Route,
@@ -30,6 +31,15 @@ function ScrollToTop() {
 }
 
 function App() {
+	// In any component or file
+	const clarityId = import.meta.env.VITE_CLARITY_ID;
+
+	useEffect(() => {
+		if (clarityId) {
+			Clarity.init(clarityId);
+		}
+	}, [clarityId]);
+
 	return (
 		<Router>
 			<ScrollToTop />

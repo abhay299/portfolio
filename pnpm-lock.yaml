@@ -14,6 +14,9 @@ importers:
       '@emotion/styled':
         specifier: ^11.11.0
         version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@18.3.1))(@types/react@19.2.2)(react@18.3.1)
+      '@microsoft/clarity':
+        specifier: ^1.0.0
+        version: 1.0.0
       '@mui/icons-material':
         specifier: ^5.18.0
         version: 5.18.0(@mui/material@5.18.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@18.3.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@18.3.1))(@types/react@19.2.2)(react@18.3.1))(@types/react@19.2.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/react@19.2.2)(react@18.3.1)
@@ -1358,6 +1361,9 @@ packages:
 
   '@leichtgewicht/ip-codec@2.0.5':
     resolution: {integrity: sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==}
+
+  '@microsoft/clarity@1.0.0':
+    resolution: {integrity: sha512-2QY6SmXnqRj6dWhNY8NYCN3e53j4zCFebH4wGnNhdGV1mqAsQwql2fT0w8TISxCvwwfVp8idsWLIdrRHOms1PQ==}
 
   '@mui/core-downloads-tracker@5.18.0':
     resolution: {integrity: sha512-jbhwoQ1AY200PSSOrNXmrFCaSDSJWP7qk6urkTmIirvRXDROkqe+QwcLlUiw/PrREwsIF/vm3/dAXvjlMHF0RA==}
@@ -8263,6 +8269,8 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.5
 
   '@leichtgewicht/ip-codec@2.0.5': {}
+
+  '@microsoft/clarity@1.0.0': {}
 
   '@mui/core-downloads-tracker@5.18.0': {}
 
