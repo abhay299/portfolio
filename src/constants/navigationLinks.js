@@ -3,7 +3,7 @@ const NAVIGATION_LINKS = [
 	{ path: "/projects", label: "Work" },
 	{ path: "/aboutMe", label: "About" },
 	{
-		path: "https://drive.google.com/file/d/1f8NoJjYrAB-oKEv_yuEx5n6gcn1iqjRa/view?usp=sharing",
+		path: `https://drive.google.com/${import.meta.env.VITE_RESUME_LINK}`,
 		label: "Resume",
 		external: true,
 	},

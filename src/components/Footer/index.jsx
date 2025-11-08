@@ -2,7 +2,6 @@ import { EmailSharp } from "@mui/icons-material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import React from "react";
 import "./footer.css";
 
 const currentYear = new Date().getFullYear();
@@ -60,7 +59,7 @@ const Footer = () => {
 					<h3 className="FooterTitle">Quick Links</h3>
 					<nav className="FooterNav">
 						<a
-							href="https://drive.google.com/file/d/1f8NoJjYrAB-oKEv_yuEx5n6gcn1iqjRa/view?usp=sharing"
+							href={`https://drive.google.com/${import.meta.env.VITE_RESUME_LINK}`}
 							target="_blank"
 							rel="noopener noreferrer"
 							className="FooterNavLink"
