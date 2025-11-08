@@ -1,4 +1,4 @@
-import { EmailSharp } from "@mui/icons-material";
+import EmailRounded from "@mui/icons-material/EmailRounded";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -30,7 +30,7 @@ const Footer = () => {
 							className="SocialLink"
 							aria-label="Email"
 						>
-							<EmailSharp />
+							<EmailRounded />
 						</a>
 						<a
 							href="https://www.instagram.com/abhay_29_7/"
