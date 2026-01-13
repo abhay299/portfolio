@@ -1,7 +1,7 @@
 import EmailRounded from "@mui/icons-material/EmailRounded";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import "./footer.css";
 
 const currentYear = new Date().getFullYear();
@@ -42,13 +42,13 @@ const Footer = () => {
 							<InstagramIcon />
 						</a>
 						<a
-							href="https://twitter.com/abysssickg"
+							href="https://github.com/abhay299"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="SocialLink"
-							aria-label="Twitter"
+							aria-label="GitHub"
 						>
-							<TwitterIcon />
+							<GitHubIcon />
 						</a>
 					</div>
 				</div>
