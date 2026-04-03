@@ -1,8 +1,21 @@
+import { Skeleton } from "@mui/material";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
 import styles from "./index.module.css";
 
 import sayingHelloImage from "@/assets/Portfolio/generated-image-new.png";
 
 function Hero() {
+	const [imageLoaded, setImageLoaded] = useState(false);
+
+	useEffect(() => {
+		const img = new Image();
+		img.src = sayingHelloImage;
+		img.onload = () => {
+			setImageLoaded(true);
+		};
+	}, []);
 	const scrollToContact = () => {
 		const contactSection = document.getElementById("contact");
 		if (contactSection) {
@@ -35,11 +48,28 @@ function Hero() {
 
 				{/* Image */}
 				<div className={styles.hero_image_wrapper}>
-					<img
-						src={sayingHelloImage}
-						alt="Abhay Gupta - Developer"
-						className={styles.hero_image}
-					/>
+					{!imageLoaded ? (
+						<Skeleton 
+							variant="circular" 
+							animation="wave" 
+							sx={{ 
+								width: "100%", 
+								maxWidth: "550px", 
+								aspectRatio: "1/1", 
+								bgcolor: 'rgba(102, 126, 234, 0.1)',
+								margin: "auto"
+							}} 
+						/>
+					) : (
+						<motion.img
+							src={sayingHelloImage}
+							alt="Abhay Gupta - Developer"
+							className={styles.hero_image}
+							initial={{ opacity: 0, filter: "blur(10px)" }}
+							animate={{ opacity: 1, filter: "blur(0px)" }}
+							transition={{ duration: 0.6, ease: "easeOut" }}
+						/>
+					)}
 				</div>
 			</div>
 		</div>
