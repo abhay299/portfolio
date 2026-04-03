@@ -1,12 +1,13 @@
 import {
-	Business,
-	Code,
-	GitHub,
-	Hotel,
-	Launch,
-	Person,
-	ShoppingCart,
-	Storage,
+    Business,
+    Code,
+    GitHub,
+    Hotel,
+    Launch,
+    MenuBook,
+    Person,
+    ShoppingCart,
+    Storage,
 } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -21,6 +22,7 @@ const projectIcons = {
 	MyFits: ShoppingCart,
 	BookAmigo: Hotel,
 	Portfolio: Code,
+	"Book Manga": MenuBook,
 	"CRM App": Business,
 };
 
@@ -105,7 +107,9 @@ function Work({ navigate }) {
 										<motion.button
 											className={styles.view_button}
 											onClick={() =>
-												navigate(`/projects/${index}`)
+												project.demoUrl
+													? window.open(project.demoUrl, "_blank", "noopener,noreferrer")
+													: navigate(`/projects/${encodeURIComponent(project.name)}`)
 											}
 											whileHover={
 												!isMobile ? { scale: 1.05 } : {}
@@ -115,7 +119,7 @@ function Work({ navigate }) {
 											<Launch
 												className={styles.button_icon}
 											/>
-											View Project
+											{project.demoUrl ? "Live Demo" : "View Project"}
 										</motion.button>
 										{project.gitUrl && (
 											<motion.a

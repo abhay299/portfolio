@@ -5,6 +5,15 @@ import portfolioLogo from "@/assets/Portfolio/myPortfolioLogo.png";
 import smLogo from "@/assets/Socials/SM-logo2.png";
 
 export const PROJECT_CARDS = [
+    {
+		name: "Book Manga",
+		title: "Personal Book Manager",
+		image: portfolioLogo,
+		desc: "A sleek and modern web application for managing your personal book collection, reading statistics, and tracking your reading journey.",
+		stack: "Next.js, TypeScript, Tailwind CSS",
+		gitUrl: "https://github.com/abhay299/personal-book-manager",
+		demoUrl: "https://book-manga.netlify.app/",
+	},
 	{
 		name: "Socials",
 		title: "Meet & Greet",
@@ -28,14 +37,6 @@ export const PROJECT_CARDS = [
 		desc: "Frontend Hotel Booking App",
 		stack: "ReactJS, NodeJS, ExpressJS, MySQL",
 		gitUrl: "https://github.com/abhay299/BookAmigo",
-	},
-	{
-		name: "Portfolio",
-		title: "Personal Website",
-		image: portfolioLogo,
-		desc: "Checkout My Website",
-		stack: "ReactJS, NodeJS, ExpressJS, MySQL, CSS",
-		gitUrl: "https://github.com/abhay299/my_Portfolio",
 	},
 	{
 		name: "CRM App",

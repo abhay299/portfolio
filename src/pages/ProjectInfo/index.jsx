@@ -14,7 +14,14 @@ const ProjectInfo = () => {
 	const carouselRef = useRef(null);
 
 	const { id } = useParams();
-	const project = projectList[id];
+	
+	// General solution: Find project by name, fallback to legacy index
+	let currentIndex = projectList.findIndex(p => p.name === decodeURIComponent(id));
+	if (currentIndex === -1) {
+		currentIndex = parseInt(id);
+	}
+
+	const project = projectList[currentIndex];
 
 	// Scroll to carousel container when navigation changes
 	useEffect(() => {
@@ -27,11 +34,13 @@ const ProjectInfo = () => {
 	}, [id]);
 
 	const handleNext = () => {
-		navigate("/projects/" + (parseInt(id) + 1).toString());
+		const nextProject = projectList[currentIndex + 1];
+		navigate("/projects/" + encodeURIComponent(nextProject.name));
 	};
 
 	const handlePrev = () => {
-		navigate("/projects/" + (parseInt(id) - 1).toString());
+		const prevProject = projectList[currentIndex - 1];
+		navigate("/projects/" + encodeURIComponent(prevProject.name));
 	};
 
 	// Convert description to bullet points
@@ -142,6 +151,16 @@ const ProjectInfo = () => {
 		);
 	};
 
+	if (!project) {
+		return (
+			<section className={`${styles.project_section} section`}>
+				<div className={styles.project_container}>
+					<h1 className={styles.project_title}>Project Not Found</h1>
+				</div>
+			</section>
+		);
+	}
+
 	return (
 		<section className={`${styles.project_section} section`}>
 			<div className={styles.project_container}>
@@ -179,7 +198,7 @@ const ProjectInfo = () => {
 				<div className={styles.project_footer}>
 					<button
 						className={styles.nav_btn}
-						disabled={parseInt(id) === 0}
+						disabled={currentIndex === 0}
 						onClick={handlePrev}
 						aria-label="Previous project"
 					>
@@ -200,7 +219,7 @@ const ProjectInfo = () => {
 
 					<button
 						className={styles.nav_btn}
-						disabled={parseInt(id) === projectList.length - 1}
+						disabled={currentIndex === projectList.length - 1}
 						onClick={handleNext}
 						aria-label="Next project"
 					>

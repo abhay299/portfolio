@@ -27,7 +27,7 @@ const Projects = () => {
 									className={styles.project_item_wrapper}
 								>
 									<ProjectItem
-										id={index}
+										id={encodeURIComponent(project.name)}
 										name={project.name}
 										image={project.image}
 										stack={project.stack}
