@@ -25,5 +25,5 @@ export default defineConfig({
 			localsConvention: "dashes",
 		},
 	},
-	assetsInclude: ["**/*.JPG", "**/*.jpeg", "**/*.png", "**/*.svg"],
+	assetsInclude: ["**/*.JPG", "**/*.jpeg", "**/*.png", "**/*.webp", "**/*.svg"],
 });
