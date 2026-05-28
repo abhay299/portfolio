@@ -416,20 +416,6 @@
 		font-size: 12pt;
 	}
 
-	.InfoImg {
-		width: 100%;
-		height: 50vh;
-	}
-
-	.InfoImg span {
-		background: url("../../assets/Portfolio/me_in_HD.png") no-repeat center;
-		background-size: contain;
-		-webkit-background-size: contain;
-		display: block;
-		width: 100%;
-		height: 85%;
-	}
-
 	.InfoBtn {
 		align-items: center;
 		appearance: none;

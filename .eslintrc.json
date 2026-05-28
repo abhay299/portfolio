@@ -3,6 +3,10 @@
 	"plugins": ["import", "unused-imports"],
 	"settings": {
 		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx", ".json"],
+				"exportConditions": ["import", "node", "default"]
+			},
 			"alias": {
 				"map": [["@", "./src"]],
 				"extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]

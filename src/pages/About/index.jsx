@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import styles from "./index.module.css";
 
-import hdImage from "@/assets/Portfolio/me_in_HD_without_bg.png";
+import hdImage from "@/assets/Portfolio/me_in_HD_without_bg.webp";
 import { experienceData, stats } from "@/constants/experienceData";
 
 function About() {
@@ -64,7 +64,6 @@ function About() {
 							alt="Abhay Gupta"
 							className={styles.hero_image}
 						/>
-						<div className={styles.image_overlay} />
 					</motion.div>
 					<div className={styles.hero_text}>
 						<motion.h1
