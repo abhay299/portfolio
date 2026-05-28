@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import styles from "./index.module.css";
 
-import sayingHelloImage from "@/assets/Portfolio/generated-image-new.png";
+import sayingHelloImage from "@/assets/Portfolio/generated-image-new.webp";
 
 function Hero() {
 	const [imageLoaded, setImageLoaded] = useState(false);
@@ -49,16 +49,16 @@ function Hero() {
 				{/* Image */}
 				<div className={styles.hero_image_wrapper}>
 					{!imageLoaded ? (
-						<Skeleton 
-							variant="circular" 
-							animation="wave" 
-							sx={{ 
-								width: "100%", 
-								maxWidth: "550px", 
-								aspectRatio: "1/1", 
-								bgcolor: 'rgba(102, 126, 234, 0.1)',
-								margin: "auto"
-							}} 
+						<Skeleton
+							variant="circular"
+							animation="wave"
+							sx={{
+								width: "100%",
+								maxWidth: "550px",
+								aspectRatio: "1/1",
+								bgcolor: "rgba(102, 126, 234, 0.1)",
+								margin: "auto",
+							}}
 						/>
 					) : (
 						<motion.img
