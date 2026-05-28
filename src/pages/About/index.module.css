@@ -23,9 +23,9 @@
 .hero_image_wrapper {
 	position: relative;
 	flex-shrink: 0;
-	border-radius: 1.5rem;
+	/* border-radius: 1.5rem; */
 	overflow: hidden;
-	box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.25);
+	/* box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.25); */
 	width: 18.75rem;
 	height: 18.75rem;
 }
@@ -35,20 +35,6 @@
 	height: 100%;
 	object-fit: cover;
 	display: block;
-}
-
-.image_overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: linear-gradient(
-		135deg,
-		rgba(102, 126, 234, 0.2) 0%,
-		rgba(118, 75, 162, 0.2) 100%
-	);
-	pointer-events: none;
 }
 
 .hero_text {
