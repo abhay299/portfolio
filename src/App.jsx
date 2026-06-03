@@ -10,6 +10,7 @@ import "./App.css";
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { initGtm, trackPageView } from "@/lib/gtm";
 import About from "@/pages/About";
 import Home from "@/pages/Home";
 import ProjectInfo from "@/pages/ProjectInfo";
@@ -30,9 +31,23 @@ function ScrollToTop() {
 	return null;
 }
 
+function GtmPageView() {
+	const { pathname, search } = useLocation();
+
+	useEffect(() => {
+		trackPageView(pathname, search);
+	}, [pathname, search]);
+
+	return null;
+}
+
 function App() {
 	// In any component or file
 	const clarityId = import.meta.env.VITE_CLARITY_ID;
+
+	useEffect(() => {
+		initGtm();
+	}, []);
 
 	useEffect(() => {
 		if (clarityId) {
@@ -42,6 +57,7 @@ function App() {
 
 	return (
 		<Router>
+			<GtmPageView />
 			<ScrollToTop />
 			<Navbar />
 			<Routes>

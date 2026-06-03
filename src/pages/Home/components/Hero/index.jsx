@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import styles from "./index.module.css";
 
 import sayingHelloImage from "@/assets/Portfolio/generated-image-new.webp";
+import { trackHeroContactClick } from "@/lib/gtm";
 
 function Hero() {
 	const [imageLoaded, setImageLoaded] = useState(false);
@@ -17,6 +18,7 @@ function Hero() {
 		};
 	}, []);
 	const scrollToContact = () => {
+		trackHeroContactClick();
 		const contactSection = document.getElementById("contact");
 		if (contactSection) {
 			contactSection.scrollIntoView({ behavior: "smooth" });
