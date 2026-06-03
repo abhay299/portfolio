@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import styles from "./index.module.css";
 
 import { NAVIGATION_LINKS } from "@/constants/navigationLinks";
+import { trackHomepageNavClick } from "@/lib/gtm";
 
 function Navbar() {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -38,7 +39,12 @@ function Navbar() {
 		};
 	}, [menuOpen]);
 
+	const handleNavClick = (label) => {
+		trackHomepageNavClick(label);
+	};
+
 	const scrollToContact = () => {
+		handleNavClick("Contact");
 		if (location.pathname === "/") {
 			// Already on home page, just scroll
 			const contactSection = document.getElementById("contact");
@@ -116,6 +122,7 @@ function Navbar() {
 									? styles.active
 									: ""
 							}`}
+							onClick={() => handleNavClick(link.label)}
 						>
 							{link.label}
 						</Link>
@@ -193,9 +200,12 @@ function Navbar() {
 													className={
 														styles.mobile_nav_link
 													}
-													onClick={() =>
-														setMenuOpen(false)
-													}
+													onClick={() => {
+														handleNavClick(
+															link.label,
+														);
+														setMenuOpen(false);
+													}}
 												>
 													{link.label}
 												</a>
@@ -226,9 +236,12 @@ function Navbar() {
 															? styles.active
 															: ""
 													}`}
-													onClick={() =>
-														setMenuOpen(false)
-													}
+													onClick={() => {
+														handleNavClick(
+															link.label,
+														);
+														setMenuOpen(false);
+													}}
 												>
 													{link.label}
 												</Link>
