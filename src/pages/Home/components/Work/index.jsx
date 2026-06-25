@@ -1,13 +1,14 @@
 import {
-    Business,
-    Code,
-    GitHub,
-    Hotel,
-    Launch,
-    MenuBook,
-    Person,
-    ShoppingCart,
-    Storage,
+	Business,
+	CatchingPokemon,
+	Code,
+	GitHub,
+	Hotel,
+	Launch,
+	MenuBook,
+	Person,
+	ShoppingCart,
+	Storage,
 } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -18,6 +19,7 @@ import styles from "./index.module.css";
 import { PROJECT_CARDS } from "@/helpers/projectCards";
 
 const projectIcons = {
+	Pokekan: CatchingPokemon,
 	Socials: Person,
 	MyFits: ShoppingCart,
 	BookAmigo: Hotel,
@@ -130,9 +132,9 @@ function Work({ navigate }) {
 												whileHover={
 													!isMobile
 														? {
-																scale: 1.1,
-																rotate: 5,
-															}
+															scale: 1.1,
+															rotate: 5,
+														}
 														: {}
 												}
 												whileTap={{ scale: 0.9 }}
