@@ -3,9 +3,18 @@ import crmLogo from "@/assets/CRM/CRM-logo.webp";
 import myFitsLogo from "@/assets/MyFits/MyFits-Logo.webp";
 import portfolioLogo from "@/assets/Portfolio/myPortfolioLogo.webp";
 import smLogo from "@/assets/Socials/SM-logo2.webp";
+import pokekanLogo from "@/assets/Pokekan/Pokekan-Catalog.png";
 
 export const PROJECT_CARDS = [
-    {
+	{
+		name: "Pokekan",
+		title: "Your Digital Pokémon Zukan",
+		image: pokekanLogo,
+		desc: "A fast, fan-made catalog to browse every Pokémon, compare stats, and build your favorites list with offline support.",
+		stack: "Next.js, TypeScript, Tailwind CSS, PokeAPI",
+		demoUrl: "https://pokekan.vercel.app/",
+	},
+	{
 		name: "Book Manga",
 		title: "Personal Book Manager",
 		image: portfolioLogo,
@@ -14,6 +23,7 @@ export const PROJECT_CARDS = [
 		gitUrl: "https://github.com/abhay299/personal-book-manager",
 		demoUrl: "https://book-manga.netlify.app/",
 	},
+	/*
 	{
 		name: "Socials",
 		title: "Meet & Greet",
@@ -22,6 +32,7 @@ export const PROJECT_CARDS = [
 		stack: "ReactJS, NodeJS, ExpressJS, MySQL",
 		gitUrl: "https://github.com/abhay299/social_media",
 	},
+	*/
 	{
 		name: "MyFits",
 		title: "Find Your Fit",
@@ -30,6 +41,7 @@ export const PROJECT_CARDS = [
 		stack: "ReactJS (Redux), NodeJS, ExpressJS, MongoDB, styled components",
 		gitUrl: "https://github.com/abhay299/e-commerce",
 	},
+	/*
 	{
 		name: "BookAmigo",
 		title: "Find Your Comfort Zone",
@@ -46,4 +58,5 @@ export const PROJECT_CARDS = [
 		stack: "Django, HTML5, Bootstrap",
 		gitUrl: "https://github.com/abhay299/crm-App",
 	},
+	*/
 ];
